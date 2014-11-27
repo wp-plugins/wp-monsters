@@ -19,3 +19,8 @@ To install WP Monsters:
 
 1. Install WP Monsters automatically or by uploading the ZIP file or unzip plugin file and upload to /wp-contet/plugins/. 
 2. Activate the plugin through the 'Plugins' menu in WordPress.
+
+== Screenshots ==
+
+1. Monster displayed in the blog
+2. Admin zone
