@@ -11,7 +11,6 @@ Version: 1.0
 Author: Gwannon
 Author URI: http://blog.gwannon.com/
 */
-
 /* 
 This plugins uses trademarks and/or copyrights owned by Paizo Inc., which are used under Paizo's Community Use Policy. We are expressly prohibited from charging you to use or access this content. This plugins is not published, endorsed, or specifically approved by Paizo Inc. For more information about Paizo's Community Use Policy, please visit paizo.com/communityuse. For more information about Paizo Inc. and Paizo products, please visit paizo.com. 
 */
@@ -20,10 +19,20 @@ This plugins uses trademarks and/or copyrights owned by Paizo Inc., which are us
 function wp_monsters_init() {
 	load_plugin_textdomain( 'wp_monsters', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' ); 
 }
-add_action('init', 'wp_monsters_init');
+add_action('init', 'wp_monsters_init', 10);
 
 /* ----------------------- Monsters ---------------------------- */
 /* ------------------------------------------------------------- */
+/**
+ * Add a flag that will allow to flush the rewrite rules when needed.
+ */
+register_activation_hook( __FILE__, 'wp_monsters_activate' );
+function wp_monsters_activate() {
+    if ( ! get_option( 'wp_monsters_flush_rewrite_rules_flag' ) ) {
+        add_option( 'wp_monsters_flush_rewrite_rules_flag', true );
+    }
+}
+
 
 add_action( 'init', 'wp_monsters_create_post_type' );
 function wp_monsters_create_post_type() {
@@ -54,6 +63,14 @@ function wp_monsters_create_post_type() {
 	);
 	register_post_type( 'monster', $args );
 	flush_rewrite_rules();
+}
+
+add_action( 'init', 'wp_monsters_flush_rewrite_rules_maybe', 20 );
+function wp_monsters_flush_rewrite_rules_maybe() {
+	    if ( get_option( 'wp_monsters_flush_rewrite_rules_flag' ) ) {
+			flush_rewrite_rules();
+			delete_option( 'wp_monsters_flush_rewrite_rules_flag' );
+	    }
 }
 
 //SHORTCODE --------------------------------------
@@ -88,8 +105,20 @@ add_action('add_meta_boxes', 'wp_monsters_add_monster_type');
 function wp_monsters_show_monster_type() { //Show box
 	global $post;
 	$sizes = array (__("fine", 'wp_monsters'), __("diminutive", 'wp_monsters'), __("tiny", 'wp_monsters'), __("small", 'wp_monsters'), __("medium", 'wp_monsters'), __("large", 'wp_monsters'), __("huge", 'wp_monsters'), __("gargantuan", 'wp_monsters'), __("colossal", 'wp_monsters'));
+
+	$alignment = array (__("lawful good", 'wp_monsters'), __("neutral good", 'wp_monsters'), __("chaotic good", 'wp_monsters'), __("lawful neutral", 'wp_monsters'), __("neutral", 'wp_monsters'), __("chaotic neutral", 'wp_monsters'), __("lawful evil", 'wp_monsters'), __("neutral evil", 'wp_monsters'), __("chaotic evil", 'wp_monsters'));
+
 	?><table width="100%">
 		<tr><td><?php _e('Type', 'wp_monsters'); ?></td><td><input type="text" style="width: 100%;" name="type" value="<?php echo get_post_meta( $post->ID, 'type', true ); ?>" /></td></tr>
+		<tr><td><?php _e('Alignment', 'wp_monsters'); ?></td><td>
+		<select name='alignment'>
+		<?php 
+			foreach ($alignment as $key => $alignment) { ?> 
+				<option value='<?php echo $key; ?>'<?php if(get_post_meta( $post->ID, 'alignment', true ) == $key) echo " selected='selected'"; ?>><?php echo $alignment; ?></option>
+			<?php }
+		?>
+		</select>
+		</td></tr>
 		<tr><td><?php _e('Size', 'wp_monsters'); ?></td><td>
 		<select name='size'>
 		<?php 
@@ -108,6 +137,7 @@ function wp_monsters_show_monster_type() { //Show box
 
 function wp_monsters_save_monster_type( $post_id ) { //Save changes
 	if (isset($_POST['type'])) update_post_meta( $post_id, 'type', sanitize_text_field( $_POST['type'] ) );
+	if (isset($_POST['alignment'])) update_post_meta( $post_id, 'alignment', sanitize_text_field( $_POST['alignment'] ) );
 	if (isset($_POST['size'])) update_post_meta( $post_id, 'size', sanitize_text_field( $_POST['size'] ) );
 	if (isset($_POST['cr'])) update_post_meta( $post_id, 'cr', sanitize_text_field( $_POST['cr'] ) );
 	if (isset($_POST['xp'])) update_post_meta( $post_id, 'xp', sanitize_text_field( $_POST['xp'] ) );
@@ -356,7 +386,7 @@ add_action( 'manage_monster_posts_custom_column' , 'wp_monsters_set_columns_info
 //SHORTCODE ---------------------------------------------
 function monster_shortcode( $atts ) {
 	$sizes = array (__("fine", 'wp_monsters'), __("diminutive", 'wp_monsters'), __("tiny", 'wp_monsters'), __("small", 'wp_monsters'), __("medium", 'wp_monsters'), __("large", 'wp_monsters'), __("huge", 'wp_monsters'), __("gargantuan", 'wp_monsters'), __("colossal", 'wp_monsters'));
-
+	$alignment = array (__("lawful good", 'wp_monsters'), __("neutral good", 'wp_monsters'), __("chaotic good", 'wp_monsters'), __("lawful neutral", 'wp_monsters'), __("neutral", 'wp_monsters'), __("chaotic neutral", 'wp_monsters'), __("lawful evil", 'wp_monsters'), __("neutral evil", 'wp_monsters'), __("chaotic evil", 'wp_monsters'));
 	$flytypes = array("--", __("clumsy", 'wp_monsters'), __("poor", 'wp_monsters'), __("average", 'wp_monsters'), __("good", 'wp_monsters'), __("perfect", 'wp_monsters')); 
 	
 	$post = get_post( $atts['id'] );
@@ -369,7 +399,7 @@ function monster_shortcode( $atts ) {
 			<thead>
 				<tr>
 					<td><b>".apply_filters('the_title', $post->post_title)."</b></td>
-					<td><b>[type] [size]</b></td>
+					<td><b>[type] [size] [alignment]</b></td>
 				</tr>
 			<thead>
 			<tbody>
@@ -430,12 +460,13 @@ function monster_shortcode( $atts ) {
 				</tr>
 			</tbody>
 		</table>";
-	$codes = array("type", "size", "cr", "xp", "init", "senses", "str", "dex", "con", "int", "wis", "cha", "ba", "cmb", "cmd", "feats", "skills", "speed", "fly", "flytype", "space", "reach", "fort", "ref", "will", "environment", "organization", "treasure", "special-abilities", "sr", "melee", "ranged","special-attacks", "spell-like-abilities", "ca", "flat-footed", "touched", "infoca", "hp", "dr", "inmmune", "resist", "weaknesses", "languages");
+	$codes = array("type", "size", "cr", "xp", "init", "senses", "str", "dex", "con", "int", "wis", "cha", "ba", "cmb", "cmd", "feats", "skills", "speed", "fly", "flytype", "space", "reach", "fort", "ref", "will", "environment", "organization", "treasure", "special-abilities", "sr", "melee", "ranged","special-attacks", "spell-like-abilities", "ca", "flat-footed", "touched", "infoca", "hp", "dr", "inmmune", "resist", "weaknesses", "languages", "alignment");
 	foreach($codes as $code) {
 		$data = get_post_meta( $post->ID, $code, true );
 		if ($code == 'special-abilities' || $code == 'spell-like-abilities') $data = wpautop($data, true);
 		else if ($code == 'size') $data = $sizes[$data];
 		else if ($code == 'flytype') $data = $flytypes[$data];
+		else if ($code == 'alignment') $data = $alignment[$data];
 		else if (($code == "str" || $code == "dex" || $code == "con" || $code == "int" || $code == "wis" || $code == "cha") && $data == 0)  $data = "--";
 		if ($data == '')  $data = "--";
 		$template = str_replace("[".$code."]", $data, $template);
@@ -455,7 +486,12 @@ function wp_monsters_show_content ($content) {
 		if (has_post_thumbnail($wp_query->post->ID) ) $content .= get_the_post_thumbnail($wp_query->post->ID, 'medium', array('class' => "alignleft") ).$content;
 		$content .= monster_shortcode(array("id" => $wp_query->post->ID, "title" => 'no', "description" => 'no'));
 		//$content .= "Prueba"; 
+	} else if (get_post_type($wp_query->post->ID) == 'spell') {
+
+		$content = spell_shortcode(array("id" => $wp_query->post->ID, "title" => 'no', "description" => 'no')).$content;
+		//$content .= "Prueba"; 
 	}
+
 	return $content;
 }
 
@@ -475,5 +511,7 @@ function wp_monsters_generate_select ($ini= 0, $end = 10, $step = 1, $name, $val
 	$html .= "</select>";
 	return $html;
 }
+
+require_once ('wp-spells.php');
 
 ?>
