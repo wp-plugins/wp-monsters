@@ -1,11 +1,17 @@
 <?php
 /**
  * @package WP Monsters
- * @version 1.0
+ * @version 1.0.2
  */
 /* 
 This plugins uses trademarks and/or copyrights owned by Paizo Inc., which are used under Paizo's Community Use Policy. We are expressly prohibited from charging you to use or access this content. This plugins is not published, endorsed, or specifically approved by Paizo Inc. For more information about Paizo's Community Use Policy, please visit paizo.com/communityuse. For more information about Paizo Inc. and Paizo products, please visit paizo.com. 
 */
+register_activation_hook( __FILE__, 'wp_spells_activate' );
+function wp_spells_activate() {
+    if ( ! get_option( 'wp_spells_flush_rewrite_rules_flag' ) ) {
+        add_option( 'wp_spells_flush_rewrite_rules_flag', true );
+    }
+}
 
 add_action( 'init', 'wp_spells_create_post_type' );
 function wp_spells_create_post_type() {
@@ -35,7 +41,6 @@ function wp_spells_create_post_type() {
 		'hierarchical'	=> true,
 	);
 	register_post_type( 'spell', $args );
-	flush_rewrite_rules();
 }
 
 add_action( 'init', 'wp_spells_flush_rewrite_rules_maybe', 20 );
@@ -80,10 +85,20 @@ function wp_spells_show_spell_type() { //Show box
 
 	$srs = array (__("Yes", 'wp_monsters'), __("No", 'wp_monsters'));
 
+	$times = array (__("Swift Action", 'wp_monsters'), __("Inmediate Action", 'wp_monsters'), __("Standard Action", 'wp_monsters'), __("View Description", 'wp_monsters'));	
+
 	?><table width="100%">
 		<tr><td><?php _e('School', 'wp_monsters'); ?></td><td><input type="text" style="width: 100%;" name="school" value="<?php echo get_post_meta( $post->ID, 'school', true ); ?>" /></td></tr>
 		<tr><td><?php _e('Level', 'wp_monsters'); ?></td><td><input type="text" style="width: 100%;" name="level" value="<?php echo get_post_meta( $post->ID, 'level', true ); ?>" /></td></tr>
-		<tr><td><?php _e('Casting time', 'wp_monsters'); ?></td><td><input type="text" style="width: 100%;" name="castingtime" value="<?php echo get_post_meta( $post->ID, 'castingtime', true ); ?>" /></td></tr>
+		<tr><td><?php _e('Casting time', 'wp_monsters'); ?></td><td>
+		<select name='castingtime'>
+		<?php 
+			foreach ($times as $key => $time) { ?> 
+				<option value='<?php echo $key; ?>'<?php if(get_post_meta( $post->ID, 'castingtime', true ) == $key) echo " selected='selected'"; ?>><?php echo $time; ?></option>
+			<?php }
+		?>
+		</select>
+		</td></tr>
 		<tr><td><?php _e('Components', 'wp_monsters'); ?></td><td><input type="text" style="width: 100%;" name="components" value="<?php echo get_post_meta( $post->ID, 'components', true ); ?>" /></td></tr>
 		<tr><td><?php _e('Range', 'wp_monsters'); ?></td><td><input type="text" style="width: 100%;" name="range" value="<?php echo get_post_meta( $post->ID, 'range', true ); ?>" /></td></tr>
 		<tr><td><?php _e('Target', 'wp_monsters'); ?></td><td><input type="text" style="width: 100%;" name="target" value="<?php echo get_post_meta( $post->ID, 'target', true ); ?>" /></td></tr>
@@ -139,7 +154,8 @@ add_action( 'manage_spell_posts_custom_column' , 'wp_spells_set_columns_info');
 function spell_shortcode( $atts ) {
 	$post = get_post( $atts['id'] );
 
-		$srs = array (__("Yes", 'wp_monsters'), __("No", 'wp_monsters'));
+	$srs = array (__("Yes", 'wp_monsters'), __("No", 'wp_monsters'));
+	$times = array (__("Swift Action", 'wp_monsters'), __("Inmediate Action", 'wp_monsters'), __("Standard Action", 'wp_monsters'), __("View Description", 'wp_monsters'));	
 
 	if ($atts['title'] != 'no') $html = "<h3>".apply_filters('the_title', $post->post_title)."</h3>";
 	$template = "<table class='wp-spells'>
@@ -185,7 +201,8 @@ function spell_shortcode( $atts ) {
 	$codes = array("school", "level", "castingtime", "components", "range", "target", "duration", "savingthrow", "sr" );
 	foreach($codes as $code) {
 		$data = get_post_meta( $post->ID, $code, true );
-		if ($code == 'sr') $data = $srs[$data];
+		if ($code == 'sr') $data = $srs[$data];	
+		if ($code == 'castingtime') $data = $times[$data];
 		if ($data == '')  $data = "--";
 		$template = str_replace("[".$code."]", $data, $template);
 	} 

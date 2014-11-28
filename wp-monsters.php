@@ -1,13 +1,13 @@
 <?php
 /**
  * @package WP Monsters
- * @version 1.0
+ * @version 1.0.2
  */
 /*
 Plugin Name: WP Monsters
 Plugin URI: http://blog.gwannon.com/wp-monsters/
 Description: This plugin allows to the bloggers to publish in a easy way their Pathfinder RPG home-brew monster in their Wordpress blogs.
-Version: 1.0
+Version: 1.0.1
 Author: Gwannon
 Author URI: http://blog.gwannon.com/
 */
@@ -62,7 +62,6 @@ function wp_monsters_create_post_type() {
 		'hierarchical'	=> true,
 	);
 	register_post_type( 'monster', $args );
-	flush_rewrite_rules();
 }
 
 add_action( 'init', 'wp_monsters_flush_rewrite_rules_maybe', 20 );
@@ -490,6 +489,10 @@ function wp_monsters_show_content ($content) {
 
 		$content = spell_shortcode(array("id" => $wp_query->post->ID, "title" => 'no', "description" => 'no')).$content;
 		//$content .= "Prueba"; 
+	} else if (get_post_type($wp_query->post->ID) == 'feat') {
+
+		$content = feat_shortcode(array("id" => $wp_query->post->ID, "title" => 'no', "description" => 'no'))."<div><b>".__('Benefit', 'wp_monsters').":</b> ".$content."</div>";
+		//$content .= "Prueba"; 
 	}
 
 	return $content;
@@ -513,5 +516,6 @@ function wp_monsters_generate_select ($ini= 0, $end = 10, $step = 1, $name, $val
 }
 
 require_once ('wp-spells.php');
+require_once ('wp-feats.php');
 
 ?>
