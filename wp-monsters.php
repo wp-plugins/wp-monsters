@@ -1,13 +1,13 @@
 <?php
 /**
  * @package WP Monsters
- * @version 1.0.2
+ * @version 1.0.3
  */
 /*
 Plugin Name: WP Monsters
 Plugin URI: http://blog.gwannon.com/wp-monsters/
 Description: This plugin allows to the bloggers to publish in a easy way their Pathfinder RPG home-brew monster in their Wordpress blogs.
-Version: 1.0.2
+Version: 1.0.3
 Author: Gwannon
 Author URI: http://blog.gwannon.com/
 */
@@ -514,6 +514,19 @@ function wp_monsters_generate_select ($ini= 0, $end = 10, $step = 1, $name, $val
 	$html .= "</select>";
 	return $html;
 }
+
+function wp_monsters_taxonomy_dropdown($taxonomy) { ?>
+	<select name="<?php echo $taxonomy; ?>" id="<?php echo $taxonomy; ?>" class="postform">
+		<option value="0"><?php _e("Show All", "wp-monsters"); ?></option>
+		<?php
+		$terms = get_terms($taxonomy);
+		foreach ($terms as $term) {
+			//print_r ($term);
+			if($_REQUEST[$taxonomy] == $term->slug) printf( '<option class="level-0" selected="selected" value="%s">%s</option>', $term->slug, $term->name." (".$term->count.")" ); 
+			else printf( '<option class="level-0" value="%s">%s</option>', $term->slug, $term->name." (".$term->count.")" );
+		} ?>
+	</select>
+<?php }
 
 require_once ('wp-spells.php');
 require_once ('wp-feats.php');

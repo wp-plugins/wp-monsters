@@ -27,6 +27,9 @@ To install WP Monsters:
 
 == Changelog ==
 
+= 1.0.3 =
+* Support for types of Feats.
+
 = 1.0.2 =
 * Support for Feats.
 

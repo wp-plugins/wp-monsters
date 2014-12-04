@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Monsters\n"
-"POT-Creation-Date: 2014-11-28 15:55+0100\n"
-"PO-Revision-Date: 2014-11-28 15:57+0100\n"
+"POT-Creation-Date: 2014-12-05 00:38+0100\n"
+"PO-Revision-Date: 2014-12-05 00:41+0100\n"
 "Last-Translator: \n"
 "Language-Team: @Gwannon <monclus.jorge@gmail.com>\n"
 "Language: es_ES\n"
@@ -59,7 +59,7 @@ msgid "Monster not found in trash"
 msgstr "Monstruo no encontrado en la papelera"
 
 #: ../wp-monsters.php:79 ../wp-monsters.php:366 ../wp-spells.php:58
-#: ../wp-spells.php:134 ../wp-feats.php:58 ../wp-feats.php:100
+#: ../wp-spells.php:134 ../wp-feats.php:107 ../wp-feats.php:149
 msgid "Shortcode"
 msgstr "Código corto"
 
@@ -140,7 +140,6 @@ msgid "chaotic evil"
 msgstr "caótico malvado"
 
 #: ../wp-monsters.php:111 ../wp-monsters.php:367 ../wp-spells.php:135
-#: ../wp-feats.php:101
 msgid "Type"
 msgstr "Tipo"
 
@@ -366,9 +365,13 @@ msgstr "HABILIDADES ESPECIALES"
 msgid "Special abilities"
 msgstr "Habilidades especiales"
 
-#: ../wp-monsters.php:494 ../wp-feats.php:87 ../wp-feats.php:127
+#: ../wp-monsters.php:494 ../wp-feats.php:136 ../wp-feats.php:205
 msgid "Benefit"
 msgstr "Beneficio"
+
+#: ../wp-monsters.php:520
+msgid "Show All"
+msgstr "Mostrar todo"
 
 #: ../wp-spells.php:20 ../wp-spells.php:32
 msgid "Spells"
@@ -414,11 +417,11 @@ msgstr "Hechizo no encontrado en la papelera"
 msgid "SPELL"
 msgstr "HECHIZO"
 
-#: ../wp-spells.php:86 ../wp-spells.php:157 ../wp-feats.php:123
+#: ../wp-spells.php:86 ../wp-spells.php:157 ../wp-feats.php:201
 msgid "Yes"
 msgstr "Si"
 
-#: ../wp-spells.php:86 ../wp-spells.php:157 ../wp-feats.php:123
+#: ../wp-spells.php:86 ../wp-spells.php:157 ../wp-feats.php:201
 msgid "No"
 msgstr "No"
 
@@ -510,15 +513,52 @@ msgstr "Dote no encontrada"
 msgid "Feat not found in trash"
 msgstr "Dote no encontrada en la papelera"
 
-#: ../wp-feats.php:75
+#: ../wp-feats.php:53 ../wp-feats.php:54 ../wp-feats.php:63
+#: ../wp-feats.php:150
+msgid "Type of feats"
+msgstr "Tipos de dotes"
+
+#: ../wp-feats.php:55
+msgid "Search type of feats"
+msgstr "Buscar  tipo de dote"
+
+#: ../wp-feats.php:56
+msgid "All type of feats"
+msgstr "Todos los tipos de dotes"
+
+#: ../wp-feats.php:57
+msgid "Parent type of feats"
+msgstr ""
+
+#: ../wp-feats.php:58
+msgid "Parent type of feats:"
+msgstr ""
+
+#: ../wp-feats.php:59
+msgid "Edit type of feats"
+msgstr "Editar  tipo de dote"
+
+#: ../wp-feats.php:60
+msgid "Update type of feats"
+msgstr "Actualizar tipo de dote"
+
+#: ../wp-feats.php:61
+msgid "Add new type of feats"
+msgstr "Añadir nuevo tipo de dote"
+
+#: ../wp-feats.php:62
+msgid "New type of feats"
+msgstr "Nuevo tipo de dote"
+
+#: ../wp-feats.php:124
 msgid "FEATS"
 msgstr "DOTES"
 
-#: ../wp-feats.php:86 ../wp-feats.php:126
+#: ../wp-feats.php:135 ../wp-feats.php:204
 msgid "Prerequisites"
 msgstr "Prerrequisitos"
 
-#: ../wp-feats.php:126
+#: ../wp-feats.php:204
 msgid "Normal"
 msgstr "Normal"
 
