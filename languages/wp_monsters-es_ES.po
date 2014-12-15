@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Monsters\n"
-"POT-Creation-Date: 2014-12-05 00:38+0100\n"
-"PO-Revision-Date: 2014-12-05 00:41+0100\n"
+"POT-Creation-Date: 2014-12-16 00:45+0100\n"
+"PO-Revision-Date: 2014-12-16 00:49+0100\n"
 "Last-Translator: \n"
 "Language-Team: @Gwannon <monclus.jorge@gmail.com>\n"
 "Language: es_ES\n"
@@ -22,7 +22,8 @@ msgstr "Monstruos"
 msgid "Monster"
 msgstr "Monstruo"
 
-#: ../wp-monsters.php:43 ../wp-spells.php:22 ../wp-feats.php:22
+#: ../wp-monsters.php:43 ../wp-weapons.php:22 ../wp-spells.php:22
+#: ../wp-feats.php:22
 msgid "Add new"
 msgstr "Añadir nuevo"
 
@@ -58,8 +59,9 @@ msgstr "Monstruo no encontrado"
 msgid "Monster not found in trash"
 msgstr "Monstruo no encontrado en la papelera"
 
-#: ../wp-monsters.php:79 ../wp-monsters.php:366 ../wp-spells.php:58
-#: ../wp-spells.php:134 ../wp-feats.php:107 ../wp-feats.php:149
+#: ../wp-monsters.php:79 ../wp-monsters.php:366 ../wp-weapons.php:107
+#: ../wp-weapons.php:216 ../wp-spells.php:58 ../wp-spells.php:134
+#: ../wp-feats.php:107 ../wp-feats.php:149
 msgid "Shortcode"
 msgstr "Código corto"
 
@@ -276,7 +278,8 @@ msgstr "Espacio"
 msgid "Reach"
 msgstr "Alcance"
 
-#: ../wp-monsters.php:235 ../wp-monsters.php:436
+#: ../wp-monsters.php:235 ../wp-monsters.php:436 ../wp-weapons.php:138
+#: ../wp-weapons.php:269
 msgid "Ranged"
 msgstr "A distancia"
 
@@ -369,9 +372,186 @@ msgstr "Habilidades especiales"
 msgid "Benefit"
 msgstr "Beneficio"
 
-#: ../wp-monsters.php:520
+#: ../wp-monsters.php:524
 msgid "Show All"
 msgstr "Mostrar todo"
+
+#: ../wp-weapons.php:20 ../wp-weapons.php:32
+msgid "Weapons"
+msgstr "Armas"
+
+#: ../wp-weapons.php:21
+msgid "Weapon"
+msgstr "Arma"
+
+#: ../wp-weapons.php:23 ../wp-weapons.php:36
+msgid "Add new weapon"
+msgstr "Añadir nueva arma"
+
+#: ../wp-weapons.php:24
+msgid "Edit weapon"
+msgstr "Editar arma"
+
+#: ../wp-weapons.php:25
+msgid "New weapon"
+msgstr "Nueva arma"
+
+#: ../wp-weapons.php:26
+msgid "All weapons"
+msgstr "Todos las armas"
+
+#: ../wp-weapons.php:27
+msgid "View weapon"
+msgstr "Ver arma"
+
+#: ../wp-weapons.php:28
+msgid "Search weapon"
+msgstr "Buscar arma"
+
+#: ../wp-weapons.php:29
+msgid "Weapon not found"
+msgstr "Arma no encontrada"
+
+#: ../wp-weapons.php:30
+msgid "Weapon not found in trash"
+msgstr "Arma no encontrada en la papelera"
+
+#: ../wp-weapons.php:53 ../wp-weapons.php:54 ../wp-weapons.php:63
+#: ../wp-weapons.php:217
+msgid "Type of weapons"
+msgstr "Tipos de armas"
+
+#: ../wp-weapons.php:55
+msgid "Search type of weapons"
+msgstr "Buscar  tipo de armas"
+
+#: ../wp-weapons.php:56
+msgid "All type of weapons"
+msgstr "Todos los tipos de armas"
+
+#: ../wp-weapons.php:57
+#, fuzzy
+msgid "Parent type of weapons"
+msgstr "Buscar  tipo de dote"
+
+#: ../wp-weapons.php:58
+#, fuzzy
+msgid "Parent type of weapons:"
+msgstr "Buscar  tipo de dote"
+
+#: ../wp-weapons.php:59
+msgid "Edit type of weapons"
+msgstr "Editar  tipo de arma"
+
+#: ../wp-weapons.php:60
+msgid "Update type of weapons"
+msgstr "Actualizar tipo de arma"
+
+#: ../wp-weapons.php:61
+msgid "Add new type of weapons"
+msgstr "Añadir nuevo tipo de arma"
+
+#: ../wp-weapons.php:62
+msgid "New type of weapons"
+msgstr "Nuevo tipo de arma"
+
+#: ../wp-weapons.php:124
+msgid "WEAPONS"
+msgstr "ARMAS"
+
+#: ../wp-weapons.php:137 ../wp-weapons.php:268
+msgid "Simple"
+msgstr "Simple"
+
+#: ../wp-weapons.php:137 ../wp-weapons.php:268
+msgid "Martial"
+msgstr "Marcial"
+
+#: ../wp-weapons.php:137 ../wp-weapons.php:268
+msgid "Exotic"
+msgstr "Exótica"
+
+#: ../wp-weapons.php:138 ../wp-weapons.php:269
+msgid "Unarmed"
+msgstr "Desarmado"
+
+#: ../wp-weapons.php:138 ../wp-weapons.php:269
+msgid "Light Melee"
+msgstr "Cuerpo a cuerpo ligera"
+
+#: ../wp-weapons.php:138 ../wp-weapons.php:269
+msgid "One-handed Melee"
+msgstr "Cuerpo a cuerpo una mano"
+
+#: ../wp-weapons.php:138 ../wp-weapons.php:269
+msgid "Two-handed Melee"
+msgstr "Cuerpo a cuerpo  dos manos"
+
+#: ../wp-weapons.php:138 ../wp-weapons.php:269
+msgid "Ammunition"
+msgstr "Munición"
+
+#: ../wp-weapons.php:142
+msgid "General type"
+msgstr "Tipo general"
+
+#: ../wp-weapons.php:151
+msgid "Subtype"
+msgstr "Subtipo"
+
+#: ../wp-weapons.php:160 ../wp-weapons.php:278
+msgid "Cost"
+msgstr "Coste"
+
+#: ../wp-weapons.php:161 ../wp-weapons.php:279
+msgid "Dmg (S)"
+msgstr "Daño (P)"
+
+#: ../wp-weapons.php:162 ../wp-weapons.php:280
+msgid "Dmg (M)"
+msgstr "Daño (M)"
+
+#: ../wp-weapons.php:163 ../wp-weapons.php:281
+msgid "Critical"
+msgstr "Crítico"
+
+#: ../wp-weapons.php:172 ../wp-weapons.php:282 ../wp-spells.php:103
+#: ../wp-spells.php:180
+msgid "Range"
+msgstr "Alcance"
+
+#: ../wp-weapons.php:173 ../wp-weapons.php:283
+msgid "Weight"
+msgstr "Peso"
+
+#: ../wp-weapons.php:174 ../wp-weapons.php:284
+msgid "Type of damage"
+msgstr "Tipos de daño"
+
+#: ../wp-weapons.php:181 ../wp-weapons.php:185 ../wp-weapons.php:189
+#: ../wp-spells.php:86 ../wp-spells.php:157 ../wp-feats.php:201
+msgid "No"
+msgstr "No"
+
+#: ../wp-weapons.php:182 ../wp-weapons.php:186 ../wp-weapons.php:190
+msgid "Si"
+msgstr "Si"
+
+#: ../wp-weapons.php:183 ../wp-weapons.php:305
+msgid "Bludgeoning"
+msgstr "Contundente"
+
+#: ../wp-weapons.php:187 ../wp-weapons.php:307
+msgid "Piercing"
+msgstr "Empalante"
+
+#: ../wp-weapons.php:191 ../wp-weapons.php:309
+msgid "Slashing"
+msgstr "Cortante"
+
+#: ../wp-weapons.php:193
+msgid "Special"
+msgstr "Especial"
 
 #: ../wp-spells.php:20 ../wp-spells.php:32
 msgid "Spells"
@@ -421,10 +601,6 @@ msgstr "HECHIZO"
 msgid "Yes"
 msgstr "Si"
 
-#: ../wp-spells.php:86 ../wp-spells.php:157 ../wp-feats.php:201
-msgid "No"
-msgstr "No"
-
 #: ../wp-spells.php:88 ../wp-spells.php:158
 msgid "Swift Action"
 msgstr "Acción Rápida"
@@ -456,10 +632,6 @@ msgstr "Tiempo de lanzamiento"
 #: ../wp-spells.php:102 ../wp-spells.php:176
 msgid "Components"
 msgstr "Componentes"
-
-#: ../wp-spells.php:103 ../wp-spells.php:180
-msgid "Range"
-msgstr "Alcance"
 
 #: ../wp-spells.php:104 ../wp-spells.php:184
 msgid "Target"
