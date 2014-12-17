@@ -31,7 +31,7 @@ To install WP Monsters:
 
 == Changelog ==
 
-= 1.0.4 =
+= 1.0.5 =
 * Support for types of Spells.
 
 = 1.0.4 =
