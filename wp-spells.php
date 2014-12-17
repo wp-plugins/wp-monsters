@@ -39,6 +39,7 @@ function wp_spells_create_post_type() {
 		'supports'      => array( 'title', 'editor'/*, 'thumbnail', 'page-attributes', 'excerpt'*/ ),
 		'has_archive'   => true,
 		'hierarchical'	=> true,
+		'menu_icon'	=> '/wp-content/plugins/wp-monsters/img/spell.png'
 	);
 	register_post_type( 'spell', $args );
 }

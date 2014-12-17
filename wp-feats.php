@@ -42,6 +42,7 @@ function wp_feats_create_post_type() {
 		'query_var'	=> true,
 		'has_archive'   => true,
 		'hierarchical'	=> true,
+		'menu_icon'	=> '/wp-content/plugins/wp-monsters/img/feat.png'
 	);
 	register_post_type( 'feat', $args );
 }

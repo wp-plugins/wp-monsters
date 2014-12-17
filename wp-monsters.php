@@ -60,6 +60,7 @@ function wp_monsters_create_post_type() {
 		'supports'      => array( 'title', 'editor', 'thumbnail', /*'page-attributes', 'excerpt'*/ ),
 		'has_archive'   => true,
 		'hierarchical'	=> true,
+		'menu_icon'	=> '/wp-content/plugins/wp-monsters/img/monster.png'
 	);
 	register_post_type( 'monster', $args );
 }

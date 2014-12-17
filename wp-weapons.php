@@ -42,6 +42,7 @@ function wp_weapons_create_post_type() {
 		'query_var'	=> true,
 		'has_archive'   => true,
 		'hierarchical'	=> true,
+		'menu_icon'	=> '/wp-content/plugins/wp-monsters/img/weapon.png'
 	);
 	register_post_type( 'weapon', $args );
 }
@@ -291,9 +292,9 @@ function weapon_shortcode( $atts ) {
 			<td>[critical]</td>
 			<td>[range]</td>
 			<td>[weight]</td>
-			<td>[typedamageb] [typedamagep] [typedamages]<td>
+			<td>[typedamageb] [typedamagep] [typedamages]</td>
 		</tr>
-		<tr><td colspan='9'>[special]</td></tr>
+		<tr><td colspan='8'>[special]</td></tr>
 	</table>";
 
 	$codes = array("generaltype", "subtype", "cost", "dmgs", "dmgm", "critical", "range", "weight", "typedamageb", "typedamagep", "typedamages", "special");
