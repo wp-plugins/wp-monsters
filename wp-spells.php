@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WP Monsters
- * @version 1.0.4
+ * @version 1.0.5
  */
 /* 
 This plugins uses trademarks and/or copyrights owned by Paizo Inc., which are used under Paizo's Community Use Policy. We are expressly prohibited from charging you to use or access this content. This plugins is not published, endorsed, or specifically approved by Paizo Inc. For more information about Paizo's Community Use Policy, please visit paizo.com/communityuse. For more information about Paizo Inc. and Paizo products, please visit paizo.com. 
@@ -37,11 +37,58 @@ function wp_spells_create_post_type() {
 		'public'        => true,
 		'menu_position' => 6,
 		'supports'      => array( 'title', 'editor'/*, 'thumbnail', 'page-attributes', 'excerpt'*/ ),
+		'rewrite'	=> array('slug' => 'spells/%spells%','with_front' => false),
 		'has_archive'   => true,
 		'hierarchical'	=> true,
 		'menu_icon'	=> '/wp-content/plugins/wp-monsters/img/spell.png'
 	);
 	register_post_type( 'spell', $args );
+}
+
+add_action( 'init', 'wp_spells_create_category' );
+
+function wp_spells_create_category() {
+	$labels = array(
+		'name'              => __( 'Type of spells', 'wp_monsters' ),
+		'singular_name'     => __( 'Type of spells', 'wp_monsters' ),
+		'search_items'      => __( 'Search type of spells', 'wp_monsters' ),
+		'all_items'         => __( 'All type of spells', 'wp_monsters' ),
+		'parent_item'       => __( 'Parent type of spells', 'wp_monsters' ),
+		'parent_item_colon' => __( 'Parent type of spells:', 'wp_monsters' ),
+		'edit_item'         => __( 'Edit type of spells', 'wp_monsters' ),
+		'update_item'       => __( 'Update type of spells', 'wp_monsters' ),
+		'add_new_item'      => __( 'Add new type of spells', 'wp_monsters' ),
+		'new_item_name'     => __( 'New type of spells', 'wp_monsters' ),
+		'menu_name'         => __( 'Type of spells', 'wp_monsters' ),
+	);
+	$args = array(
+		'labels' => $labels,
+		'hierarchical' 	=> true,
+		//'public'		=> true,
+		'query_var'		=> true,
+		//slug prodotto deve coincidere con il primo parametro dello slug del Custom Post Type correlato
+		'rewrite'		=>  array('slug' => 'spells' ),
+		//'_builtin'		=> false,
+	);
+	register_taxonomy( 'spells', 'spell', $args );
+}
+
+add_filter('post_link', 'wp_spells_permalink', 1, 3);
+add_filter('post_type_link', 'wp_spells_permalink', 1, 3);
+
+function wp_spells_permalink($permalink, $post_id, $leavename) {
+    if (strpos($permalink, '%spells%') === FALSE) return $permalink;
+        // Get post
+        $post = get_post($post_id);
+        if (!$post) return $permalink;
+
+        // Get taxonomy terms
+        $terms = wp_get_object_terms($post->ID, 'spells');
+        if (!is_wp_error($terms) && !empty($terms) && is_object($terms[0]))
+        	$taxonomy_slug = $terms[0]->slug;
+        else $taxonomy_slug = 'general';
+
+    return str_replace('%spells%', $taxonomy_slug, $permalink);
 }
 
 add_action( 'init', 'wp_spells_flush_rewrite_rules_maybe', 20 );
@@ -51,6 +98,7 @@ function wp_spells_flush_rewrite_rules_maybe() {
 			delete_option( 'wp_spells_flush_rewrite_rules_flag' );
 	    }
 }
+
 
 //SHORTCODE --------------------------------------
 function wp_spells_add_spell_shortcode() {
@@ -145,10 +193,40 @@ function wp_spells_set_columns_info( $column ) {
 		echo "[spell id=\"".$post->ID."\" name=\"".$post->post_name."\"]";
 	} else 	if ($column == 'type') {
 		global $post; 
-		echo get_post_meta( $post->ID, 'type', true );
+		$terms = get_the_terms( $post->ID, 'spells' );
+			if ($terms && ! is_wp_error($terms)) :
+				$term_slugs_arr = array();
+				foreach ($terms as $term) {
+				    $term_slugs_arr[] = $term->name;
+				}
+				$terms_slug_str = join( ", ", $term_slugs_arr);
+			endif;
+			echo $terms_slug_str;
 	}
 }
 add_action( 'manage_spell_posts_custom_column' , 'wp_spells_set_columns_info');
+
+//Metemos el filtrado por categoria
+add_action('restrict_manage_posts','wp_spells_restrict');
+function wp_spells_restrict() {
+	global $typenow;
+	global $wp_query;
+	if ($typenow=='spell') {
+		$taxonomy = 'spells';
+		wp_monsters_taxonomy_dropdown($taxonomy);
+	}
+}
+add_filter('parse_query','wp_spells_term_in_query');
+function wp_spells_term_in_query($query) {
+	global $pagenow;
+	$qv = &$query->query_vars;
+	if ($pagenow=='edit.php') {
+		if(isset($qv['taxonomy']) && $qv['taxonomy']=='spells' && isset($qv['term']) && is_numeric($qv['term']) &&$qv['term']>0) { 
+			$term = get_term_by('id',$qv['term'],'spells');
+			$qv['term'] = $term->slug;
+		}
+	}
+}
 
 
 //SHORTCODE ---------------------------------------------
