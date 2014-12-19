@@ -1,9 +1,9 @@
 === WP Monsters ===
 Contributors: gwannon 
-Tags: monsters, spells, rpg, pathfinder, role playing games, feats
+Tags: monsters, spells, rpg, pathfinder, role playing games, role playing game, feats
 Requires at least: 4.0.0
 Tested up to: 4.0.0
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,6 +31,9 @@ To install WP Monsters:
 2. Admin monster
 
 == Changelog ==
+
+= 1.0.6 =
+* Support for types of Monsters.
 
 = 1.0.5 =
 * Support for types of Spells.

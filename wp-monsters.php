@@ -1,13 +1,13 @@
 <?php
 /**
  * @package WP Monsters
- * @version 1.0.5
+ * @version 1.0.6
  */
 /*
 Plugin Name: WP Monsters
 Plugin URI: http://blog.gwannon.com/wp-monsters/
 Description: This plugin allows to the bloggers to publish in a easy way their Pathfinder RPG home-brew monster in their Wordpress blogs.
-Version: 1.0.5
+Version: 1.0.6
 Author: Gwannon
 Author URI: http://blog.gwannon.com/
 */
@@ -58,11 +58,59 @@ function wp_monsters_create_post_type() {
 		'public'        => true,
 		'menu_position' => 5,
 		'supports'      => array( 'title', 'editor', 'thumbnail', /*'page-attributes', 'excerpt'*/ ),
+		'rewrite'	=> array('slug' => 'monsters/%monsters%','with_front' => false),
+		'query_var'	=> true,
 		'has_archive'   => true,
 		'hierarchical'	=> true,
 		'menu_icon'	=> '/wp-content/plugins/wp-monsters/img/monster.png'
 	);
 	register_post_type( 'monster', $args );
+}
+
+add_action( 'init', 'wp_monsters_create_category' );
+
+function wp_monsters_create_category() {
+	$labels = array(
+		'name'              => __( 'Type of monsters', 'wp_monsters' ),
+		'singular_name'     => __( 'Type of monsters', 'wp_monsters' ),
+		'search_items'      => __( 'Search type of monsters', 'wp_monsters' ),
+		'all_items'         => __( 'All type of monsters', 'wp_monsters' ),
+		'parent_item'       => __( 'Parent type of monsters', 'wp_monsters' ),
+		'parent_item_colon' => __( 'Parent type of monsters:', 'wp_monsters' ),
+		'edit_item'         => __( 'Edit type of monsters', 'wp_monsters' ),
+		'update_item'       => __( 'Update type of monsters', 'wp_monsters' ),
+		'add_new_item'      => __( 'Add new type of monsters', 'wp_monsters' ),
+		'new_item_name'     => __( 'New type of monsters', 'wp_monsters' ),
+		'menu_name'         => __( 'Type of monsters', 'wp_monsters' ),
+	);
+	$args = array(
+		'labels' => $labels,
+		'hierarchical' 	=> true,
+		//'public'		=> true,
+		'query_var'		=> true,
+		//slug prodotto deve coincidere con il primo parametro dello slug del Custom Post Type correlato
+		'rewrite'		=>  array('slug' => 'monsters' ),
+		//'_builtin'		=> false,
+	);
+	register_taxonomy( 'monsters', 'monster', $args );
+}
+
+add_filter('post_link', 'wp_monsters_permalink', 1, 3);
+add_filter('post_type_link', 'wp_monsters_permalink', 1, 3);
+
+function wp_monsters_permalink($permalink, $post_id, $leavename) {
+    if (strpos($permalink, '%monsters%') === FALSE) return $permalink;
+        // Get post
+        $post = get_post($post_id);
+        if (!$post) return $permalink;
+
+        // Get taxonomy terms
+        $terms = wp_get_object_terms($post->ID, 'monsters');
+        if (!is_wp_error($terms) && !empty($terms) && is_object($terms[0]))
+        	$taxonomy_slug = $terms[0]->slug;
+        else $taxonomy_slug = 'general';
+
+    return str_replace('%monsters%', $taxonomy_slug, $permalink);
 }
 
 add_action( 'init', 'wp_monsters_flush_rewrite_rules_maybe', 20 );
