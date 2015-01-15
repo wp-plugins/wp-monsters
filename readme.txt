@@ -1,17 +1,17 @@
 === WP Monsters ===
 Contributors: gwannon 
-Tags: monsters, spells, rpg, pathfinder, role playing games, role playing game, feats
+Tags: monsters, spells, rpg, pathfinder, role playing games, role playing game, feats, cities, weapons
 Requires at least: 4.0.0
 Tested up to: 4.0.0
 Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin allows to the bloggers to publish in a easy way their Pathfinder RPG home-brew monsters, weapons, spells and feats in their Wordpress blogs.
+WP Monsters allows to the bloggers to publish in a easy way their Pathfinder RPG home-brew monsters, weapons, spells, cities and feats in their Wordpress blogs.
 
 == Description ==
 
-This plugin allows to the bloggers to publish in a easy way their Pathfinder RPG home-brew monsters,weapons, spells and feats in their Wordpress blogs. You can use shortcodes to insert the monster in any site of your web.
+This plugin allows to the bloggers to publish in a easy way their Pathfinder RPG home-brew monsters,weapons, spells, cities and feats in their Wordpress blogs. You can use shortcodes to insert the monster in any site of your web.
 
 This plugins uses trademarks and/or copyrights owned by Paizo Inc., which are used under Paizo's Community Use Policy. We are expressly prohibited from charging you to use or access this content. This plugins is not published, endorsed, or specifically approved by Paizo Inc. For more information about Paizo's Community Use Policy, please visit paizo.com/communityuse. For more information about Paizo Inc. and Paizo products, please visit paizo.com.
 
@@ -31,6 +31,9 @@ To install WP Monsters:
 2. Admin monster
 
 == Changelog ==
+
+= 1.0.7 =
+* Support for Cities.
 
 = 1.0.6 =
 * Support for types of Monsters.

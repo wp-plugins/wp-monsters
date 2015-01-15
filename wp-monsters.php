@@ -1,13 +1,13 @@
 <?php
 /**
  * @package WP Monsters
- * @version 1.0.6
+ * @version 1.0.7
  */
 /*
 Plugin Name: WP Monsters
 Plugin URI: http://blog.gwannon.com/wp-monsters/
 Description: This plugin allows to the bloggers to publish in a easy way their Pathfinder RPG home-brew monster in their Wordpress blogs.
-Version: 1.0.6
+Version: 1.0.7
 Author: Gwannon
 Author URI: http://blog.gwannon.com/
 */
@@ -414,6 +414,7 @@ add_action( 'save_post', 'wp_monsters_save_monster_special_abilities' );
 function wp_monsters_set_columns($columns) {
 	$columns['shortcode'] = __( 'Shortcode', 'wp_monsters');
 	$columns['type'] = __( 'Type', 'wp_monsters');
+	$columns['monsters'] = __( 'Category', 'wp_monsters');
       	unset( $columns['date'] );
       	return $columns;
 }
@@ -426,9 +427,42 @@ function wp_monsters_set_columns_info( $column ) {
 	} else 	if ($column == 'type') {
 		global $post; 
 		echo get_post_meta( $post->ID, 'type', true );
+	} else 	if ($column == 'monsters') {
+		global $post; 
+		$terms = get_the_terms( $post->ID, 'monsters' );
+			if ($terms && ! is_wp_error($terms)) :
+				$term_slugs_arr = array();
+				foreach ($terms as $term) {
+				    $term_slugs_arr[] = $term->name;
+				}
+				$terms_slug_str = join( ", ", $term_slugs_arr);
+			endif;
+			echo $terms_slug_str;
 	}
 }
 add_action( 'manage_monster_posts_custom_column' , 'wp_monsters_set_columns_info');
+
+//Metemos el filtrado por categoria
+add_action('restrict_manage_posts','wp_monsters_restrict');
+function wp_monsters_restrict() {
+	global $typenow;
+	global $wp_query;
+	if ($typenow=='monster') {
+		$taxonomy = 'monsters';
+		wp_monsters_taxonomy_dropdown($taxonomy);
+	}
+}
+add_filter('parse_query','wp_monsters_term_in_query');
+function wp_monsters_term_in_query($query) {
+	global $pagenow;
+	$qv = &$query->query_vars;
+	if ($pagenow=='edit.php') {
+		if(isset($qv['taxonomy']) && $qv['taxonomy']=='monsters' && isset($qv['term']) && is_numeric($qv['term']) &&$qv['term']>0) { 
+			$term = get_term_by('id',$qv['term'],'monsters');
+			$qv['term'] = $term->slug;
+		}
+	}
+}
 
 
 //SHORTCODE ---------------------------------------------
@@ -546,6 +580,10 @@ function wp_monsters_show_content ($content) {
 
 		$content = $content.weapon_shortcode(array("id" => $wp_query->post->ID, "title" => 'no', "description" => 'no'));
 		//$content .= "Prueba"; 
+	} else if (get_post_type($wp_query->post->ID) == 'city') {
+
+		$content = $content.city_shortcode(array("id" => $wp_query->post->ID, "title" => 'no', "description" => 'no'));
+		//$content .= "Prueba"; 
 	}
 
 	return $content;
@@ -584,5 +622,5 @@ function wp_monsters_taxonomy_dropdown($taxonomy) { ?>
 require_once ('wp-spells.php');
 require_once ('wp-feats.php');
 require_once ('wp-weapons.php');
-
+require_once ('wp-cities.php');
 ?>

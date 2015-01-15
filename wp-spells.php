@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WP Monsters
- * @version 1.0.6
+ * @version 1.0.7
  */
 /* 
 This plugins uses trademarks and/or copyrights owned by Paizo Inc., which are used under Paizo's Community Use Policy. We are expressly prohibited from charging you to use or access this content. This plugins is not published, endorsed, or specifically approved by Paizo Inc. For more information about Paizo's Community Use Policy, please visit paizo.com/communityuse. For more information about Paizo Inc. and Paizo products, please visit paizo.com. 
@@ -40,7 +40,7 @@ function wp_spells_create_post_type() {
 		'rewrite'	=> array('slug' => 'spells/%spells%','with_front' => false),
 		'has_archive'   => true,
 		'hierarchical'	=> true,
-		'menu_icon'	=> '/wp-content/plugins/wp-monsters/img/spell.png'
+		'menu_icon'	=> plugin_dir_url( __FILE__ ).'img/spell.png'
 	);
 	register_post_type( 'spell', $args );
 }
