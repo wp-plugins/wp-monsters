@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Monsters\n"
 "POT-Creation-Date: 2015-01-17 15:34+0100\n"
-"PO-Revision-Date: 2015-01-17 15:34+0100\n"
+"PO-Revision-Date: 2015-01-17 15:35+0100\n"
 "Last-Translator: \n"
 "Language-Team: @Gwannon <monclus.jorge@gmail.com>\n"
 "Language: es_ES\n"
@@ -1206,9 +1206,8 @@ msgid "Construction cost"
 msgstr "Coste de construcción"
 
 #: ../wp-magic-items.php:157 ../wp-magic-items.php:255
-#, fuzzy
 msgid "Construction requeriments"
-msgstr "Coste de construcción"
+msgstr "Requerimientos de construcción"
 
 #, fuzzy
 #~ msgid "Spell-Like abilities"
