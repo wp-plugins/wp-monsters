@@ -361,7 +361,7 @@ function city_shortcode( $atts ) {
 					<td colspan='5'>[goverment]</td>
 				</tr>
 				<tr>
-					<td colspan='1'><b>".__('Populaton', 'wp_monsters')."</b></td>
+					<td colspan='1'><b>".__('Population', 'wp_monsters')."</b></td>
 					<td colspan='5'>[population]</td>
 				</tr>
 				<tr>

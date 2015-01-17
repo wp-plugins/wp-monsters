@@ -154,7 +154,7 @@ function wp_magic_items_show_magic_item_type() { //Show box
 		<tr><td><?php _e('CL', 'wp_monsters'); ?></td><td><?php echo wp_monsters_generate_select (1, 10, 1, 'cl', get_post_meta( $post->ID, 'cl', true ), false); ?></td></tr>
 		<tr><td><?php _e('Aura', 'wp_monsters'); ?></td><td><input type="text" style="width: 100%;" name="aura" value="<?php echo get_post_meta( $post->ID, 'aura', true ); ?>" /></td></tr>
 		<tr><td><?php _e('Construction cost', 'wp_monsters'); ?></td><td><input type="text" style="width: 100%;" name="constructioncost" value="<?php echo get_post_meta( $post->ID, 'constructioncost', true ); ?>" /></td></tr>
-		<tr><td><?php _e('Construction requirements', 'wp_monsters'); ?></td><td><input type="text" style="width: 100%;" name="constructionrequirements" value="<?php echo get_post_meta( $post->ID, 'constructionrequirements', true ); ?>" /></td></tr>
+		<tr><td><?php _e('Construction requeriments', 'wp_monsters'); ?></td><td><input type="text" style="width: 100%;" name="constructionrequirements" value="<?php echo get_post_meta( $post->ID, 'constructionrequirements', true ); ?>" /></td></tr>
 	</td></tr>
 	</table><?php
 }
@@ -252,8 +252,8 @@ function magic_item_shortcode( $atts ) {
 					<td colspan='6'>[aura]</td>
 				</tr>
 				<tr>
-					<td colspan='2'><b>".__('Construcction requeriments', 'wp_monsters')."</b></td>
-					<td colspan='6'><b>".__('Construcction cost', 'wp_monsters')."</b></td>
+					<td colspan='2'><b>".__('Construction requeriments', 'wp_monsters')."</b></td>
+					<td colspan='6'><b>".__('Construction cost', 'wp_monsters')."</b></td>
 
 				</tr>
 				<tr>
