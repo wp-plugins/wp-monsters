@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WP Monsters
- * @version 1.0.7
+ * @version 1.1
  */
 /* 
 This plugins uses trademarks and/or copyrights owned by Paizo Inc., which are used under Paizo's Community Use Policy. We are expressly prohibited from charging you to use or access this content. This plugins is not published, endorsed, or specifically approved by Paizo Inc. For more information about Paizo's Community Use Policy, please visit paizo.com/communityuse. For more information about Paizo Inc. and Paizo products, please visit paizo.com. 
@@ -199,15 +199,12 @@ function wp_feats_term_in_query($query) {
 function feat_shortcode( $atts ) {
 	$post = get_post( $atts['id'] );
 
-		$srs = array (__("Yes", 'wp_monsters'), __("No", 'wp_monsters'));
-
 	if ($atts['title'] != 'no') $html = "<h3>".apply_filters('the_title', $post->post_title)."</h3>";
 	$template = "<div><b>".__('Prerequisites', 'wp_monsters').":</b> [prerequisites]</div><div><b>".__('Normal', 'wp_monsters').":</b> [normal]</div>";
 	if ($atts['description'] != 'no') $template .= "<div><b>".__('Benefit', 'wp_monsters').":</b> ".apply_filters('the_content', $post->post_content)."</div>";
 	$codes = array("prerequisites", "normal" );
 	foreach($codes as $code) {
 		$data = get_post_meta( $post->ID, $code, true );
-		if ($code == 'sr') $data = $srs[$data];
 		if ($data == '')  $data = "--";
 		$template = str_replace("[".$code."]", $data, $template);
 	} 

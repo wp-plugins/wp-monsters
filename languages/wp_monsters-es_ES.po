@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Monsters\n"
-"POT-Creation-Date: 2015-01-15 20:15+0100\n"
-"PO-Revision-Date: 2015-01-15 20:18+0100\n"
+"POT-Creation-Date: 2015-01-16 01:14+0100\n"
+"PO-Revision-Date: 2015-01-16 01:14+0100\n"
 "Last-Translator: \n"
 "Language-Team: @Gwannon <monclus.jorge@gmail.com>\n"
 "Language: es_ES\n"
@@ -23,7 +23,7 @@ msgid "Monster"
 msgstr "Monstruo"
 
 #: ../wp-monsters.php:43 ../wp-weapons.php:22 ../wp-spells.php:22
-#: ../wp-feats.php:22 ../wp-cities.php:22
+#: ../wp-feats.php:22 ../wp-cities.php:22 ../wp-magic-items.php:36
 msgid "Add new"
 msgstr "Añadir nuevo"
 
@@ -98,7 +98,7 @@ msgstr "Nuevo tipo de monstruo"
 #: ../wp-monsters.php:128 ../wp-monsters.php:415 ../wp-weapons.php:108
 #: ../wp-weapons.php:217 ../wp-spells.php:107 ../wp-spells.php:183
 #: ../wp-feats.php:108 ../wp-feats.php:150 ../wp-cities.php:108
-#: ../wp-cities.php:262
+#: ../wp-cities.php:262 ../wp-magic-items.php:122 ../wp-magic-items.php:164
 msgid "Shortcode"
 msgstr "Código corto"
 
@@ -418,11 +418,11 @@ msgstr "Habilidades especiales"
 msgid "Category"
 msgstr "Categoría"
 
-#: ../wp-monsters.php:577 ../wp-feats.php:137 ../wp-feats.php:206
+#: ../wp-monsters.php:577 ../wp-feats.php:137 ../wp-feats.php:204
 msgid "Benefit"
 msgstr "Beneficio"
 
-#: ../wp-monsters.php:611
+#: ../wp-monsters.php:615
 msgid "Show All"
 msgstr "Mostrar todo"
 
@@ -547,7 +547,7 @@ msgstr "Tipo general"
 msgid "Subtype"
 msgstr "Subtipo"
 
-#: ../wp-weapons.php:161 ../wp-weapons.php:279
+#: ../wp-weapons.php:161 ../wp-weapons.php:279 ../wp-magic-items.php:150
 msgid "Cost"
 msgstr "Coste"
 
@@ -568,7 +568,8 @@ msgstr "Crítico"
 msgid "Range"
 msgstr "Alcance"
 
-#: ../wp-weapons.php:174 ../wp-weapons.php:284
+#: ../wp-weapons.php:174 ../wp-weapons.php:284 ../wp-magic-items.php:151
+#: ../wp-magic-items.php:230
 msgid "Weight"
 msgstr "Peso"
 
@@ -577,7 +578,7 @@ msgid "Type of damage"
 msgstr "Tipos de daño"
 
 #: ../wp-weapons.php:182 ../wp-weapons.php:186 ../wp-weapons.php:190
-#: ../wp-spells.php:135 ../wp-spells.php:236 ../wp-feats.php:202
+#: ../wp-spells.php:135 ../wp-spells.php:236
 msgid "No"
 msgstr "No"
 
@@ -681,7 +682,7 @@ msgstr "Nuevo tipo de hechizo"
 msgid "SPELL"
 msgstr "HECHIZO"
 
-#: ../wp-spells.php:135 ../wp-spells.php:236 ../wp-feats.php:202
+#: ../wp-spells.php:135 ../wp-spells.php:236
 msgid "Yes"
 msgstr "Si"
 
@@ -810,11 +811,11 @@ msgstr "Nuevo tipo de dote"
 msgid "FEATS"
 msgstr "DOTES"
 
-#: ../wp-feats.php:136 ../wp-feats.php:205
+#: ../wp-feats.php:136 ../wp-feats.php:203
 msgid "Prerequisites"
 msgstr "Prerrequisitos"
 
-#: ../wp-feats.php:205
+#: ../wp-feats.php:203
 msgid "Normal"
 msgstr "Normal"
 
@@ -1029,6 +1030,106 @@ msgstr ""
 
 #: ../wp-cities.php:371
 msgid "Base value"
+msgstr ""
+
+#: ../wp-magic-items.php:34 ../wp-magic-items.php:46
+#, fuzzy
+msgid "Magic items"
+msgstr "Objetos menores"
+
+#: ../wp-magic-items.php:35
+#, fuzzy
+msgid "Magic item"
+msgstr "Objetos menores"
+
+#: ../wp-magic-items.php:37 ../wp-magic-items.php:50
+#, fuzzy
+msgid "Add new magic item"
+msgstr "Añadir nueva dote"
+
+#: ../wp-magic-items.php:38
+#, fuzzy
+msgid "Edit magic item"
+msgstr "Editar dote"
+
+#: ../wp-magic-items.php:39
+#, fuzzy
+msgid "New magic item"
+msgstr "Nueva dote"
+
+#: ../wp-magic-items.php:40
+#, fuzzy
+msgid "All magic items"
+msgstr "Todos los monstruos"
+
+#: ../wp-magic-items.php:41
+#, fuzzy
+msgid "View magic item"
+msgstr "Ver dote"
+
+#: ../wp-magic-items.php:42
+#, fuzzy
+msgid "Search magic item"
+msgstr "Buscar dote"
+
+#: ../wp-magic-items.php:43
+#, fuzzy
+msgid "Magic item not found"
+msgstr "Dote no encontrada"
+
+#: ../wp-magic-items.php:44
+#, fuzzy
+msgid "Magic item not found in trash"
+msgstr "Dote no encontrada en la papelera"
+
+#: ../wp-magic-items.php:68 ../wp-magic-items.php:69 ../wp-magic-items.php:78
+#: ../wp-magic-items.php:165
+#, fuzzy
+msgid "Type of magic items"
+msgstr "Tipos de dotes"
+
+#: ../wp-magic-items.php:70
+#, fuzzy
+msgid "Search type of magic items"
+msgstr "Buscar  tipo de dote"
+
+#: ../wp-magic-items.php:71
+#, fuzzy
+msgid "All type of magic items"
+msgstr "Todos los tipos de dotes"
+
+#: ../wp-magic-items.php:72
+#, fuzzy
+msgid "Parent type of magic items"
+msgstr "Buscar  tipo de monstruos"
+
+#: ../wp-magic-items.php:73
+#, fuzzy
+msgid "Parent type of magic items:"
+msgstr "Buscar  tipo de monstruos"
+
+#: ../wp-magic-items.php:74
+#, fuzzy
+msgid "Edit type of magic items"
+msgstr "Editar  tipo de dote"
+
+#: ../wp-magic-items.php:75
+#, fuzzy
+msgid "Update type of magic items"
+msgstr "Actualizar tipo de dote"
+
+#: ../wp-magic-items.php:76
+#, fuzzy
+msgid "Add new type of magic items"
+msgstr "Añadir nuevo tipo de dote"
+
+#: ../wp-magic-items.php:77
+#, fuzzy
+msgid "New type of magic items"
+msgstr "Nuevo tipo de dote"
+
+#: ../wp-magic-items.php:139
+msgid "MAGIC"
 msgstr ""
 
 #, fuzzy
