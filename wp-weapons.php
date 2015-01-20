@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WP Monsters
- * @version 1.1
+ * @version 1.2
  */
 /* 
 This plugins uses trademarks and/or copyrights owned by Paizo Inc., which are used under Paizo's Community Use Policy. We are expressly prohibited from charging you to use or access this content. This plugins is not published, endorsed, or specifically approved by Paizo Inc. For more information about Paizo's Community Use Policy, please visit paizo.com/communityuse. For more information about Paizo Inc. and Paizo products, please visit paizo.com. 
@@ -273,7 +273,7 @@ function weapon_shortcode( $atts ) {
 	if ($atts['title'] != 'no') $html = "<h3>".apply_filters('the_title', $post->post_title)."</h3>";
 	if ($atts['image'] != 'no' && has_post_thumbnail($post->ID) ) $html .= get_the_post_thumbnail($post->ID, 'medium', array('class' => "alignleft") );
 	if ($atts['description'] != 'no') $html .= "<div>".apply_filters('the_content', $post->post_content)."</div>";
-	$template = "<table border='1'>
+	$template = "<table class='wp-weapons'>
 		<tr>
 			<th>".apply_filters('the_title', $post->post_title)."</th>
 			<th>".__('Cost', 'wp_monsters')."</th>

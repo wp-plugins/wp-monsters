@@ -1,9 +1,9 @@
 === WP Monsters ===
 Contributors: gwannon 
-Tags: monsters, spells, rpg, pathfinder, role playing games, role playing game, feats, cities, weapons
+Tags: monsters, spells, rpg, pathfinder, role playing games, role playing game, feats, cities, weapons, magic items, traps
 Requires at least: 4.0.0
 Tested up to: 4.0.0
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,8 +32,11 @@ To install WP Monsters:
 
 == Changelog ==
 
+= 1.2 =
+* Support for Traps.
+
 = 1.1 =
-* Support for magic items.
+* Support for Magic items.
 
 = 1.0.7 =
 * Support for Cities.
@@ -54,4 +57,4 @@ To install WP Monsters:
 * Support for Feats.
 
 = 1.0.1 =
-* Support for Speels.
+* Support for Spells.
