@@ -7,7 +7,7 @@
 Plugin Name: WP Monsters
 Plugin URI: http://blog.gwannon.com/wp-monsters/
 Description: This plugin allows to the bloggers to publish in a easy way their Pathfinder RPG home-brew monster in their Wordpress blogs.
-Version: 1.2
+Version: 1.3
 Author: Gwannon
 Author URI: http://blog.gwannon.com/
 */
