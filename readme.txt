@@ -33,7 +33,7 @@ To install WP Monsters:
 == Translations included ==
 
 * Deutsch (German) by http://nerdig-by-nature.de/
-* Spanish (Castellano)
+* Castellano (Spanish)
 
 == Changelog ==
 
