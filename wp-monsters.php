@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WP Monsters
- * @version 1.2
+ * @version 1.3
  */
 /*
 Plugin Name: WP Monsters
@@ -62,7 +62,7 @@ function wp_monsters_create_post_type() {
 		'query_var'	=> true,
 		'has_archive'   => true,
 		'hierarchical'	=> true,
-		'menu_icon'	=> '/wp-content/plugins/wp-monsters/img/monster.png'
+		'menu_icon'	=> plugin_dir_url( __FILE__ ).'img/monster.png'
 	);
 	register_post_type( 'monster', $args );
 }
@@ -262,11 +262,14 @@ add_action('add_meta_boxes', 'wp_monsters_add_monster_offense');
 function wp_monsters_show_monster_offense() { //Show box
 	global $post;
 
+	$measures = get_option('wp_monsters_measures');
+	if ($measures == '') $measures = 5;
+
 	$flytypes = array("--", __("clumsy", 'wp_monsters'), __("poor", 'wp_monsters'), __("average", 'wp_monsters'), __("good", 'wp_monsters'), __("perfect", 'wp_monsters')); 
 
 	?><table width="100%">
-	<tr><td><?php _e('Speed', 'wp_monsters'); ?></td><td><?php echo wp_monsters_generate_select (0, 120, 5, 'speed', get_post_meta( $post->ID, 'speed', true ), false); ?> <?php _e('ft.', 'wp_monsters'); ?></td></tr>
-	<tr><td><?php _e('Fly', 'wp_monsters'); ?></td><td><?php echo wp_monsters_generate_select (0, 120, 5, 'fly', get_post_meta( $post->ID, 'fly', true ), false); ?> <?php _e('ft.', 'wp_monsters'); ?></td></tr>
+	<tr><td><?php _e('Speed', 'wp_monsters'); ?></td><td><?php echo wp_monsters_generate_select (0, 120, $measures, 'speed', get_post_meta( $post->ID, 'speed', true ), false); ?> <?php _e('ft.', 'wp_monsters'); ?></td></tr>
+	<tr><td><?php _e('Fly', 'wp_monsters'); ?></td><td><?php echo wp_monsters_generate_select (0, 120, $measures, 'fly', get_post_meta( $post->ID, 'fly', true ), false); ?> <?php _e('ft.', 'wp_monsters'); ?></td></tr>
 	<tr><td><?php _e('Fly maneuverability', 'wp_monsters'); ?></td><td>
 	<select name='flytype'>
 	<?php 
@@ -278,8 +281,8 @@ function wp_monsters_show_monster_offense() { //Show box
 	</td></tr>
 	<tr><td><?php _e('Melee', 'wp_monsters'); ?></td><td><input type="text" name="melee" style="width: 100%;" value="<?php echo get_post_meta( $post->ID, 'melee', true ); ?>" /></td></tr>
 
-	<tr><td><?php _e('Space', 'wp_monsters'); ?></td><td><?php echo wp_monsters_generate_select (5, 50, 5, 'space', get_post_meta( $post->ID, 'space', true ), false); ?> <?php _e('ft.', 'wp_monsters'); ?></td></tr>
-	<tr><td><?php _e('Reach', 'wp_monsters'); ?></td><td><?php echo wp_monsters_generate_select (5, 50, 5, 'reach', get_post_meta( $post->ID, 'reach', true ), false); ?> <?php _e('ft.', 'wp_monsters'); ?></td></tr>
+	<tr><td><?php _e('Space', 'wp_monsters'); ?></td><td><?php echo wp_monsters_generate_select ($measures, 50, $measures, 'space', get_post_meta( $post->ID, 'space', true ), false); ?> <?php _e('ft.', 'wp_monsters'); ?></td></tr>
+	<tr><td><?php _e('Reach', 'wp_monsters'); ?></td><td><?php echo wp_monsters_generate_select ($measures, 50, $measures, 'reach', get_post_meta( $post->ID, 'reach', true ), false); ?> <?php _e('ft.', 'wp_monsters'); ?></td></tr>
 
 	<tr><td><?php _e('Ranged', 'wp_monsters'); ?></td><td><input type="text" name="ranged" style="width: 100%;" value="<?php echo get_post_meta( $post->ID, 'ranged', true ); ?>" /></td></tr>
 	<tr><td colspan="2"><?php _e('Special attacks', 'wp_monsters'); ?></td></tr>
@@ -513,9 +516,9 @@ function monster_shortcode( $atts ) {
 				</tr>
 				<tr>
 					<td>
-						<b>".__('Speed', 'wp_monsters').":</b> [speed] ".__('ft.', 'wp_monsters')." ".__('Fly', 'wp_monsters')." [fly] ".__('ft.', 'wp_monsters')." ([flytype])<br/>
+						<b>".__('Speed', 'wp_monsters').":</b> [speed] [feets] ".__('Fly', 'wp_monsters')." [fly] [feets] ([flytype])<br/>
 						<b>".__('Melee', 'wp_monsters').":</b> [melee]<br/>
-						<b>".__('Space', 'wp_monsters')."</b> [space] ".__('ft.', 'wp_monsters')." <b>".__('Reach', 'wp_monsters')."</b> [reach] ".__('ft.', 'wp_monsters')."</br>
+						<b>".__('Space', 'wp_monsters')."</b> [space] [feets] <b>".__('Reach', 'wp_monsters')."</b> [reach] [feets]</br>
 						<b>".__('Ranged', 'wp_monsters').":</b> [ranged]<br/>
 						<b>".__('Special attacks', 'wp_monsters').":</b> [special-attacks]<br/>
 						<b>".__('Spell-like abilities', 'wp_monsters').":</b><br/>[spell-like-abilities]
@@ -542,11 +545,16 @@ function monster_shortcode( $atts ) {
 				</tr>
 			</tbody>
 		</table>";
-	$codes = array("type", "size", "cr", "xp", "init", "senses", "str", "dex", "con", "int", "wis", "cha", "ba", "cmb", "cmd", "feats", "skills", "speed", "fly", "flytype", "space", "reach", "fort", "ref", "will", "environment", "organization", "treasure", "special-abilities", "sr", "melee", "ranged","special-attacks", "spell-like-abilities", "ca", "flat-footed", "touched", "infoca", "hp", "dr", "inmmune", "resist", "weaknesses", "languages", "alignment");
+	$codes = array("type", "size", "cr", "xp", "init", "senses", "str", "dex", "con", "int", "wis", "cha", "ba", "cmb", "cmd", "feats", "skills", "speed", "fly", "flytype", "space", "reach", "fort", "ref", "will", "environment", "organization", "treasure", "special-abilities", "sr", "melee", "ranged","special-attacks", "spell-like-abilities", "ca", "flat-footed", "touched", "infoca", "hp", "dr", "inmmune", "resist", "weaknesses", "languages", "alignment", "feets");
 	foreach($codes as $code) {
 		$data = get_post_meta( $post->ID, $code, true );
 		if ($code == 'special-abilities' || $code == 'spell-like-abilities') $data = wpautop($data, true);
-		else if ($code == 'size') $data = $sizes[$data];
+		else if ($code == 'feets') {
+			$measures = get_option('wp_monsters_measures');
+			if ($measures == '') $measures = 5;
+			if ($measures == 5) $data =  __('ft.', 'wp_monsters');
+			else if ($measures == 1.5) $data =  __('meters', 'wp_monsters');
+		} else if ($code == 'size') $data = $sizes[$data];
 		else if ($code == 'flytype') $data = $flytypes[$data];
 		else if ($code == 'alignment') $data = $alignment[$data];
 		else if (($code == "str" || $code == "dex" || $code == "con" || $code == "int" || $code == "wis" || $code == "cha") && $data == 0)  $data = "--";
@@ -563,37 +571,38 @@ add_shortcode( 'monster', 'monster_shortcode' );
 //Modificamos el contenido the_content(); 
 add_filter( 'the_content', 'wp_monsters_show_content',17 );
 function wp_monsters_show_content ($content) {
+	global $wp_query; 
+	if (is_object($wp_query)) {
+		if (get_post_type($wp_query->post->ID) == 'monster') {
+			if (has_post_thumbnail($wp_query->post->ID) ) $content .= get_the_post_thumbnail($wp_query->post->ID, 'medium', array('class' => "alignleft") ).$content;
+			$content .= monster_shortcode(array("id" => $wp_query->post->ID, "title" => 'no', "description" => 'no'));
+			//$content .= "Prueba"; 
+		} else if (get_post_type($wp_query->post->ID) == 'spell') {
 
-	if (get_post_type($wp_query->post->ID) == 'monster') {
-		if (has_post_thumbnail($wp_query->post->ID) ) $content .= get_the_post_thumbnail($wp_query->post->ID, 'medium', array('class' => "alignleft") ).$content;
-		$content .= monster_shortcode(array("id" => $wp_query->post->ID, "title" => 'no', "description" => 'no'));
-		//$content .= "Prueba"; 
-	} else if (get_post_type($wp_query->post->ID) == 'spell') {
+			$content = spell_shortcode(array("id" => $wp_query->post->ID, "title" => 'no', "description" => 'no')).$content;
+			//$content .= "Prueba"; 
+		} else if (get_post_type($wp_query->post->ID) == 'feat') {
 
-		$content = spell_shortcode(array("id" => $wp_query->post->ID, "title" => 'no', "description" => 'no')).$content;
-		//$content .= "Prueba"; 
-	} else if (get_post_type($wp_query->post->ID) == 'feat') {
+			$content = feat_shortcode(array("id" => $wp_query->post->ID, "title" => 'no', "description" => 'no'))."<div><b>".__('Benefit', 'wp_monsters').":</b> ".$content."</div>";
+			//$content .= "Prueba"; 
+		} else if (get_post_type($wp_query->post->ID) == 'magic_item') {
 
-		$content = feat_shortcode(array("id" => $wp_query->post->ID, "title" => 'no', "description" => 'no'))."<div><b>".__('Benefit', 'wp_monsters').":</b> ".$content."</div>";
-		//$content .= "Prueba"; 
-	} else if (get_post_type($wp_query->post->ID) == 'magic_item') {
+			$content = magic_item_shortcode(array("id" => $wp_query->post->ID, "title" => 'no', "description" => 'no')).$content;
+			//$content .= "Prueba"; 
+		} else if (get_post_type($wp_query->post->ID) == 'weapon') {
 
-		$content = magic_item_shortcode(array("id" => $wp_query->post->ID, "title" => 'no', "description" => 'no')).$content;
-		//$content .= "Prueba"; 
-	} else if (get_post_type($wp_query->post->ID) == 'weapon') {
+			$content = $content.weapon_shortcode(array("id" => $wp_query->post->ID, "title" => 'no', "description" => 'no'));
+			//$content .= "Prueba"; 
+		} else if (get_post_type($wp_query->post->ID) == 'trap') {
 
-		$content = $content.weapon_shortcode(array("id" => $wp_query->post->ID, "title" => 'no', "description" => 'no'));
-		//$content .= "Prueba"; 
-	} else if (get_post_type($wp_query->post->ID) == 'trap') {
+			$content = $content.trap_shortcode(array("id" => $wp_query->post->ID, "title" => 'no', "description" => 'no'));
+			//$content .= "Prueba"; 
+		} else if (get_post_type($wp_query->post->ID) == 'city') {
 
-		$content = $content.trap_shortcode(array("id" => $wp_query->post->ID, "title" => 'no', "description" => 'no'));
-		//$content .= "Prueba"; 
-	} else if (get_post_type($wp_query->post->ID) == 'city') {
-
-		$content = $content.city_shortcode(array("id" => $wp_query->post->ID, "title" => 'no', "description" => 'no'));
-		//$content .= "Prueba"; 
+			$content = $content.city_shortcode(array("id" => $wp_query->post->ID, "title" => 'no', "description" => 'no'));
+			//$content .= "Prueba"; 
+		}
 	}
-
 	return $content;
 }
 
@@ -626,6 +635,40 @@ function wp_monsters_taxonomy_dropdown($taxonomy) { ?>
 		} ?>
 	</select>
 <?php }
+
+//PAgina de settings
+add_action('admin_menu', 'wp_monsters_create_menu');
+
+function wp_monsters_create_menu() {
+	add_options_page(__('WP Monsters Settings', 'wp_monsters'), __('WP Monsters Settings', 'wp_monsters'), 'manage_options', __FILE__, 'wp_monsters_page_settings');
+	//add_menu_page(__('WP Monsters Settings', 'wp_monsters'), __('WP Monsters Settings', 'wp_monsters'), 'administrator', __FILE__, 'wp_monsters_page_settings', plugins_url('/img/setting.png', __FILE__));
+
+}
+
+function wp_monsters_page_settings() {
+if (isset($_REQUEST['wp_monsters_measures']) && $_REQUEST['wp_monsters_measures'] != '') {
+	update_option( 'wp_monsters_measures', $_REQUEST['wp_monsters_measures']);
+}
+?>
+<div class="wrap">
+	<h2><?php _e('WP Monsters Settings', 'wp_monsters'); echo get_option('wp_monsters_measures'); ?></h2>
+	<form method="post" action="">
+		<table class="form-table">
+			<tr valign="top">
+				<th scope="row"><?php _e('Measurement', 'wp_monsters'); ?></th>
+				<td>
+					<select name="wp_monsters_measures">
+						<option value="5"<?php if (get_option('wp_monsters_measures') == 5) { echo " selected='selected'"; } ?>><?php _e('ft.', 'wp_monsters'); ?></option>
+						<option value="1.5"<?php if (get_option('wp_monsters_measures') == 1.5) { echo " selected='selected'"; } ?>><?php _e('m.', 'wp_monsters'); ?></option>
+					</select>
+				</td>
+			</tr>
+		</table>
+		<?php submit_button(); ?>
+	</form>
+</div>
+<?php }
+
 
 require_once ('wp-spells.php');
 require_once ('wp-feats.php');

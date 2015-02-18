@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Monsters\n"
-"POT-Creation-Date: 2015-01-17 15:34+0100\n"
-"PO-Revision-Date: 2015-01-17 15:35+0100\n"
+"POT-Creation-Date: 2015-01-20 22:28+0100\n"
+"PO-Revision-Date: 2015-01-20 22:28+0100\n"
 "Last-Translator: \n"
 "Language-Team: @Gwannon <monclus.jorge@gmail.com>\n"
 "Language: es_ES\n"
@@ -23,7 +23,8 @@ msgid "Monster"
 msgstr "Monstruo"
 
 #: ../wp-monsters.php:43 ../wp-weapons.php:22 ../wp-spells.php:22
-#: ../wp-feats.php:22 ../wp-cities.php:22 ../wp-magic-items.php:26
+#: ../wp-feats.php:22 ../wp-cities.php:22 ../wp-traps.php:22
+#: ../wp-magic-items.php:26
 msgid "Add new"
 msgstr "Añadir nuevo"
 
@@ -98,11 +99,12 @@ msgstr "Nuevo tipo de monstruo"
 #: ../wp-monsters.php:128 ../wp-monsters.php:415 ../wp-weapons.php:108
 #: ../wp-weapons.php:217 ../wp-spells.php:107 ../wp-spells.php:183
 #: ../wp-feats.php:108 ../wp-feats.php:150 ../wp-cities.php:108
-#: ../wp-cities.php:262 ../wp-magic-items.php:112 ../wp-magic-items.php:175
+#: ../wp-cities.php:262 ../wp-traps.php:108 ../wp-traps.php:229
+#: ../wp-magic-items.php:112 ../wp-magic-items.php:175
 msgid "Shortcode"
 msgstr "Código corto"
 
-#: ../wp-monsters.php:145 ../wp-monsters.php:489
+#: ../wp-monsters.php:145 ../wp-monsters.php:489 ../wp-traps.php:125
 msgid "GENERAL"
 msgstr "GENERAL"
 
@@ -188,6 +190,7 @@ msgid "chaotic evil"
 msgstr "caótico malvado"
 
 #: ../wp-monsters.php:160 ../wp-monsters.php:416 ../wp-spells.php:184
+#: ../wp-traps.php:140 ../wp-traps.php:295
 msgid "Type"
 msgstr "Tipo"
 
@@ -199,11 +202,13 @@ msgstr "Alineamiento"
 msgid "Size"
 msgstr "Tamaño"
 
-#: ../wp-monsters.php:179 ../wp-monsters.php:494
+#: ../wp-monsters.php:179 ../wp-monsters.php:494 ../wp-traps.php:149
+#: ../wp-traps.php:292
 msgid "CR"
 msgstr "VD"
 
-#: ../wp-monsters.php:180 ../wp-monsters.php:495
+#: ../wp-monsters.php:180 ../wp-monsters.php:495 ../wp-traps.php:150
+#: ../wp-traps.php:298
 msgid "XP"
 msgstr "PX"
 
@@ -422,7 +427,7 @@ msgstr "Categoría"
 msgid "Benefit"
 msgstr "Beneficio"
 
-#: ../wp-monsters.php:615
+#: ../wp-monsters.php:619
 msgid "Show All"
 msgstr "Mostrar todo"
 
@@ -579,7 +584,8 @@ msgid "Type of damage"
 msgstr "Tipos de daño"
 
 #: ../wp-weapons.php:182 ../wp-weapons.php:186 ../wp-weapons.php:190
-#: ../wp-spells.php:135 ../wp-spells.php:236
+#: ../wp-spells.php:135 ../wp-spells.php:236 ../wp-traps.php:137
+#: ../wp-traps.php:284
 msgid "No"
 msgstr "No"
 
@@ -607,7 +613,7 @@ msgstr "Especial"
 msgid "Spells"
 msgstr "Hechizos"
 
-#: ../wp-spells.php:21
+#: ../wp-spells.php:21 ../wp-traps.php:189 ../wp-traps.php:282
 msgid "Spell"
 msgstr "Hechizo"
 
@@ -723,7 +729,7 @@ msgstr "Componentes"
 msgid "Target"
 msgstr "Objetivo"
 
-#: ../wp-spells.php:154 ../wp-spells.php:267
+#: ../wp-spells.php:154 ../wp-spells.php:267 ../wp-traps.php:203
 msgid "Duration"
 msgstr "Duración"
 
@@ -1028,6 +1034,195 @@ msgstr "Objetos mayores"
 #: ../wp-cities.php:371
 msgid "Base value"
 msgstr ""
+
+#: ../wp-traps.php:20 ../wp-traps.php:32
+msgid "Traps"
+msgstr "Trampas"
+
+#: ../wp-traps.php:21
+msgid "Trap"
+msgstr "Trampa"
+
+#: ../wp-traps.php:23 ../wp-traps.php:36
+#, fuzzy
+msgid "Add new trap"
+msgstr "Añadir nueva arma"
+
+#: ../wp-traps.php:24
+#, fuzzy
+msgid "Edit trap"
+msgstr "Editar arma"
+
+#: ../wp-traps.php:25
+#, fuzzy
+msgid "New trap"
+msgstr "Nueva arma"
+
+#: ../wp-traps.php:26
+#, fuzzy
+msgid "All traps"
+msgstr "Todos las armas"
+
+#: ../wp-traps.php:27
+#, fuzzy
+msgid "View trap"
+msgstr "Ver arma"
+
+#: ../wp-traps.php:28
+#, fuzzy
+msgid "Search trap"
+msgstr "Buscar arma"
+
+#: ../wp-traps.php:29
+#, fuzzy
+msgid "Trap not found"
+msgstr "Arma no encontrada"
+
+#: ../wp-traps.php:30
+#, fuzzy
+msgid "Trap not found in trash"
+msgstr "Arma no encontrada en la papelera"
+
+#: ../wp-traps.php:54 ../wp-traps.php:55 ../wp-traps.php:64
+#: ../wp-traps.php:230
+#, fuzzy
+msgid "Type of traps"
+msgstr "Tipos de armas"
+
+#: ../wp-traps.php:56
+#, fuzzy
+msgid "Search type of traps"
+msgstr "Buscar  tipo de armas"
+
+#: ../wp-traps.php:57
+#, fuzzy
+msgid "All type of traps"
+msgstr "Todos los tipos de armas"
+
+#: ../wp-traps.php:58
+#, fuzzy
+msgid "Parent type of traps"
+msgstr "Buscar  tipo de monstruos"
+
+#: ../wp-traps.php:59
+#, fuzzy
+msgid "Parent type of traps:"
+msgstr "Buscar  tipo de monstruos"
+
+#: ../wp-traps.php:60
+#, fuzzy
+msgid "Edit type of traps"
+msgstr "Editar  tipo de arma"
+
+#: ../wp-traps.php:61
+#, fuzzy
+msgid "Update type of traps"
+msgstr "Actualizar tipo de arma"
+
+#: ../wp-traps.php:62
+#, fuzzy
+msgid "Add new type of traps"
+msgstr "Añadir nuevo tipo de arma"
+
+#: ../wp-traps.php:63
+#, fuzzy
+msgid "New type of traps"
+msgstr "Nuevo tipo de arma"
+
+#: ../wp-traps.php:136 ../wp-traps.php:281
+msgid "Mechanical"
+msgstr ""
+
+#: ../wp-traps.php:136 ../wp-traps.php:281
+msgid "Magical"
+msgstr ""
+
+#: ../wp-traps.php:136 ../wp-traps.php:281
+msgid "Mechanical and magical"
+msgstr ""
+
+#: ../wp-traps.php:137 ../wp-traps.php:284
+msgid "Lock (DC 30 Disable Device)"
+msgstr ""
+
+#: ../wp-traps.php:137 ../wp-traps.php:284
+msgid "Hidden Switch (DC 25 Perception)"
+msgstr ""
+
+#: ../wp-traps.php:137 ../wp-traps.php:284
+msgid "Hidden Lock (DC 25 Perception / DC 30 Disable Device)"
+msgstr ""
+
+#: ../wp-traps.php:151 ../wp-traps.php:301
+msgid "Bypass"
+msgstr ""
+
+#: ../wp-traps.php:160 ../wp-traps.php:304
+msgid "Perception DC"
+msgstr ""
+
+#: ../wp-traps.php:161 ../wp-traps.php:307
+msgid "Disable Device DC"
+msgstr ""
+
+#: ../wp-traps.php:178 ../wp-traps.php:310
+msgid "EFFECTS"
+msgstr ""
+
+#: ../wp-traps.php:189 ../wp-traps.php:282
+#, fuzzy
+msgid "Location"
+msgstr "Población"
+
+#: ../wp-traps.php:189 ../wp-traps.php:282
+msgid "Sound"
+msgstr ""
+
+#: ../wp-traps.php:189 ../wp-traps.php:282
+msgid "Visual"
+msgstr ""
+
+#: ../wp-traps.php:189 ../wp-traps.php:282
+#, fuzzy
+msgid "Touch"
+msgstr "De toque"
+
+#: ../wp-traps.php:189 ../wp-traps.php:282
+msgid "Timed"
+msgstr ""
+
+#: ../wp-traps.php:191 ../wp-traps.php:283
+msgid "No Reset"
+msgstr ""
+
+#: ../wp-traps.php:191 ../wp-traps.php:283
+msgid "Repair"
+msgstr ""
+
+#: ../wp-traps.php:191 ../wp-traps.php:283
+msgid "Manual"
+msgstr ""
+
+#: ../wp-traps.php:191 ../wp-traps.php:283
+msgid "Automatic"
+msgstr ""
+
+#: ../wp-traps.php:194 ../wp-traps.php:313
+msgid "Trigger"
+msgstr ""
+
+#: ../wp-traps.php:204 ../wp-traps.php:316
+msgid "Reset"
+msgstr ""
+
+#: ../wp-traps.php:213
+msgid "Reset automatic time"
+msgstr ""
+
+#: ../wp-traps.php:214 ../wp-traps.php:319
+#, fuzzy
+msgid "Effect"
+msgstr "perfecto"
 
 #: ../wp-magic-items.php:24 ../wp-magic-items.php:36
 #, fuzzy
