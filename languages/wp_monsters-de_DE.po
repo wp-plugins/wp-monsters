@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Monsters\n"
-"POT-Creation-Date: 2015-02-19 22:44+0100\n"
-"PO-Revision-Date: 2015-02-19 22:44+0100\n"
+"POT-Creation-Date: 2015-02-19 23:25+0100\n"
+"PO-Revision-Date: 2015-02-19 23:25+0100\n"
 "Last-Translator: Floh <Floh@l4f.de>\n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: wp-monsters.php:41 wp-monsters.php:53
+#: wp-monsters.php:41 wp-monsters.php:53 wp-monsters.php:670
 msgid "Monsters"
 msgstr "Monster"
 
@@ -28,7 +28,7 @@ msgid "Monster"
 msgstr "Monster"
 
 #: wp-monsters.php:43 wp-weapons.php:22 wp-spells.php:22 wp-feats.php:22
-#: wp-cities.php:22 wp-traps.php:24 wp-magic-items.php:26
+#: wp-cities.php:22 wp-traps.php:23 wp-magic-items.php:26
 msgid "Add new"
 msgstr "Hinzufügen"
 
@@ -44,7 +44,7 @@ msgstr "Monster bearbeiten"
 msgid "New monster"
 msgstr "Neues Monster"
 
-#: wp-monsters.php:47
+#: wp-monsters.php:47 wp-monsters.php:670
 msgid "All monsters"
 msgstr "Alle Monster"
 
@@ -65,6 +65,7 @@ msgid "Monster not found in trash"
 msgstr "Monster nicht bei den gelöschten gefunden"
 
 #: wp-monsters.php:75 wp-monsters.php:76 wp-monsters.php:85
+#: wp-monsters.php:671
 msgid "Type of monsters"
 msgstr "Art des Monsters"
 
@@ -102,12 +103,12 @@ msgstr "Neue Monster Art"
 
 #: wp-monsters.php:129 wp-monsters.php:419 wp-weapons.php:109
 #: wp-weapons.php:218 wp-spells.php:108 wp-spells.php:184 wp-feats.php:109
-#: wp-feats.php:151 wp-cities.php:109 wp-cities.php:263 wp-traps.php:112
-#: wp-traps.php:233 wp-magic-items.php:113 wp-magic-items.php:176
+#: wp-feats.php:151 wp-cities.php:109 wp-cities.php:263 wp-traps.php:111
+#: wp-traps.php:232 wp-magic-items.php:113 wp-magic-items.php:176
 msgid "Shortcode"
 msgstr "Abkürzung"
 
-#: wp-monsters.php:146 wp-monsters.php:493 wp-traps.php:129
+#: wp-monsters.php:146 wp-monsters.php:493 wp-traps.php:128
 msgid "GENERAL"
 msgstr "ALLGEMEIN"
 
@@ -183,8 +184,8 @@ msgstr "neutral böse"
 msgid "chaotic evil"
 msgstr "chaotisch böse"
 
-#: wp-monsters.php:161 wp-monsters.php:420 wp-spells.php:185 wp-traps.php:144
-#: wp-traps.php:299
+#: wp-monsters.php:161 wp-monsters.php:420 wp-spells.php:185 wp-traps.php:143
+#: wp-traps.php:298
 msgid "Type"
 msgstr "Typ"
 
@@ -196,11 +197,11 @@ msgstr "Gesinnung"
 msgid "Size"
 msgstr "Größe"
 
-#: wp-monsters.php:180 wp-monsters.php:498 wp-traps.php:153 wp-traps.php:296
+#: wp-monsters.php:180 wp-monsters.php:498 wp-traps.php:152 wp-traps.php:295
 msgid "CR"
 msgstr "HG"
 
-#: wp-monsters.php:181 wp-monsters.php:499 wp-traps.php:154 wp-traps.php:302
+#: wp-monsters.php:181 wp-monsters.php:499 wp-traps.php:153 wp-traps.php:301
 msgid "XP"
 msgstr "EP"
 
@@ -297,7 +298,7 @@ msgid "Speed"
 msgstr "Bewegungsrate"
 
 #: wp-monsters.php:272 wp-monsters.php:273 wp-monsters.php:285
-#: wp-monsters.php:286 wp-monsters.php:556 wp-monsters.php:662
+#: wp-monsters.php:286 wp-monsters.php:556 wp-monsters.php:654
 msgid "ft."
 msgstr "Fuß"
 
@@ -374,7 +375,7 @@ msgstr "KMB"
 msgid "CMD"
 msgstr "KMV"
 
-#: wp-monsters.php:338 wp-monsters.php:530 wp-monsters.php:683 wp-feats.php:20
+#: wp-monsters.php:338 wp-monsters.php:530 wp-monsters.php:679 wp-feats.php:20
 #: wp-feats.php:32
 msgid "Feats"
 msgstr "Talente"
@@ -427,96 +428,96 @@ msgstr "Vorteil"
 msgid "Show All"
 msgstr "Alle anzeigen"
 
-#: wp-monsters.php:655 wp-monsters.php:695
+#: wp-monsters.php:647
 msgid "WP Monsters Settings"
 msgstr ""
 
-#: wp-monsters.php:659
+#: wp-monsters.php:651
 #, fuzzy
 msgid "Measurement"
 msgstr "Schätze"
 
-#: wp-monsters.php:663
+#: wp-monsters.php:655
 msgid "m."
 msgstr ""
 
-#: wp-monsters.php:677 wp-traps.php:28
+#: wp-monsters.php:668
+#, fuzzy
+msgid "WP Monsters"
+msgstr "Monster"
+
+#: wp-monsters.php:673 wp-traps.php:27
 msgid "All traps"
 msgstr "Alle Fallen"
 
-#: wp-monsters.php:677 wp-traps.php:22 wp-traps.php:34
+#: wp-monsters.php:673 wp-traps.php:21 wp-traps.php:33
 msgid "Traps"
 msgstr "Fallen"
 
-#: wp-monsters.php:678 wp-traps.php:57 wp-traps.php:58 wp-traps.php:67
-#: wp-traps.php:234
+#: wp-monsters.php:674 wp-traps.php:56 wp-traps.php:57 wp-traps.php:66
+#: wp-traps.php:233
 msgid "Type of traps"
 msgstr "Typ der Falle"
 
-#: wp-monsters.php:680 wp-spells.php:26
+#: wp-monsters.php:676 wp-spells.php:26
 msgid "All spells"
 msgstr "Alle Zauber"
 
-#: wp-monsters.php:680 wp-spells.php:20 wp-spells.php:32
+#: wp-monsters.php:676 wp-spells.php:20 wp-spells.php:32
 msgid "Spells"
 msgstr "Zauber"
 
-#: wp-monsters.php:681 wp-spells.php:53 wp-spells.php:54 wp-spells.php:63
+#: wp-monsters.php:677 wp-spells.php:53 wp-spells.php:54 wp-spells.php:63
 msgid "Type of spells"
 msgstr "Art des Zaubers"
 
-#: wp-monsters.php:683 wp-feats.php:26
+#: wp-monsters.php:679 wp-feats.php:26
 msgid "All feats"
 msgstr "Alle Talente"
 
-#: wp-monsters.php:684 wp-feats.php:55 wp-feats.php:56 wp-feats.php:65
+#: wp-monsters.php:680 wp-feats.php:55 wp-feats.php:56 wp-feats.php:65
 #: wp-feats.php:152
 msgid "Type of feats"
 msgstr "Art des Talents"
 
-#: wp-monsters.php:686 wp-magic-items.php:30
+#: wp-monsters.php:682 wp-magic-items.php:30
 msgid "All magic items"
 msgstr "Alle magischen Gegenstände"
 
-#: wp-monsters.php:686 wp-magic-items.php:24 wp-magic-items.php:36
+#: wp-monsters.php:682 wp-magic-items.php:24 wp-magic-items.php:36
 msgid "Magic items"
 msgstr "Magische Gegenstände"
 
-#: wp-monsters.php:687 wp-magic-items.php:59 wp-magic-items.php:60
+#: wp-monsters.php:683 wp-magic-items.php:59 wp-magic-items.php:60
 #: wp-magic-items.php:69 wp-magic-items.php:177
 msgid "Type of magic items"
 msgstr "Art der magische Gegenstände"
 
-#: wp-monsters.php:689 wp-weapons.php:26
+#: wp-monsters.php:685 wp-weapons.php:26
 msgid "All weapons"
 msgstr "Alle Waffen"
 
-#: wp-monsters.php:689 wp-weapons.php:20 wp-weapons.php:32
+#: wp-monsters.php:685 wp-weapons.php:20 wp-weapons.php:32
 msgid "Weapons"
 msgstr "Waffen"
 
-#: wp-monsters.php:690 wp-weapons.php:55 wp-weapons.php:56 wp-weapons.php:65
+#: wp-monsters.php:686 wp-weapons.php:55 wp-weapons.php:56 wp-weapons.php:65
 #: wp-weapons.php:219
 msgid "Type of weapons"
 msgstr "Art der Waffe"
 
-#: wp-monsters.php:692 wp-cities.php:26
+#: wp-monsters.php:688 wp-cities.php:26
 msgid "All cities"
 msgstr "Alle Städte"
 
-#: wp-monsters.php:692 wp-cities.php:20 wp-cities.php:32
+#: wp-monsters.php:688 wp-cities.php:20 wp-cities.php:32
 msgid "Cities"
 msgstr "Städte"
 
-#: wp-monsters.php:693 wp-cities.php:55 wp-cities.php:56 wp-cities.php:65
+#: wp-monsters.php:689 wp-cities.php:55 wp-cities.php:56 wp-cities.php:65
 #: wp-cities.php:264
 msgid "Type of cities"
 msgstr "Art der Stadt"
-
-#: wp-monsters.php:695
-#, fuzzy
-msgid "Settings"
-msgstr "Zauberei"
 
 #: wp-weapons.php:21
 msgid "Weapon"
@@ -657,7 +658,7 @@ msgid "Type of damage"
 msgstr "Schadensart"
 
 #: wp-weapons.php:183 wp-weapons.php:187 wp-weapons.php:191 wp-spells.php:136
-#: wp-spells.php:237 wp-traps.php:141 wp-traps.php:288
+#: wp-spells.php:237 wp-traps.php:140 wp-traps.php:287
 msgid "No"
 msgstr "Nein"
 
@@ -681,7 +682,7 @@ msgstr "Hiebschaden"
 msgid "Special"
 msgstr "Spezial"
 
-#: wp-spells.php:21 wp-traps.php:193 wp-traps.php:286
+#: wp-spells.php:21 wp-traps.php:192 wp-traps.php:285
 msgid "Spell"
 msgstr "Zauber"
 
@@ -789,7 +790,7 @@ msgstr "Komponenten"
 msgid "Target"
 msgstr "Ziel"
 
-#: wp-spells.php:155 wp-spells.php:268 wp-traps.php:207
+#: wp-spells.php:155 wp-spells.php:268 wp-traps.php:206
 msgid "Duration"
 msgstr "Dauer"
 
@@ -1053,160 +1054,160 @@ msgstr "mächtige Gegenstände"
 msgid "Base value"
 msgstr "Grundangriffsbonus"
 
-#: wp-traps.php:23
+#: wp-traps.php:22
 msgid "Trap"
 msgstr "Falle"
 
-#: wp-traps.php:25 wp-traps.php:38
+#: wp-traps.php:24 wp-traps.php:37
 msgid "Add new trap"
 msgstr "Neue Falle hinzufügen"
 
-#: wp-traps.php:26
+#: wp-traps.php:25
 msgid "Edit trap"
 msgstr "Falle bearbeiten"
 
-#: wp-traps.php:27
+#: wp-traps.php:26
 msgid "New trap"
 msgstr "Neue Falle"
 
-#: wp-traps.php:29
+#: wp-traps.php:28
 msgid "View trap"
 msgstr "Falle ansehen"
 
-#: wp-traps.php:30
+#: wp-traps.php:29
 msgid "Search trap"
 msgstr "Falle suchen"
 
-#: wp-traps.php:31
+#: wp-traps.php:30
 msgid "Trap not found"
 msgstr "Falle wurde nicht gefunden"
 
-#: wp-traps.php:32
+#: wp-traps.php:31
 msgid "Trap not found in trash"
 msgstr "Falle nicht im Papierkorb gefunden"
 
-#: wp-traps.php:59
+#: wp-traps.php:58
 msgid "Search type of traps"
 msgstr "Nach Fallen Typ suchen"
 
-#: wp-traps.php:60
+#: wp-traps.php:59
 msgid "All type of traps"
 msgstr "Alle Typen von Fallen"
 
-#: wp-traps.php:61
+#: wp-traps.php:60
 msgid "Parent type of traps"
 msgstr "Übergeordnete Art von Fallen"
 
-#: wp-traps.php:62
+#: wp-traps.php:61
 msgid "Parent type of traps:"
 msgstr "Übergeordnete Art von Fallen:"
 
-#: wp-traps.php:63
+#: wp-traps.php:62
 msgid "Edit type of traps"
 msgstr "Typ der Falle bearbeiten"
 
-#: wp-traps.php:64
+#: wp-traps.php:63
 msgid "Update type of traps"
 msgstr "Typ der Falle aktualisieren"
 
-#: wp-traps.php:65
+#: wp-traps.php:64
 msgid "Add new type of traps"
 msgstr "Neuen Fallen Typ hinzufügen"
 
-#: wp-traps.php:66
+#: wp-traps.php:65
 msgid "New type of traps"
 msgstr "Neuen Fallen Typ"
 
-#: wp-traps.php:140 wp-traps.php:285
+#: wp-traps.php:139 wp-traps.php:284
 msgid "Mechanical"
 msgstr "mechanisch"
 
-#: wp-traps.php:140 wp-traps.php:285
+#: wp-traps.php:139 wp-traps.php:284
 msgid "Magical"
 msgstr "magisch"
 
-#: wp-traps.php:140 wp-traps.php:285
+#: wp-traps.php:139 wp-traps.php:284
 msgid "Mechanical and magical"
 msgstr "mechanisch und magisch"
 
-#: wp-traps.php:141 wp-traps.php:288
+#: wp-traps.php:140 wp-traps.php:287
 msgid "Lock (DC 30 Disable Device)"
 msgstr "SG für Mechanismus ausschalten (SG 30 Mechanismus ausschalten)"
 
-#: wp-traps.php:141 wp-traps.php:288
+#: wp-traps.php:140 wp-traps.php:287
 msgid "Hidden Switch (DC 25 Perception)"
 msgstr "Versteckte Schalter (SG 25 Wahrnehmung)"
 
-#: wp-traps.php:141 wp-traps.php:288
+#: wp-traps.php:140 wp-traps.php:287
 msgid "Hidden Lock (DC 25 Perception / DC 30 Disable Device)"
 msgstr ""
 "Versteckte Schalter (SG 25 Wahrnehmung / SG 30 Mechanismus ausschalten)"
 
-#: wp-traps.php:155 wp-traps.php:305
+#: wp-traps.php:154 wp-traps.php:304
 msgid "Bypass"
 msgstr "Umgehung"
 
-#: wp-traps.php:164 wp-traps.php:308
+#: wp-traps.php:163 wp-traps.php:307
 msgid "Perception DC"
 msgstr "SG für Wahrnehmung"
 
-#: wp-traps.php:165 wp-traps.php:311
+#: wp-traps.php:164 wp-traps.php:310
 msgid "Disable Device DC"
 msgstr "SG für Mechanismus ausschalten"
 
-#: wp-traps.php:182 wp-traps.php:314
+#: wp-traps.php:181 wp-traps.php:313
 msgid "EFFECTS"
 msgstr "AUSWIRKUNGEN"
 
-#: wp-traps.php:193 wp-traps.php:286
+#: wp-traps.php:192 wp-traps.php:285
 msgid "Location"
 msgstr "Ort"
 
-#: wp-traps.php:193 wp-traps.php:286
+#: wp-traps.php:192 wp-traps.php:285
 msgid "Sound"
 msgstr "Geräusch"
 
-#: wp-traps.php:193 wp-traps.php:286
+#: wp-traps.php:192 wp-traps.php:285
 msgid "Visual"
 msgstr "Visuell"
 
-#: wp-traps.php:193 wp-traps.php:286
+#: wp-traps.php:192 wp-traps.php:285
 msgid "Touch"
 msgstr "Berührung"
 
-#: wp-traps.php:193 wp-traps.php:286
+#: wp-traps.php:192 wp-traps.php:285
 msgid "Timed"
 msgstr "Zeit"
 
-#: wp-traps.php:195 wp-traps.php:287
+#: wp-traps.php:194 wp-traps.php:286
 msgid "No Reset"
 msgstr "Kein Rücksetzer"
 
-#: wp-traps.php:195 wp-traps.php:287
+#: wp-traps.php:194 wp-traps.php:286
 msgid "Repair"
 msgstr "Reparieren"
 
-#: wp-traps.php:195 wp-traps.php:287
+#: wp-traps.php:194 wp-traps.php:286
 msgid "Manual"
 msgstr "manuell"
 
-#: wp-traps.php:195 wp-traps.php:287
+#: wp-traps.php:194 wp-traps.php:286
 msgid "Automatic"
 msgstr "Automatisch"
 
-#: wp-traps.php:198 wp-traps.php:317
+#: wp-traps.php:197 wp-traps.php:316
 msgid "Trigger"
 msgstr "Auslöser"
 
-#: wp-traps.php:208 wp-traps.php:320
+#: wp-traps.php:207 wp-traps.php:319
 msgid "Reset"
 msgstr "Zurücksetzen"
 
-#: wp-traps.php:217
+#: wp-traps.php:216
 msgid "Reset automatic time"
 msgstr "Zurücksetzen nach"
 
-#: wp-traps.php:218 wp-traps.php:323
+#: wp-traps.php:217 wp-traps.php:322
 msgid "Effect"
 msgstr "Wirkung"
 
@@ -1357,3 +1358,7 @@ msgstr "Herstellungskosten"
 #: wp-magic-items.php:158 wp-magic-items.php:256
 msgid "Construction requeriments"
 msgstr "Benötigte Materialien"
+
+#, fuzzy
+#~ msgid "Settings"
+#~ msgstr "Zauberei"

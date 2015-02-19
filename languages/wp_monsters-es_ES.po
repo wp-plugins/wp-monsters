@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Monsters\n"
 "POT-Creation-Date: 2015-02-19 22:43+0100\n"
-"PO-Revision-Date: 2015-02-19 23:15+0100\n"
+"PO-Revision-Date: 2015-02-19 23:25+0100\n"
 "Last-Translator: \n"
 "Language-Team: @Gwannon <monclus.jorge@gmail.com>\n"
 "Language: es_ES\n"
@@ -951,7 +951,6 @@ msgid "New type of cities"
 msgstr "Nuevo tipo de ciudad"
 
 #: ../wp-cities.php:126
-#, fuzzy
 msgid "STATS"
 msgstr "ESTADÍSTICAS"
 
@@ -1016,9 +1015,8 @@ msgid "Qualities"
 msgstr ""
 
 #: ../wp-cities.php:171 ../wp-cities.php:354
-#, fuzzy
 msgid "Danger"
-msgstr "Alcance"
+msgstr ""
 
 #: ../wp-cities.php:195 ../wp-cities.php:358
 msgid "DEMOGRAPHICS"
@@ -1045,9 +1043,8 @@ msgid "Purchase Limit"
 msgstr ""
 
 #: ../wp-cities.php:236 ../wp-cities.php:380
-#, fuzzy
 msgid "Spellcasting"
-msgstr "Hechizos"
+msgstr ""
 
 #: ../wp-cities.php:238 ../wp-cities.php:384
 msgid "Minor items"
@@ -1106,14 +1103,12 @@ msgid "All type of traps"
 msgstr "Todos los tipos de trampas"
 
 #: ../wp-traps.php:61
-#, fuzzy
 msgid "Parent type of traps"
-msgstr "Buscar  tipo de monstruos"
+msgstr ""
 
 #: ../wp-traps.php:62
-#, fuzzy
 msgid "Parent type of traps:"
-msgstr "Buscar  tipo de monstruos"
+msgstr ""
 
 #: ../wp-traps.php:63
 msgid "Edit type of traps"
@@ -1172,9 +1167,8 @@ msgid "EFFECTS"
 msgstr ""
 
 #: ../wp-traps.php:193 ../wp-traps.php:286
-#, fuzzy
 msgid "Location"
-msgstr "Población"
+msgstr ""
 
 #: ../wp-traps.php:193 ../wp-traps.php:286
 msgid "Sound"
@@ -1185,9 +1179,8 @@ msgid "Visual"
 msgstr ""
 
 #: ../wp-traps.php:193 ../wp-traps.php:286
-#, fuzzy
 msgid "Touch"
-msgstr "De toque"
+msgstr ""
 
 #: ../wp-traps.php:193 ../wp-traps.php:286
 msgid "Timed"
@@ -1222,9 +1215,8 @@ msgid "Reset automatic time"
 msgstr ""
 
 #: ../wp-traps.php:218 ../wp-traps.php:323
-#, fuzzy
 msgid "Effect"
-msgstr "perfecto"
+msgstr ""
 
 #: ../wp-magic-items.php:25
 msgid "Magic item"
@@ -1251,14 +1243,12 @@ msgid "Search magic item"
 msgstr "Buscar objeto mágico"
 
 #: ../wp-magic-items.php:33
-#, fuzzy
 msgid "Magic item not found"
-msgstr "Dote no encontrada"
+msgstr ""
 
 #: ../wp-magic-items.php:34
-#, fuzzy
 msgid "Magic item not found in trash"
-msgstr "Dote no encontrada en la papelera"
+msgstr ""
 
 #: ../wp-magic-items.php:61
 msgid "Search type of magic items"
@@ -1269,14 +1259,12 @@ msgid "All type of magic items"
 msgstr "Todos los tipos de objetos mágicos"
 
 #: ../wp-magic-items.php:63
-#, fuzzy
 msgid "Parent type of magic items"
-msgstr "Buscar  tipo de monstruos"
+msgstr ""
 
 #: ../wp-magic-items.php:64
-#, fuzzy
 msgid "Parent type of magic items:"
-msgstr "Buscar  tipo de monstruos"
+msgstr ""
 
 #: ../wp-magic-items.php:65
 msgid "Edit type of magic items"
