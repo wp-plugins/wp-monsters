@@ -7,7 +7,7 @@
 Plugin Name: WP Monsters
 Plugin URI: http://blog.gwannon.com/wp-monsters/
 Description: This plugin allows to the bloggers to publish in a easy way their Pathfinder RPG home-brew monster in their Wordpress blogs.
-Version: 1.3
+Version: 1.2
 Author: Gwannon
 Author URI: http://blog.gwannon.com/
 */
@@ -62,6 +62,7 @@ function wp_monsters_create_post_type() {
 		'query_var'	=> true,
 		'has_archive'   => true,
 		'hierarchical'	=> true,
+		'show_in_menu'  => false,
 		'menu_icon'	=> plugin_dir_url( __FILE__ ).'img/monster.png'
 	);
 	register_post_type( 'monster', $args );
@@ -636,22 +637,14 @@ function wp_monsters_taxonomy_dropdown($taxonomy) { ?>
 	</select>
 <?php }
 
-//PAgina de settings
-add_action('admin_menu', 'wp_monsters_create_menu');
-
-function wp_monsters_create_menu() {
-	add_options_page(__('WP Monsters Settings', 'wp_monsters'), __('WP Monsters Settings', 'wp_monsters'), 'manage_options', __FILE__, 'wp_monsters_page_settings');
-	//add_menu_page(__('WP Monsters Settings', 'wp_monsters'), __('WP Monsters Settings', 'wp_monsters'), 'administrator', __FILE__, 'wp_monsters_page_settings', plugins_url('/img/setting.png', __FILE__));
-
-}
-
+//Página de settings
 function wp_monsters_page_settings() {
 if (isset($_REQUEST['wp_monsters_measures']) && $_REQUEST['wp_monsters_measures'] != '') {
 	update_option( 'wp_monsters_measures', $_REQUEST['wp_monsters_measures']);
 }
 ?>
 <div class="wrap">
-	<h2><?php _e('WP Monsters Settings', 'wp_monsters'); echo get_option('wp_monsters_measures'); ?></h2>
+	<h2><?php _e('WP Monsters Settings', 'wp_monsters'); ?></h2>
 	<form method="post" action="">
 		<table class="form-table">
 			<tr valign="top">
@@ -669,6 +662,34 @@ if (isset($_REQUEST['wp_monsters_measures']) && $_REQUEST['wp_monsters_measures'
 </div>
 <?php }
 
+// Add menu item for draft posts
+function wp_monsters_admin_menu_item() {
+
+	add_menu_page( __('WP Monsters', 'wp_monsters'), __('WP Monsters', 'wp_monsters'), 'manage_options', __FILE__, 'wp_monsters_page_settings', plugin_dir_url( __FILE__ ).'img/monster.png');
+
+	add_submenu_page( __FILE__, __( 'All monsters', 'wp_monsters' ), __( 'Monsters', 'wp_monsters' ), 'manage_options', 'edit.php?post_type=monster', '');
+	add_submenu_page( __FILE__, __( 'Type of monsters', 'wp_monsters' ), __( 'Type of monsters', 'wp_monsters' ), 'manage_options', 'edit-tags.php?taxonomy=monsters&post_type=monster', '');
+
+	add_submenu_page( __FILE__, __( 'All traps', 'wp_monsters' ), __( 'Traps', 'wp_monsters' ), 'manage_options', 'edit.php?post_type=trap', '');
+	add_submenu_page( __FILE__, __( 'Type of traps', 'wp_monsters' ), __( 'Type of traps', 'wp_monsters' ), 'manage_options', 'edit-tags.php?taxonomy=traps&post_type=trap', '');
+
+	add_submenu_page( __FILE__, __( 'All spells', 'wp_monsters' ), __( 'Spells', 'wp_monsters' ), 'manage_options', 'edit.php?post_type=spell', '');
+	add_submenu_page( __FILE__, __( 'Type of spells', 'wp_monsters' ), __( 'Type of spells', 'wp_monsters' ), 'manage_options', 'edit-tags.php?taxonomy=spells&post_type=spell', '');
+
+	add_submenu_page( __FILE__, __( 'All feats', 'wp_monsters' ), __( 'Feats', 'wp_monsters' ), 'manage_options', 'edit.php?post_type=feat', '');
+	add_submenu_page( __FILE__, __( 'Type of feats', 'wp_monsters' ), __( 'Type of feats', 'wp_monsters' ), 'manage_options', 'edit-tags.php?taxonomy=feats&post_type=feat', '');
+
+	add_submenu_page( __FILE__, __( 'All magic items', 'wp_monsters' ), __( 'Magic items', 'wp_monsters' ), 'manage_options', 'edit.php?post_type=magic_item', '');
+	add_submenu_page( __FILE__, __( 'Type of magic items', 'wp_monsters' ), __( 'Type of magic items', 'wp_monsters' ), 'manage_options', 'edit-tags.php?taxonomy=magic_items&post_type=magic_item', '');
+
+	add_submenu_page( __FILE__, __( 'All weapons', 'wp_monsters' ), __( 'Weapons', 'wp_monsters' ), 'manage_options', 'edit.php?post_type=weapon', '');
+	add_submenu_page( __FILE__, __( 'Type of weapons', 'wp_monsters' ), __( 'Type of weapons', 'wp_monsters' ), 'manage_options', 'edit-tags.php?taxonomy=weapons&post_type=weapon', '');
+
+	add_submenu_page( __FILE__, __( 'All cities', 'wp_monsters' ), __( 'Cities', 'wp_monsters' ), 'manage_options', 'edit.php?post_type=city', '');
+	add_submenu_page( __FILE__, __( 'Type of cities', 'wp_monsters' ), __( 'Type of cities', 'wp_monsters' ), 'manage_options', 'edit-tags.php?taxonomy=cities&post_type=city', '');
+
+}
+add_action('admin_menu', 'wp_monsters_admin_menu_item');
 
 require_once ('wp-spells.php');
 require_once ('wp-feats.php');
@@ -676,5 +697,6 @@ require_once ('wp-weapons.php');
 require_once ('wp-cities.php');
 require_once ('wp-magic-items.php');
 require_once ('wp-traps.php');
+
 
 ?>

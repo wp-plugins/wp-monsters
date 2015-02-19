@@ -3,6 +3,8 @@
  * @package WP Monsters
  * @version 1.3
  */
+
+//http://wordpress.stackexchange.com/questions/160224/show-custom-taxonomy-inside-custom-menu
 /* 
 This plugins uses trademarks and/or copyrights owned by Paizo Inc., which are used under Paizo's Community Use Policy. We are expressly prohibited from charging you to use or access this content. This plugins is not published, endorsed, or specifically approved by Paizo Inc. For more information about Paizo's Community Use Policy, please visit paizo.com/communityuse. For more information about Paizo Inc. and Paizo products, please visit paizo.com. 
 */
@@ -42,6 +44,7 @@ function wp_traps_create_post_type() {
 		'query_var'	=> true,
 		'has_archive'   => true,
 		'hierarchical'	=> true,
+		'show_in_menu'  => false,
 		'menu_icon'	=> plugin_dir_url( __FILE__ ).'img/trap.png'
 	);
 	register_post_type( 'trap', $args );
@@ -70,6 +73,7 @@ function wp_traps_create_category() {
 		'query_var'		=> true,
 		//slug prodotto deve coincidere con il primo parametro dello slug del Custom Post Type correlato
 		'rewrite'		=>  array('slug' => 'traps' ),
+		'show_admin_column' => true,
 		//'_builtin'		=> false,
 	);
 	register_taxonomy( 'traps', 'trap', $args );

@@ -42,6 +42,7 @@ function wp_cities_create_post_type() {
 		'query_var'	=> true,
 		'has_archive'   => true,
 		'hierarchical'	=> true,
+		'show_in_menu'  => false,
 		'menu_icon'	=> plugin_dir_url( __FILE__ ).'img/city.png'
 	);
 	register_post_type( 'city', $args );

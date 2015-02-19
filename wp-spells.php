@@ -40,6 +40,7 @@ function wp_spells_create_post_type() {
 		'rewrite'	=> array('slug' => 'spells/%spells%','with_front' => false),
 		'has_archive'   => true,
 		'hierarchical'	=> true,
+		'show_in_menu'  => false,
 		'menu_icon'	=> plugin_dir_url( __FILE__ ).'img/spell.png'
 	);
 	register_post_type( 'spell', $args );

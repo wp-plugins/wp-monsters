@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Monsters\n"
-"POT-Creation-Date: 2015-02-19 00:47+0100\n"
-"PO-Revision-Date: 2015-02-19 00:47+0100\n"
+"POT-Creation-Date: 2015-02-19 22:43+0100\n"
+"PO-Revision-Date: 2015-02-19 22:43+0100\n"
 "Last-Translator: \n"
 "Language-Team: @Gwannon <monclus.jorge@gmail.com>\n"
 "Language: es_ES\n"
@@ -23,7 +23,7 @@ msgid "Monster"
 msgstr "Monstruo"
 
 #: ../wp-monsters.php:43 ../wp-weapons.php:22 ../wp-spells.php:22
-#: ../wp-feats.php:22 ../wp-cities.php:22 ../wp-traps.php:22
+#: ../wp-feats.php:22 ../wp-cities.php:22 ../wp-traps.php:24
 #: ../wp-magic-items.php:26
 msgid "Add new"
 msgstr "Añadir nuevo"
@@ -60,397 +60,479 @@ msgstr "Monstruo no encontrado"
 msgid "Monster not found in trash"
 msgstr "Monstruo no encontrado en la papelera"
 
-#: ../wp-monsters.php:74 ../wp-monsters.php:75 ../wp-monsters.php:84
+#: ../wp-monsters.php:75 ../wp-monsters.php:76 ../wp-monsters.php:85
 msgid "Type of monsters"
 msgstr "Tipos de monstruos"
 
-#: ../wp-monsters.php:76
+#: ../wp-monsters.php:77
 msgid "Search type of monsters"
 msgstr "Buscar  tipo de monstruos"
 
-#: ../wp-monsters.php:77
+#: ../wp-monsters.php:78
 msgid "All type of monsters"
 msgstr "Todos los tipos de monstruos"
 
-#: ../wp-monsters.php:78
+#: ../wp-monsters.php:79
 msgid "Parent type of monsters"
 msgstr ""
 
-#: ../wp-monsters.php:79
+#: ../wp-monsters.php:80
 msgid "Parent type of monsters:"
 msgstr ""
 
-#: ../wp-monsters.php:80
+#: ../wp-monsters.php:81
 msgid "Edit type of monsters"
 msgstr "Editar  tipo de monstruo"
 
-#: ../wp-monsters.php:81
+#: ../wp-monsters.php:82
 msgid "Update type of monsters"
 msgstr "Actualizar tipo de monstruo"
 
-#: ../wp-monsters.php:82
+#: ../wp-monsters.php:83
 msgid "Add new type of monsters"
 msgstr "Añadir nuevo tipo de monstruo"
 
-#: ../wp-monsters.php:83
+#: ../wp-monsters.php:84
 msgid "New type of monsters"
 msgstr "Nuevo tipo de monstruo"
 
-#: ../wp-monsters.php:128 ../wp-monsters.php:418 ../wp-weapons.php:108
-#: ../wp-weapons.php:217 ../wp-spells.php:107 ../wp-spells.php:183
-#: ../wp-feats.php:108 ../wp-feats.php:150 ../wp-cities.php:108
-#: ../wp-cities.php:262 ../wp-traps.php:108 ../wp-traps.php:229
-#: ../wp-magic-items.php:112 ../wp-magic-items.php:175
+#: ../wp-monsters.php:129 ../wp-monsters.php:419 ../wp-weapons.php:109
+#: ../wp-weapons.php:218 ../wp-spells.php:108 ../wp-spells.php:184
+#: ../wp-feats.php:109 ../wp-feats.php:151 ../wp-cities.php:109
+#: ../wp-cities.php:263 ../wp-traps.php:112 ../wp-traps.php:233
+#: ../wp-magic-items.php:113 ../wp-magic-items.php:176
 msgid "Shortcode"
 msgstr "Código corto"
 
-#: ../wp-monsters.php:145 ../wp-monsters.php:492 ../wp-traps.php:125
+#: ../wp-monsters.php:146 ../wp-monsters.php:493 ../wp-traps.php:129
 msgid "GENERAL"
 msgstr "GENERAL"
 
-#: ../wp-monsters.php:155 ../wp-monsters.php:473
+#: ../wp-monsters.php:156 ../wp-monsters.php:474
 msgid "fine"
 msgstr "minúsculo"
 
-#: ../wp-monsters.php:155 ../wp-monsters.php:473
+#: ../wp-monsters.php:156 ../wp-monsters.php:474
 msgid "diminutive"
 msgstr "diminuto"
 
-#: ../wp-monsters.php:155 ../wp-monsters.php:473
+#: ../wp-monsters.php:156 ../wp-monsters.php:474
 msgid "tiny"
 msgstr "menudo"
 
-#: ../wp-monsters.php:155 ../wp-monsters.php:473
+#: ../wp-monsters.php:156 ../wp-monsters.php:474
 msgid "small"
 msgstr "pequeño"
 
-#: ../wp-monsters.php:155 ../wp-monsters.php:473
+#: ../wp-monsters.php:156 ../wp-monsters.php:474
 msgid "medium"
 msgstr "mediano"
 
-#: ../wp-monsters.php:155 ../wp-monsters.php:473
+#: ../wp-monsters.php:156 ../wp-monsters.php:474
 msgid "large"
 msgstr "grande"
 
-#: ../wp-monsters.php:155 ../wp-monsters.php:473
+#: ../wp-monsters.php:156 ../wp-monsters.php:474
 msgid "huge"
 msgstr "enorme"
 
-#: ../wp-monsters.php:155 ../wp-monsters.php:473
+#: ../wp-monsters.php:156 ../wp-monsters.php:474
 msgid "gargantuan"
 msgstr "gargantuesco"
 
-#: ../wp-monsters.php:155 ../wp-monsters.php:473
+#: ../wp-monsters.php:156 ../wp-monsters.php:474
 msgid "colossal"
 msgstr "colosal"
 
-#: ../wp-monsters.php:157 ../wp-monsters.php:474 ../wp-cities.php:138
-#: ../wp-cities.php:315
+#: ../wp-monsters.php:158 ../wp-monsters.php:475 ../wp-cities.php:139
+#: ../wp-cities.php:316
 msgid "lawful good"
 msgstr "legal bueno"
 
-#: ../wp-monsters.php:157 ../wp-monsters.php:474 ../wp-cities.php:138
-#: ../wp-cities.php:315
+#: ../wp-monsters.php:158 ../wp-monsters.php:475 ../wp-cities.php:139
+#: ../wp-cities.php:316
 msgid "neutral good"
 msgstr "neutral bueno"
 
-#: ../wp-monsters.php:157 ../wp-monsters.php:474 ../wp-cities.php:138
-#: ../wp-cities.php:315
+#: ../wp-monsters.php:158 ../wp-monsters.php:475 ../wp-cities.php:139
+#: ../wp-cities.php:316
 msgid "chaotic good"
 msgstr "caótico bueno"
 
-#: ../wp-monsters.php:157 ../wp-monsters.php:474 ../wp-cities.php:138
-#: ../wp-cities.php:315
+#: ../wp-monsters.php:158 ../wp-monsters.php:475 ../wp-cities.php:139
+#: ../wp-cities.php:316
 msgid "lawful neutral"
 msgstr "legal neutral"
 
-#: ../wp-monsters.php:157 ../wp-monsters.php:474 ../wp-cities.php:138
-#: ../wp-cities.php:315
+#: ../wp-monsters.php:158 ../wp-monsters.php:475 ../wp-cities.php:139
+#: ../wp-cities.php:316
 msgid "neutral"
 msgstr "neutral"
 
-#: ../wp-monsters.php:157 ../wp-monsters.php:474 ../wp-cities.php:138
-#: ../wp-cities.php:315
+#: ../wp-monsters.php:158 ../wp-monsters.php:475 ../wp-cities.php:139
+#: ../wp-cities.php:316
 msgid "chaotic neutral"
 msgstr "caótico neutral"
 
-#: ../wp-monsters.php:157 ../wp-monsters.php:474 ../wp-cities.php:138
-#: ../wp-cities.php:315
+#: ../wp-monsters.php:158 ../wp-monsters.php:475 ../wp-cities.php:139
+#: ../wp-cities.php:316
 msgid "lawful evil"
 msgstr "legal malvado"
 
-#: ../wp-monsters.php:157 ../wp-monsters.php:474 ../wp-cities.php:138
-#: ../wp-cities.php:315
+#: ../wp-monsters.php:158 ../wp-monsters.php:475 ../wp-cities.php:139
+#: ../wp-cities.php:316
 msgid "neutral evil"
 msgstr "neutral malvado"
 
-#: ../wp-monsters.php:157 ../wp-monsters.php:474 ../wp-cities.php:138
-#: ../wp-cities.php:315
+#: ../wp-monsters.php:158 ../wp-monsters.php:475 ../wp-cities.php:139
+#: ../wp-cities.php:316
 msgid "chaotic evil"
 msgstr "caótico malvado"
 
-#: ../wp-monsters.php:160 ../wp-monsters.php:419 ../wp-spells.php:184
-#: ../wp-traps.php:140 ../wp-traps.php:295
+#: ../wp-monsters.php:161 ../wp-monsters.php:420 ../wp-spells.php:185
+#: ../wp-traps.php:144 ../wp-traps.php:299
 msgid "Type"
 msgstr "Tipo"
 
-#: ../wp-monsters.php:161 ../wp-cities.php:141
+#: ../wp-monsters.php:162 ../wp-cities.php:142
 msgid "Alignment"
 msgstr "Alineamiento"
 
-#: ../wp-monsters.php:170 ../wp-cities.php:150
+#: ../wp-monsters.php:171 ../wp-cities.php:151
 msgid "Size"
 msgstr "Tamaño"
 
-#: ../wp-monsters.php:179 ../wp-monsters.php:497 ../wp-traps.php:149
-#: ../wp-traps.php:292
+#: ../wp-monsters.php:180 ../wp-monsters.php:498 ../wp-traps.php:153
+#: ../wp-traps.php:296
 msgid "CR"
 msgstr "VD"
 
-#: ../wp-monsters.php:180 ../wp-monsters.php:498 ../wp-traps.php:150
-#: ../wp-traps.php:298
+#: ../wp-monsters.php:181 ../wp-monsters.php:499 ../wp-traps.php:154
+#: ../wp-traps.php:302
 msgid "XP"
 msgstr "PX"
 
-#: ../wp-monsters.php:181 ../wp-monsters.php:499
+#: ../wp-monsters.php:182 ../wp-monsters.php:500
 msgid "Init"
 msgstr "Iniciativa"
 
-#: ../wp-monsters.php:182 ../wp-monsters.php:500
+#: ../wp-monsters.php:183 ../wp-monsters.php:501
 msgid "Senses"
 msgstr "Sentidos"
 
-#: ../wp-monsters.php:201 ../wp-monsters.php:493
+#: ../wp-monsters.php:202 ../wp-monsters.php:494
 msgid "DEFENSE"
 msgstr "DEFENSA"
 
-#: ../wp-monsters.php:212 ../wp-monsters.php:505
+#: ../wp-monsters.php:213 ../wp-monsters.php:506
 msgid "Fort"
 msgstr "Fort"
 
-#: ../wp-monsters.php:213 ../wp-monsters.php:505
+#: ../wp-monsters.php:214 ../wp-monsters.php:506
 msgid "Ref"
 msgstr "Ref"
 
-#: ../wp-monsters.php:214 ../wp-monsters.php:505
+#: ../wp-monsters.php:215 ../wp-monsters.php:506
 msgid "Will"
 msgstr "Vol"
 
-#: ../wp-monsters.php:215 ../wp-monsters.php:510
+#: ../wp-monsters.php:216 ../wp-monsters.php:511
 msgid "SR"
 msgstr "RH"
 
-#: ../wp-monsters.php:218 ../wp-monsters.php:503
+#: ../wp-monsters.php:219 ../wp-monsters.php:504
 msgid "CA"
 msgstr "CA"
 
-#: ../wp-monsters.php:219 ../wp-monsters.php:503
+#: ../wp-monsters.php:220 ../wp-monsters.php:504
 msgid "Touched"
 msgstr "De toque"
 
-#: ../wp-monsters.php:220 ../wp-monsters.php:503
+#: ../wp-monsters.php:221 ../wp-monsters.php:504
 msgid "Flat-footed"
 msgstr "Sorprendido"
 
-#: ../wp-monsters.php:221
+#: ../wp-monsters.php:222
 msgid "Info CA"
 msgstr "Info CA"
 
-#: ../wp-monsters.php:222 ../wp-monsters.php:504
+#: ../wp-monsters.php:223 ../wp-monsters.php:505
 msgid "HP"
 msgstr "PV"
 
-#: ../wp-monsters.php:223 ../wp-monsters.php:506
+#: ../wp-monsters.php:224 ../wp-monsters.php:507
 msgid "DR"
 msgstr "RD"
 
-#: ../wp-monsters.php:224 ../wp-monsters.php:507
+#: ../wp-monsters.php:225 ../wp-monsters.php:508
 msgid "Immune"
 msgstr "Inmune"
 
-#: ../wp-monsters.php:225 ../wp-monsters.php:508
+#: ../wp-monsters.php:226 ../wp-monsters.php:509
 msgid "Resist"
 msgstr "Resistente"
 
-#: ../wp-monsters.php:226 ../wp-monsters.php:509
+#: ../wp-monsters.php:227 ../wp-monsters.php:510
 msgid "Weaknesses"
 msgstr "Débil"
 
-#: ../wp-monsters.php:254 ../wp-monsters.php:514
+#: ../wp-monsters.php:255 ../wp-monsters.php:515
 msgid "OFFENSE"
 msgstr "ATAQUE"
 
-#: ../wp-monsters.php:268 ../wp-monsters.php:475
+#: ../wp-monsters.php:269 ../wp-monsters.php:476
 msgid "clumsy"
 msgstr "torpe"
 
-#: ../wp-monsters.php:268 ../wp-monsters.php:475
+#: ../wp-monsters.php:269 ../wp-monsters.php:476
 msgid "poor"
 msgstr "mediocre"
 
-#: ../wp-monsters.php:268 ../wp-monsters.php:475
+#: ../wp-monsters.php:269 ../wp-monsters.php:476
 msgid "average"
 msgstr "normal"
 
-#: ../wp-monsters.php:268 ../wp-monsters.php:475
+#: ../wp-monsters.php:269 ../wp-monsters.php:476
 msgid "good"
 msgstr "bueno"
 
-#: ../wp-monsters.php:268 ../wp-monsters.php:475
+#: ../wp-monsters.php:269 ../wp-monsters.php:476
 msgid "perfect"
 msgstr "perfecto"
 
-#: ../wp-monsters.php:271 ../wp-monsters.php:519
+#: ../wp-monsters.php:272 ../wp-monsters.php:520
 msgid "Speed"
 msgstr "Velocidad"
 
-#: ../wp-monsters.php:271 ../wp-monsters.php:272 ../wp-monsters.php:284
-#: ../wp-monsters.php:285 ../wp-monsters.php:555 ../wp-monsters.php:661
+#: ../wp-monsters.php:272 ../wp-monsters.php:273 ../wp-monsters.php:285
+#: ../wp-monsters.php:286 ../wp-monsters.php:556 ../wp-monsters.php:662
 msgid "ft."
 msgstr "pies"
 
-#: ../wp-monsters.php:272 ../wp-monsters.php:519
+#: ../wp-monsters.php:273 ../wp-monsters.php:520
 msgid "Fly"
 msgstr "Volar"
 
-#: ../wp-monsters.php:273
+#: ../wp-monsters.php:274
 msgid "Fly maneuverability"
 msgstr "Maniobrabilidad"
 
-#: ../wp-monsters.php:282 ../wp-monsters.php:520
+#: ../wp-monsters.php:283 ../wp-monsters.php:521
 msgid "Melee"
 msgstr "Cuerpo a cuerpo"
 
-#: ../wp-monsters.php:284 ../wp-monsters.php:521
+#: ../wp-monsters.php:285 ../wp-monsters.php:522
 msgid "Space"
 msgstr "Espacio"
 
-#: ../wp-monsters.php:285 ../wp-monsters.php:521
+#: ../wp-monsters.php:286 ../wp-monsters.php:522
 msgid "Reach"
 msgstr "Alcance"
 
-#: ../wp-monsters.php:287 ../wp-monsters.php:522 ../wp-weapons.php:139
-#: ../wp-weapons.php:270
+#: ../wp-monsters.php:288 ../wp-monsters.php:523 ../wp-weapons.php:140
+#: ../wp-weapons.php:271
 msgid "Ranged"
 msgstr "A distancia"
 
-#: ../wp-monsters.php:288 ../wp-monsters.php:523
+#: ../wp-monsters.php:289 ../wp-monsters.php:524
 msgid "Special attacks"
 msgstr "Ataques especiales"
 
-#: ../wp-monsters.php:290 ../wp-monsters.php:524
+#: ../wp-monsters.php:291 ../wp-monsters.php:525
 msgid "Spell-like abilities"
 msgstr "Habilidades sortílegas"
 
-#: ../wp-monsters.php:313 ../wp-monsters.php:515
+#: ../wp-monsters.php:314 ../wp-monsters.php:516
 msgid "STATISTICS"
 msgstr "ESTADÍSTICAS"
 
-#: ../wp-monsters.php:324 ../wp-monsters.php:527
+#: ../wp-monsters.php:325 ../wp-monsters.php:528
 msgid "Str"
 msgstr "Fue"
 
-#: ../wp-monsters.php:325 ../wp-monsters.php:527
+#: ../wp-monsters.php:326 ../wp-monsters.php:528
 msgid "Dex"
 msgstr "Des"
 
-#: ../wp-monsters.php:326 ../wp-monsters.php:527
+#: ../wp-monsters.php:327 ../wp-monsters.php:528
 msgid "Con"
 msgstr "Con"
 
-#: ../wp-monsters.php:327 ../wp-monsters.php:527
+#: ../wp-monsters.php:328 ../wp-monsters.php:528
 msgid "Int"
 msgstr "Int"
 
-#: ../wp-monsters.php:328 ../wp-monsters.php:527
+#: ../wp-monsters.php:329 ../wp-monsters.php:528
 msgid "Wis"
 msgstr "Sab"
 
-#: ../wp-monsters.php:329 ../wp-monsters.php:527
+#: ../wp-monsters.php:330 ../wp-monsters.php:528
 msgid "Cha"
 msgstr "Car"
 
-#: ../wp-monsters.php:332 ../wp-monsters.php:528
+#: ../wp-monsters.php:333 ../wp-monsters.php:529
 msgid "Base Atk"
 msgstr "Ataque base"
 
-#: ../wp-monsters.php:333 ../wp-monsters.php:528
+#: ../wp-monsters.php:334 ../wp-monsters.php:529
 msgid "CMB"
 msgstr "CMB"
 
-#: ../wp-monsters.php:334 ../wp-monsters.php:528
+#: ../wp-monsters.php:335 ../wp-monsters.php:529
 msgid "CMD"
 msgstr "CMD"
 
-#: ../wp-monsters.php:337 ../wp-monsters.php:529 ../wp-feats.php:20
-#: ../wp-feats.php:32
+#: ../wp-monsters.php:338 ../wp-monsters.php:530 ../wp-monsters.php:683
+#: ../wp-feats.php:20 ../wp-feats.php:32
 msgid "Feats"
 msgstr "Dotes"
 
-#: ../wp-monsters.php:338 ../wp-monsters.php:530
+#: ../wp-monsters.php:339 ../wp-monsters.php:531
 msgid "Skills"
 msgstr "Habilidades"
 
-#: ../wp-monsters.php:339 ../wp-monsters.php:531
+#: ../wp-monsters.php:340 ../wp-monsters.php:532
 msgid "Languages"
 msgstr "Idiomas"
 
-#: ../wp-monsters.php:365 ../wp-monsters.php:535
+#: ../wp-monsters.php:366 ../wp-monsters.php:536
 msgid "ECOLOGY"
 msgstr "ECOLOGÍA"
 
-#: ../wp-monsters.php:377 ../wp-monsters.php:540
+#: ../wp-monsters.php:378 ../wp-monsters.php:541
 msgid "Environment"
 msgstr "Medio ambiente"
 
-#: ../wp-monsters.php:378 ../wp-monsters.php:541
+#: ../wp-monsters.php:379 ../wp-monsters.php:542
 msgid "Organization"
 msgstr "Organización"
 
-#: ../wp-monsters.php:379 ../wp-monsters.php:542
+#: ../wp-monsters.php:380 ../wp-monsters.php:543
 msgid "Treasure"
 msgstr "Tesoro"
 
-#: ../wp-monsters.php:395 ../wp-monsters.php:536
+#: ../wp-monsters.php:396 ../wp-monsters.php:537
 msgid "SPECIAL ABILITIES"
 msgstr "HABILIDADES ESPECIALES"
 
-#: ../wp-monsters.php:406
+#: ../wp-monsters.php:407
 msgid "Special abilities"
 msgstr "Habilidades especiales"
 
-#: ../wp-monsters.php:420
+#: ../wp-monsters.php:421
 msgid "Category"
 msgstr "Categoría"
 
-#: ../wp-monsters.php:556
+#: ../wp-monsters.php:557
 msgid "meters"
 msgstr ""
 
-#: ../wp-monsters.php:586 ../wp-feats.php:137 ../wp-feats.php:204
+#: ../wp-monsters.php:587 ../wp-feats.php:138 ../wp-feats.php:205
 msgid "Benefit"
 msgstr "Beneficio"
 
-#: ../wp-monsters.php:628
+#: ../wp-monsters.php:629
 msgid "Show All"
 msgstr "Mostrar todo"
 
-#: ../wp-monsters.php:643 ../wp-monsters.php:654
+#: ../wp-monsters.php:655 ../wp-monsters.php:695
 msgid "WP Monsters Settings"
 msgstr ""
 
-#: ../wp-monsters.php:658
+#: ../wp-monsters.php:659
 #, fuzzy
 msgid "Measurement"
 msgstr "Tesoro"
 
-#: ../wp-monsters.php:662
+#: ../wp-monsters.php:663
 msgid "m."
 msgstr ""
 
-#: ../wp-weapons.php:20 ../wp-weapons.php:32
+#: ../wp-monsters.php:677 ../wp-traps.php:28
+#, fuzzy
+msgid "All traps"
+msgstr "Todos las armas"
+
+#: ../wp-monsters.php:677 ../wp-traps.php:22 ../wp-traps.php:34
+msgid "Traps"
+msgstr "Trampas"
+
+#: ../wp-monsters.php:678 ../wp-traps.php:57 ../wp-traps.php:58
+#: ../wp-traps.php:67 ../wp-traps.php:234
+#, fuzzy
+msgid "Type of traps"
+msgstr "Tipos de armas"
+
+#: ../wp-monsters.php:680 ../wp-spells.php:26
+msgid "All spells"
+msgstr "Todos los hechizos"
+
+#: ../wp-monsters.php:680 ../wp-spells.php:20 ../wp-spells.php:32
+msgid "Spells"
+msgstr "Hechizos"
+
+#: ../wp-monsters.php:681 ../wp-spells.php:53 ../wp-spells.php:54
+#: ../wp-spells.php:63
+msgid "Type of spells"
+msgstr "Tipos de hechizos"
+
+#: ../wp-monsters.php:683 ../wp-feats.php:26
+msgid "All feats"
+msgstr "Todos las dotes"
+
+#: ../wp-monsters.php:684 ../wp-feats.php:55 ../wp-feats.php:56
+#: ../wp-feats.php:65 ../wp-feats.php:152
+msgid "Type of feats"
+msgstr "Tipos de dotes"
+
+#: ../wp-monsters.php:686 ../wp-magic-items.php:30
+#, fuzzy
+msgid "All magic items"
+msgstr "Todos los monstruos"
+
+#: ../wp-monsters.php:686 ../wp-magic-items.php:24 ../wp-magic-items.php:36
+#, fuzzy
+msgid "Magic items"
+msgstr "Objetos menores"
+
+#: ../wp-monsters.php:687 ../wp-magic-items.php:59 ../wp-magic-items.php:60
+#: ../wp-magic-items.php:69 ../wp-magic-items.php:177
+#, fuzzy
+msgid "Type of magic items"
+msgstr "Tipos de dotes"
+
+#: ../wp-monsters.php:689 ../wp-weapons.php:26
+msgid "All weapons"
+msgstr "Todos las armas"
+
+#: ../wp-monsters.php:689 ../wp-weapons.php:20 ../wp-weapons.php:32
 msgid "Weapons"
 msgstr "Armas"
+
+#: ../wp-monsters.php:690 ../wp-weapons.php:55 ../wp-weapons.php:56
+#: ../wp-weapons.php:65 ../wp-weapons.php:219
+msgid "Type of weapons"
+msgstr "Tipos de armas"
+
+#: ../wp-monsters.php:692 ../wp-cities.php:26
+#, fuzzy
+msgid "All cities"
+msgstr "Todos los monstruos"
+
+#: ../wp-monsters.php:692 ../wp-cities.php:20 ../wp-cities.php:32
+msgid "Cities"
+msgstr "Ciudades"
+
+#: ../wp-monsters.php:693 ../wp-cities.php:55 ../wp-cities.php:56
+#: ../wp-cities.php:65 ../wp-cities.php:264
+#, fuzzy
+msgid "Type of cities"
+msgstr "Tipos de dotes"
+
+#: ../wp-monsters.php:695
+#, fuzzy
+msgid "Settings"
+msgstr "Hechizos"
 
 #: ../wp-weapons.php:21
 msgid "Weapon"
@@ -468,10 +550,6 @@ msgstr "Editar arma"
 msgid "New weapon"
 msgstr "Nueva arma"
 
-#: ../wp-weapons.php:26
-msgid "All weapons"
-msgstr "Todos las armas"
-
 #: ../wp-weapons.php:27
 msgid "View weapon"
 msgstr "Ver arma"
@@ -488,149 +566,140 @@ msgstr "Arma no encontrada"
 msgid "Weapon not found in trash"
 msgstr "Arma no encontrada en la papelera"
 
-#: ../wp-weapons.php:54 ../wp-weapons.php:55 ../wp-weapons.php:64
-#: ../wp-weapons.php:218
-msgid "Type of weapons"
-msgstr "Tipos de armas"
-
-#: ../wp-weapons.php:56
+#: ../wp-weapons.php:57
 msgid "Search type of weapons"
 msgstr "Buscar  tipo de armas"
 
-#: ../wp-weapons.php:57
+#: ../wp-weapons.php:58
 msgid "All type of weapons"
 msgstr "Todos los tipos de armas"
 
-#: ../wp-weapons.php:58
+#: ../wp-weapons.php:59
 msgid "Parent type of weapons"
 msgstr ""
 
-#: ../wp-weapons.php:59
+#: ../wp-weapons.php:60
 msgid "Parent type of weapons:"
 msgstr ""
 
-#: ../wp-weapons.php:60
+#: ../wp-weapons.php:61
 msgid "Edit type of weapons"
 msgstr "Editar  tipo de arma"
 
-#: ../wp-weapons.php:61
+#: ../wp-weapons.php:62
 msgid "Update type of weapons"
 msgstr "Actualizar tipo de arma"
 
-#: ../wp-weapons.php:62
+#: ../wp-weapons.php:63
 msgid "Add new type of weapons"
 msgstr "Añadir nuevo tipo de arma"
 
-#: ../wp-weapons.php:63
+#: ../wp-weapons.php:64
 msgid "New type of weapons"
 msgstr "Nuevo tipo de arma"
 
-#: ../wp-weapons.php:125
+#: ../wp-weapons.php:126
 msgid "WEAPONS"
 msgstr "ARMAS"
 
-#: ../wp-weapons.php:138 ../wp-weapons.php:269
+#: ../wp-weapons.php:139 ../wp-weapons.php:270
 msgid "Simple"
 msgstr "Simple"
 
-#: ../wp-weapons.php:138 ../wp-weapons.php:269
+#: ../wp-weapons.php:139 ../wp-weapons.php:270
 msgid "Martial"
 msgstr "Marcial"
 
-#: ../wp-weapons.php:138 ../wp-weapons.php:269
+#: ../wp-weapons.php:139 ../wp-weapons.php:270
 msgid "Exotic"
 msgstr "Exótica"
 
-#: ../wp-weapons.php:139 ../wp-weapons.php:270
+#: ../wp-weapons.php:140 ../wp-weapons.php:271
 msgid "Unarmed"
 msgstr "Desarmado"
 
-#: ../wp-weapons.php:139 ../wp-weapons.php:270
+#: ../wp-weapons.php:140 ../wp-weapons.php:271
 msgid "Light Melee"
 msgstr "Cuerpo a cuerpo ligera"
 
-#: ../wp-weapons.php:139 ../wp-weapons.php:270
+#: ../wp-weapons.php:140 ../wp-weapons.php:271
 msgid "One-handed Melee"
 msgstr "Cuerpo a cuerpo una mano"
 
-#: ../wp-weapons.php:139 ../wp-weapons.php:270
+#: ../wp-weapons.php:140 ../wp-weapons.php:271
 msgid "Two-handed Melee"
 msgstr "Cuerpo a cuerpo  dos manos"
 
-#: ../wp-weapons.php:139 ../wp-weapons.php:270
+#: ../wp-weapons.php:140 ../wp-weapons.php:271
 msgid "Ammunition"
 msgstr "Munición"
 
-#: ../wp-weapons.php:143
+#: ../wp-weapons.php:144
 msgid "General type"
 msgstr "Tipo general"
 
-#: ../wp-weapons.php:152
+#: ../wp-weapons.php:153
 msgid "Subtype"
 msgstr "Subtipo"
 
-#: ../wp-weapons.php:161 ../wp-weapons.php:279 ../wp-magic-items.php:143
-#: ../wp-magic-items.php:242
+#: ../wp-weapons.php:162 ../wp-weapons.php:280 ../wp-magic-items.php:144
+#: ../wp-magic-items.php:243
 msgid "Cost"
 msgstr "Coste"
 
-#: ../wp-weapons.php:162 ../wp-weapons.php:280
+#: ../wp-weapons.php:163 ../wp-weapons.php:281
 msgid "Dmg (S)"
 msgstr "Daño (P)"
 
-#: ../wp-weapons.php:163 ../wp-weapons.php:281
+#: ../wp-weapons.php:164 ../wp-weapons.php:282
 msgid "Dmg (M)"
 msgstr "Daño (M)"
 
-#: ../wp-weapons.php:164 ../wp-weapons.php:282
+#: ../wp-weapons.php:165 ../wp-weapons.php:283
 msgid "Critical"
 msgstr "Crítico"
 
-#: ../wp-weapons.php:173 ../wp-weapons.php:283 ../wp-spells.php:152
-#: ../wp-spells.php:259
+#: ../wp-weapons.php:174 ../wp-weapons.php:284 ../wp-spells.php:153
+#: ../wp-spells.php:260
 msgid "Range"
 msgstr "Alcance"
 
-#: ../wp-weapons.php:174 ../wp-weapons.php:284 ../wp-magic-items.php:153
-#: ../wp-magic-items.php:239
+#: ../wp-weapons.php:175 ../wp-weapons.php:285 ../wp-magic-items.php:154
+#: ../wp-magic-items.php:240
 msgid "Weight"
 msgstr "Peso"
 
-#: ../wp-weapons.php:175 ../wp-weapons.php:285
+#: ../wp-weapons.php:176 ../wp-weapons.php:286
 msgid "Type of damage"
 msgstr "Tipos de daño"
 
-#: ../wp-weapons.php:182 ../wp-weapons.php:186 ../wp-weapons.php:190
-#: ../wp-spells.php:135 ../wp-spells.php:236 ../wp-traps.php:137
-#: ../wp-traps.php:284
+#: ../wp-weapons.php:183 ../wp-weapons.php:187 ../wp-weapons.php:191
+#: ../wp-spells.php:136 ../wp-spells.php:237 ../wp-traps.php:141
+#: ../wp-traps.php:288
 msgid "No"
 msgstr "No"
 
-#: ../wp-weapons.php:183 ../wp-weapons.php:187 ../wp-weapons.php:191
+#: ../wp-weapons.php:184 ../wp-weapons.php:188 ../wp-weapons.php:192
 msgid "Si"
 msgstr "Si"
 
-#: ../wp-weapons.php:184 ../wp-weapons.php:306
+#: ../wp-weapons.php:185 ../wp-weapons.php:307
 msgid "Bludgeoning"
 msgstr "Contundente"
 
-#: ../wp-weapons.php:188 ../wp-weapons.php:308
+#: ../wp-weapons.php:189 ../wp-weapons.php:309
 msgid "Piercing"
 msgstr "Empalante"
 
-#: ../wp-weapons.php:192 ../wp-weapons.php:310
+#: ../wp-weapons.php:193 ../wp-weapons.php:311
 msgid "Slashing"
 msgstr "Cortante"
 
-#: ../wp-weapons.php:194
+#: ../wp-weapons.php:195
 msgid "Special"
 msgstr "Especial"
 
-#: ../wp-spells.php:20 ../wp-spells.php:32
-msgid "Spells"
-msgstr "Hechizos"
-
-#: ../wp-spells.php:21 ../wp-traps.php:189 ../wp-traps.php:282
+#: ../wp-spells.php:21 ../wp-traps.php:193 ../wp-traps.php:286
 msgid "Spell"
 msgstr "Hechizo"
 
@@ -645,10 +714,6 @@ msgstr "Editar hechizo"
 #: ../wp-spells.php:25
 msgid "New spell"
 msgstr "Nuevo hechizo"
-
-#: ../wp-spells.php:26
-msgid "All spells"
-msgstr "Todos los hechizos"
 
 #: ../wp-spells.php:27
 msgid "View spell"
@@ -666,95 +731,91 @@ msgstr "Hechizo no encontrado"
 msgid "Spell not found in trash"
 msgstr "Hechizo no encontrado en la papelera"
 
-#: ../wp-spells.php:52 ../wp-spells.php:53 ../wp-spells.php:62
-msgid "Type of spells"
-msgstr "Tipos de hechizos"
-
-#: ../wp-spells.php:54
+#: ../wp-spells.php:55
 msgid "Search type of spells"
 msgstr "Buscar  tipo de hechizo"
 
-#: ../wp-spells.php:55
+#: ../wp-spells.php:56
 msgid "All type of spells"
 msgstr "Todos los tipos de hechizos"
 
-#: ../wp-spells.php:56
+#: ../wp-spells.php:57
 msgid "Parent type of spells"
 msgstr ""
 
-#: ../wp-spells.php:57
+#: ../wp-spells.php:58
 msgid "Parent type of spells:"
 msgstr ""
 
-#: ../wp-spells.php:58
+#: ../wp-spells.php:59
 msgid "Edit type of spells"
 msgstr "Editar  tipo de hechizo"
 
-#: ../wp-spells.php:59
+#: ../wp-spells.php:60
 msgid "Update type of spells"
 msgstr "Actualizar tipo de hechizo"
 
-#: ../wp-spells.php:60
+#: ../wp-spells.php:61
 msgid "Add new type of spells"
 msgstr "Añadir nuevo tipo de hechizo"
 
-#: ../wp-spells.php:61
+#: ../wp-spells.php:62
 msgid "New type of spells"
 msgstr "Nuevo tipo de hechizo"
 
-#: ../wp-spells.php:124
+#: ../wp-spells.php:125
 msgid "SPELL"
 msgstr "HECHIZO"
 
-#: ../wp-spells.php:135 ../wp-spells.php:236
+#: ../wp-spells.php:136 ../wp-spells.php:237
 msgid "Yes"
 msgstr "Si"
 
-#: ../wp-spells.php:137 ../wp-spells.php:237
+#: ../wp-spells.php:138 ../wp-spells.php:238
 msgid "Swift Action"
 msgstr "Acción Rápida"
 
-#: ../wp-spells.php:137 ../wp-spells.php:237
+#: ../wp-spells.php:138 ../wp-spells.php:238
 msgid "Inmediate Action"
 msgstr "Acción Inmediata"
 
-#: ../wp-spells.php:137 ../wp-spells.php:237
+#: ../wp-spells.php:138 ../wp-spells.php:238
 msgid "Standard Action"
 msgstr "Acción Estandar"
 
-#: ../wp-spells.php:137 ../wp-spells.php:237
+#: ../wp-spells.php:138 ../wp-spells.php:238
 msgid "View Description"
 msgstr "Ver Descripción"
 
-#: ../wp-spells.php:140 ../wp-spells.php:243
+#: ../wp-spells.php:141 ../wp-spells.php:244
 msgid "School"
 msgstr "Escuela"
 
-#: ../wp-spells.php:141 ../wp-spells.php:247
+#: ../wp-spells.php:142 ../wp-spells.php:248
 msgid "Level"
 msgstr "Nivel"
 
-#: ../wp-spells.php:142 ../wp-spells.php:251
+#: ../wp-spells.php:143 ../wp-spells.php:252
 msgid "Casting time"
 msgstr "Tiempo de lanzamiento"
 
-#: ../wp-spells.php:151 ../wp-spells.php:255
+#: ../wp-spells.php:152 ../wp-spells.php:256
 msgid "Components"
 msgstr "Componentes"
 
-#: ../wp-spells.php:153 ../wp-spells.php:263
+#: ../wp-spells.php:154 ../wp-spells.php:264
 msgid "Target"
 msgstr "Objetivo"
 
-#: ../wp-spells.php:154 ../wp-spells.php:267 ../wp-traps.php:203
+#: ../wp-spells.php:155 ../wp-spells.php:268 ../wp-traps.php:207
 msgid "Duration"
 msgstr "Duración"
 
-#: ../wp-spells.php:155 ../wp-spells.php:271
+#: ../wp-spells.php:156 ../wp-spells.php:272
 msgid "Saving Throw"
 msgstr "Tiradas de salvación"
 
-#: ../wp-spells.php:156 ../wp-spells.php:275
+#: ../wp-spells.php:157 ../wp-spells.php:276
 msgid "Spell Resistance"
 msgstr "Resistencia a hechizos"
 
@@ -774,10 +835,6 @@ msgstr "Editar dote"
 msgid "New feat"
 msgstr "Nueva dote"
 
-#: ../wp-feats.php:26
-msgid "All feats"
-msgstr "Todos las dotes"
-
 #: ../wp-feats.php:27
 msgid "View feat"
 msgstr "Ver dote"
@@ -794,58 +851,49 @@ msgstr "Dote no encontrada"
 msgid "Feat not found in trash"
 msgstr "Dote no encontrada en la papelera"
 
-#: ../wp-feats.php:54 ../wp-feats.php:55 ../wp-feats.php:64
-#: ../wp-feats.php:151
-msgid "Type of feats"
-msgstr "Tipos de dotes"
-
-#: ../wp-feats.php:56
+#: ../wp-feats.php:57
 msgid "Search type of feats"
 msgstr "Buscar  tipo de dote"
 
-#: ../wp-feats.php:57
+#: ../wp-feats.php:58
 msgid "All type of feats"
 msgstr "Todos los tipos de dotes"
 
-#: ../wp-feats.php:58
+#: ../wp-feats.php:59
 msgid "Parent type of feats"
 msgstr ""
 
-#: ../wp-feats.php:59
+#: ../wp-feats.php:60
 msgid "Parent type of feats:"
 msgstr ""
 
-#: ../wp-feats.php:60
+#: ../wp-feats.php:61
 msgid "Edit type of feats"
 msgstr "Editar  tipo de dote"
 
-#: ../wp-feats.php:61
+#: ../wp-feats.php:62
 msgid "Update type of feats"
 msgstr "Actualizar tipo de dote"
 
-#: ../wp-feats.php:62
+#: ../wp-feats.php:63
 msgid "Add new type of feats"
 msgstr "Añadir nuevo tipo de dote"
 
-#: ../wp-feats.php:63
+#: ../wp-feats.php:64
 msgid "New type of feats"
 msgstr "Nuevo tipo de dote"
 
-#: ../wp-feats.php:125
+#: ../wp-feats.php:126
 msgid "FEATS"
 msgstr "DOTES"
 
-#: ../wp-feats.php:136 ../wp-feats.php:203
+#: ../wp-feats.php:137 ../wp-feats.php:204
 msgid "Prerequisites"
 msgstr "Prerrequisitos"
 
-#: ../wp-feats.php:203
+#: ../wp-feats.php:204
 msgid "Normal"
 msgstr "Normal"
-
-#: ../wp-cities.php:20 ../wp-cities.php:32
-msgid "Cities"
-msgstr "Ciudades"
 
 #: ../wp-cities.php:21
 msgid "City"
@@ -865,11 +913,6 @@ msgstr "Editar dote"
 #, fuzzy
 msgid "New city"
 msgstr "Nueva dote"
-
-#: ../wp-cities.php:26
-#, fuzzy
-msgid "All cities"
-msgstr "Todos los monstruos"
 
 #: ../wp-cities.php:27
 #, fuzzy
@@ -891,360 +934,334 @@ msgstr "Dote no encontrada"
 msgid "City not found in trash"
 msgstr "Dote no encontrada en la papelera"
 
-#: ../wp-cities.php:54 ../wp-cities.php:55 ../wp-cities.php:64
-#: ../wp-cities.php:263
-#, fuzzy
-msgid "Type of cities"
-msgstr "Tipos de dotes"
-
-#: ../wp-cities.php:56
+#: ../wp-cities.php:57
 #, fuzzy
 msgid "Search type of cities"
 msgstr "Buscar  tipo de dote"
 
-#: ../wp-cities.php:57
+#: ../wp-cities.php:58
 #, fuzzy
 msgid "All type of cities"
 msgstr "Todos los tipos de dotes"
 
-#: ../wp-cities.php:58
+#: ../wp-cities.php:59
 #, fuzzy
 msgid "Parent type of cities"
 msgstr "Buscar  tipo de monstruos"
 
-#: ../wp-cities.php:59
+#: ../wp-cities.php:60
 #, fuzzy
 msgid "Parent type of cities:"
 msgstr "Buscar  tipo de monstruos"
 
-#: ../wp-cities.php:60
+#: ../wp-cities.php:61
 #, fuzzy
 msgid "Edit type of cities"
 msgstr "Editar  tipo de dote"
 
-#: ../wp-cities.php:61
+#: ../wp-cities.php:62
 #, fuzzy
 msgid "Update type of cities"
 msgstr "Actualizar tipo de dote"
 
-#: ../wp-cities.php:62
+#: ../wp-cities.php:63
 #, fuzzy
 msgid "Add new type of cities"
 msgstr "Añadir nuevo tipo de dote"
 
-#: ../wp-cities.php:63
+#: ../wp-cities.php:64
 #, fuzzy
 msgid "New type of cities"
 msgstr "Nuevo tipo de dote"
 
-#: ../wp-cities.php:125
+#: ../wp-cities.php:126
 #, fuzzy
 msgid "STATS"
 msgstr "ESTADÍSTICAS"
 
-#: ../wp-cities.php:136 ../wp-cities.php:313
+#: ../wp-cities.php:137 ../wp-cities.php:314
 msgid "Thorp (Fewer than 20)"
 msgstr ""
 
-#: ../wp-cities.php:136 ../wp-cities.php:313
+#: ../wp-cities.php:137 ../wp-cities.php:314
 msgid "Hamlet (21-60)"
 msgstr ""
 
-#: ../wp-cities.php:136 ../wp-cities.php:313
+#: ../wp-cities.php:137 ../wp-cities.php:314
 msgid "Village (61-200)"
 msgstr ""
 
-#: ../wp-cities.php:136 ../wp-cities.php:313
+#: ../wp-cities.php:137 ../wp-cities.php:314
 msgid "Small town (201-2,000)"
 msgstr ""
 
-#: ../wp-cities.php:136 ../wp-cities.php:313
+#: ../wp-cities.php:137 ../wp-cities.php:314
 msgid "Large town (2,001-5,000)"
 msgstr ""
 
-#: ../wp-cities.php:136 ../wp-cities.php:313
+#: ../wp-cities.php:137 ../wp-cities.php:314
 msgid "Small city (5,001-10,000)"
 msgstr ""
 
-#: ../wp-cities.php:136 ../wp-cities.php:313
+#: ../wp-cities.php:137 ../wp-cities.php:314
 msgid "Large city (10,001-25,000)"
 msgstr ""
 
-#: ../wp-cities.php:136 ../wp-cities.php:313
+#: ../wp-cities.php:137 ../wp-cities.php:314
 msgid "Metropolis (More than 25,000)"
 msgstr ""
 
-#: ../wp-cities.php:161 ../wp-cities.php:333
+#: ../wp-cities.php:162 ../wp-cities.php:334
 msgid "Corruption"
 msgstr "Corrupción"
 
-#: ../wp-cities.php:162 ../wp-cities.php:334
+#: ../wp-cities.php:163 ../wp-cities.php:335
 msgid "Crime"
 msgstr "Crimen"
 
-#: ../wp-cities.php:163 ../wp-cities.php:335
+#: ../wp-cities.php:164 ../wp-cities.php:336
 msgid "Economy"
 msgstr "Ecnomía"
 
-#: ../wp-cities.php:164 ../wp-cities.php:336
+#: ../wp-cities.php:165 ../wp-cities.php:337
 msgid "Law"
 msgstr "Ley"
 
-#: ../wp-cities.php:165 ../wp-cities.php:337
+#: ../wp-cities.php:166 ../wp-cities.php:338
 msgid "Lore"
 msgstr ""
 
-#: ../wp-cities.php:166 ../wp-cities.php:338
+#: ../wp-cities.php:167 ../wp-cities.php:339
 msgid "Society"
 msgstr "Sociedad"
 
-#: ../wp-cities.php:169 ../wp-cities.php:349
+#: ../wp-cities.php:170 ../wp-cities.php:350
 msgid "Qualities"
 msgstr ""
 
-#: ../wp-cities.php:170 ../wp-cities.php:353
+#: ../wp-cities.php:171 ../wp-cities.php:354
 #, fuzzy
 msgid "Danger"
 msgstr "Alcance"
 
-#: ../wp-cities.php:194 ../wp-cities.php:357
+#: ../wp-cities.php:195 ../wp-cities.php:358
 msgid "DEMOGRAPHICS"
 msgstr ""
 
-#: ../wp-cities.php:206 ../wp-cities.php:360
+#: ../wp-cities.php:207 ../wp-cities.php:361
 msgid "Goverment"
 msgstr "Gobierno"
 
-#: ../wp-cities.php:207 ../wp-cities.php:364
+#: ../wp-cities.php:208 ../wp-cities.php:365
 msgid "Population"
 msgstr "Población"
 
-#: ../wp-cities.php:222 ../wp-cities.php:368
+#: ../wp-cities.php:223 ../wp-cities.php:369
 msgid "MARKETPLACE"
 msgstr ""
 
-#: ../wp-cities.php:233
+#: ../wp-cities.php:234
 msgid "Base Value"
 msgstr ""
 
-#: ../wp-cities.php:234 ../wp-cities.php:375
+#: ../wp-cities.php:235 ../wp-cities.php:376
 msgid "Purchase Limit"
 msgstr ""
 
-#: ../wp-cities.php:235 ../wp-cities.php:379
+#: ../wp-cities.php:236 ../wp-cities.php:380
 #, fuzzy
 msgid "Spellcasting"
 msgstr "Hechizos"
 
-#: ../wp-cities.php:237 ../wp-cities.php:383
+#: ../wp-cities.php:238 ../wp-cities.php:384
 msgid "Minor items"
 msgstr "Objetos menores"
 
-#: ../wp-cities.php:238 ../wp-cities.php:384
+#: ../wp-cities.php:239 ../wp-cities.php:385
 msgid "Medium items"
 msgstr "Objetos medios"
 
-#: ../wp-cities.php:239 ../wp-cities.php:385
+#: ../wp-cities.php:240 ../wp-cities.php:386
 msgid "Mayor items"
 msgstr "Objetos mayores"
 
-#: ../wp-cities.php:371
+#: ../wp-cities.php:372
 msgid "Base value"
 msgstr ""
 
-#: ../wp-traps.php:20 ../wp-traps.php:32
-msgid "Traps"
-msgstr "Trampas"
-
-#: ../wp-traps.php:21
+#: ../wp-traps.php:23
 msgid "Trap"
 msgstr "Trampa"
 
-#: ../wp-traps.php:23 ../wp-traps.php:36
+#: ../wp-traps.php:25 ../wp-traps.php:38
 #, fuzzy
 msgid "Add new trap"
 msgstr "Añadir nueva arma"
 
-#: ../wp-traps.php:24
+#: ../wp-traps.php:26
 #, fuzzy
 msgid "Edit trap"
 msgstr "Editar arma"
 
-#: ../wp-traps.php:25
+#: ../wp-traps.php:27
 #, fuzzy
 msgid "New trap"
 msgstr "Nueva arma"
 
-#: ../wp-traps.php:26
-#, fuzzy
-msgid "All traps"
-msgstr "Todos las armas"
-
-#: ../wp-traps.php:27
+#: ../wp-traps.php:29
 #, fuzzy
 msgid "View trap"
 msgstr "Ver arma"
 
-#: ../wp-traps.php:28
+#: ../wp-traps.php:30
 #, fuzzy
 msgid "Search trap"
 msgstr "Buscar arma"
 
-#: ../wp-traps.php:29
+#: ../wp-traps.php:31
 #, fuzzy
 msgid "Trap not found"
 msgstr "Arma no encontrada"
 
-#: ../wp-traps.php:30
+#: ../wp-traps.php:32
 #, fuzzy
 msgid "Trap not found in trash"
 msgstr "Arma no encontrada en la papelera"
 
-#: ../wp-traps.php:54 ../wp-traps.php:55 ../wp-traps.php:64
-#: ../wp-traps.php:230
-#, fuzzy
-msgid "Type of traps"
-msgstr "Tipos de armas"
-
-#: ../wp-traps.php:56
+#: ../wp-traps.php:59
 #, fuzzy
 msgid "Search type of traps"
 msgstr "Buscar  tipo de armas"
 
-#: ../wp-traps.php:57
+#: ../wp-traps.php:60
 #, fuzzy
 msgid "All type of traps"
 msgstr "Todos los tipos de armas"
 
-#: ../wp-traps.php:58
+#: ../wp-traps.php:61
 #, fuzzy
 msgid "Parent type of traps"
 msgstr "Buscar  tipo de monstruos"
 
-#: ../wp-traps.php:59
+#: ../wp-traps.php:62
 #, fuzzy
 msgid "Parent type of traps:"
 msgstr "Buscar  tipo de monstruos"
 
-#: ../wp-traps.php:60
+#: ../wp-traps.php:63
 #, fuzzy
 msgid "Edit type of traps"
 msgstr "Editar  tipo de arma"
 
-#: ../wp-traps.php:61
+#: ../wp-traps.php:64
 #, fuzzy
 msgid "Update type of traps"
 msgstr "Actualizar tipo de arma"
 
-#: ../wp-traps.php:62
+#: ../wp-traps.php:65
 #, fuzzy
 msgid "Add new type of traps"
 msgstr "Añadir nuevo tipo de arma"
 
-#: ../wp-traps.php:63
+#: ../wp-traps.php:66
 #, fuzzy
 msgid "New type of traps"
 msgstr "Nuevo tipo de arma"
 
-#: ../wp-traps.php:136 ../wp-traps.php:281
+#: ../wp-traps.php:140 ../wp-traps.php:285
 msgid "Mechanical"
 msgstr ""
 
-#: ../wp-traps.php:136 ../wp-traps.php:281
+#: ../wp-traps.php:140 ../wp-traps.php:285
 msgid "Magical"
 msgstr ""
 
-#: ../wp-traps.php:136 ../wp-traps.php:281
+#: ../wp-traps.php:140 ../wp-traps.php:285
 msgid "Mechanical and magical"
 msgstr ""
 
-#: ../wp-traps.php:137 ../wp-traps.php:284
+#: ../wp-traps.php:141 ../wp-traps.php:288
 msgid "Lock (DC 30 Disable Device)"
 msgstr ""
 
-#: ../wp-traps.php:137 ../wp-traps.php:284
+#: ../wp-traps.php:141 ../wp-traps.php:288
 msgid "Hidden Switch (DC 25 Perception)"
 msgstr ""
 
-#: ../wp-traps.php:137 ../wp-traps.php:284
+#: ../wp-traps.php:141 ../wp-traps.php:288
 msgid "Hidden Lock (DC 25 Perception / DC 30 Disable Device)"
 msgstr ""
 
-#: ../wp-traps.php:151 ../wp-traps.php:301
+#: ../wp-traps.php:155 ../wp-traps.php:305
 msgid "Bypass"
 msgstr ""
 
-#: ../wp-traps.php:160 ../wp-traps.php:304
+#: ../wp-traps.php:164 ../wp-traps.php:308
 msgid "Perception DC"
 msgstr ""
 
-#: ../wp-traps.php:161 ../wp-traps.php:307
+#: ../wp-traps.php:165 ../wp-traps.php:311
 msgid "Disable Device DC"
 msgstr ""
 
-#: ../wp-traps.php:178 ../wp-traps.php:310
+#: ../wp-traps.php:182 ../wp-traps.php:314
 msgid "EFFECTS"
 msgstr ""
 
-#: ../wp-traps.php:189 ../wp-traps.php:282
+#: ../wp-traps.php:193 ../wp-traps.php:286
 #, fuzzy
 msgid "Location"
 msgstr "Población"
 
-#: ../wp-traps.php:189 ../wp-traps.php:282
+#: ../wp-traps.php:193 ../wp-traps.php:286
 msgid "Sound"
 msgstr ""
 
-#: ../wp-traps.php:189 ../wp-traps.php:282
+#: ../wp-traps.php:193 ../wp-traps.php:286
 msgid "Visual"
 msgstr ""
 
-#: ../wp-traps.php:189 ../wp-traps.php:282
+#: ../wp-traps.php:193 ../wp-traps.php:286
 #, fuzzy
 msgid "Touch"
 msgstr "De toque"
 
-#: ../wp-traps.php:189 ../wp-traps.php:282
+#: ../wp-traps.php:193 ../wp-traps.php:286
 msgid "Timed"
 msgstr ""
 
-#: ../wp-traps.php:191 ../wp-traps.php:283
+#: ../wp-traps.php:195 ../wp-traps.php:287
 msgid "No Reset"
 msgstr ""
 
-#: ../wp-traps.php:191 ../wp-traps.php:283
+#: ../wp-traps.php:195 ../wp-traps.php:287
 msgid "Repair"
 msgstr ""
 
-#: ../wp-traps.php:191 ../wp-traps.php:283
+#: ../wp-traps.php:195 ../wp-traps.php:287
 msgid "Manual"
 msgstr ""
 
-#: ../wp-traps.php:191 ../wp-traps.php:283
+#: ../wp-traps.php:195 ../wp-traps.php:287
 msgid "Automatic"
 msgstr ""
 
-#: ../wp-traps.php:194 ../wp-traps.php:313
+#: ../wp-traps.php:198 ../wp-traps.php:317
 msgid "Trigger"
 msgstr ""
 
-#: ../wp-traps.php:204 ../wp-traps.php:316
+#: ../wp-traps.php:208 ../wp-traps.php:320
 msgid "Reset"
 msgstr ""
 
-#: ../wp-traps.php:213
+#: ../wp-traps.php:217
 msgid "Reset automatic time"
 msgstr ""
 
-#: ../wp-traps.php:214 ../wp-traps.php:319
+#: ../wp-traps.php:218 ../wp-traps.php:323
 #, fuzzy
 msgid "Effect"
 msgstr "perfecto"
-
-#: ../wp-magic-items.php:24 ../wp-magic-items.php:36
-#, fuzzy
-msgid "Magic items"
-msgstr "Objetos menores"
 
 #: ../wp-magic-items.php:25
 #, fuzzy
@@ -1266,11 +1283,6 @@ msgstr "Editar dote"
 msgid "New magic item"
 msgstr "Nueva dote"
 
-#: ../wp-magic-items.php:30
-#, fuzzy
-msgid "All magic items"
-msgstr "Todos los monstruos"
-
 #: ../wp-magic-items.php:31
 #, fuzzy
 msgid "View magic item"
@@ -1291,135 +1303,133 @@ msgstr "Dote no encontrada"
 msgid "Magic item not found in trash"
 msgstr "Dote no encontrada en la papelera"
 
-#: ../wp-magic-items.php:58 ../wp-magic-items.php:59 ../wp-magic-items.php:68
-#: ../wp-magic-items.php:176
-#, fuzzy
-msgid "Type of magic items"
-msgstr "Tipos de dotes"
-
-#: ../wp-magic-items.php:60
+#: ../wp-magic-items.php:61
 #, fuzzy
 msgid "Search type of magic items"
 msgstr "Buscar  tipo de dote"
 
-#: ../wp-magic-items.php:61
+#: ../wp-magic-items.php:62
 #, fuzzy
 msgid "All type of magic items"
 msgstr "Todos los tipos de dotes"
 
-#: ../wp-magic-items.php:62
+#: ../wp-magic-items.php:63
 #, fuzzy
 msgid "Parent type of magic items"
 msgstr "Buscar  tipo de monstruos"
 
-#: ../wp-magic-items.php:63
+#: ../wp-magic-items.php:64
 #, fuzzy
 msgid "Parent type of magic items:"
 msgstr "Buscar  tipo de monstruos"
 
-#: ../wp-magic-items.php:64
+#: ../wp-magic-items.php:65
 #, fuzzy
 msgid "Edit type of magic items"
 msgstr "Editar  tipo de dote"
 
-#: ../wp-magic-items.php:65
+#: ../wp-magic-items.php:66
 #, fuzzy
 msgid "Update type of magic items"
 msgstr "Actualizar tipo de dote"
 
-#: ../wp-magic-items.php:66
+#: ../wp-magic-items.php:67
 #, fuzzy
 msgid "Add new type of magic items"
 msgstr "Añadir nuevo tipo de dote"
 
-#: ../wp-magic-items.php:67
+#: ../wp-magic-items.php:68
 #, fuzzy
 msgid "New type of magic items"
 msgstr "Nuevo tipo de dote"
 
-#: ../wp-magic-items.php:129
+#: ../wp-magic-items.php:130
 msgid "MAGIC"
 msgstr ""
 
-#: ../wp-magic-items.php:140
+#: ../wp-magic-items.php:141
 msgid "Armor"
 msgstr "Armadura"
 
-#: ../wp-magic-items.php:140
+#: ../wp-magic-items.php:141
 msgid "Belts"
 msgstr ""
 
-#: ../wp-magic-items.php:140
+#: ../wp-magic-items.php:141
 msgid "Bod"
 msgstr ""
 
-#: ../wp-magic-items.php:140
+#: ../wp-magic-items.php:141
 msgid "Chest"
 msgstr "Pecho"
 
-#: ../wp-magic-items.php:140
+#: ../wp-magic-items.php:141
 msgid "Eyes"
 msgstr "Ojos"
 
-#: ../wp-magic-items.php:140
+#: ../wp-magic-items.php:141
 msgid "Feet"
 msgstr "Pies"
 
-#: ../wp-magic-items.php:140
+#: ../wp-magic-items.php:141
 msgid "Hands"
 msgstr "Manos"
 
-#: ../wp-magic-items.php:140
+#: ../wp-magic-items.php:141
 msgid "Head"
 msgstr "Cabeza"
 
-#: ../wp-magic-items.php:140
+#: ../wp-magic-items.php:141
 msgid "Headband"
 msgstr ""
 
-#: ../wp-magic-items.php:140
+#: ../wp-magic-items.php:141
 msgid "Neck"
 msgstr "Cuello"
 
-#: ../wp-magic-items.php:140
+#: ../wp-magic-items.php:141
 msgid "Ring"
 msgstr "Anillo"
 
-#: ../wp-magic-items.php:140
+#: ../wp-magic-items.php:141
 msgid "Shield"
 msgstr "Escudo"
 
-#: ../wp-magic-items.php:140
+#: ../wp-magic-items.php:141
 msgid "Shoulders"
 msgstr "Espalda"
 
-#: ../wp-magic-items.php:140
+#: ../wp-magic-items.php:141
 msgid "Wrists"
 msgstr ""
 
-#: ../wp-magic-items.php:140
+#: ../wp-magic-items.php:141
 msgid "Slotless"
 msgstr "Sin ranura"
 
-#: ../wp-magic-items.php:144 ../wp-magic-items.php:240
+#: ../wp-magic-items.php:145 ../wp-magic-items.php:241
 msgid "Slot"
 msgstr "Ranura"
 
-#: ../wp-magic-items.php:154 ../wp-magic-items.php:241
+#: ../wp-magic-items.php:155 ../wp-magic-items.php:242
 msgid "CL"
 msgstr ""
 
-#: ../wp-magic-items.php:155 ../wp-magic-items.php:251
+#: ../wp-magic-items.php:156 ../wp-magic-items.php:252
 msgid "Aura"
 msgstr "Aura"
 
-#: ../wp-magic-items.php:156 ../wp-magic-items.php:256
+#: ../wp-magic-items.php:157 ../wp-magic-items.php:257
 msgid "Construction cost"
 msgstr "Coste de construcción"
 
-#: ../wp-magic-items.php:157 ../wp-magic-items.php:255
+#: ../wp-magic-items.php:158 ../wp-magic-items.php:256
 msgid "Construction requeriments"
 msgstr "Requerimientos de construcción"
+
+#, fuzzy
+#~ msgid "Type of magic item"
+#~ msgstr "Tipos de dotes"
 
 #, fuzzy
 #~ msgid "Spell-Like abilities"
