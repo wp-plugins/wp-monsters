@@ -3,7 +3,7 @@ Contributors: gwannon
 Tags: monsters, spells, rpg, pathfinder, role playing games, role playing game, feats, cities, weapons, magic items, traps
 Requires at least: 4.0.0
 Tested up to: 4.0.0
-Stable tag: 1.3
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,8 +38,11 @@ To install WP Monsters:
 
 == Changelog ==
 
+= 1.3.1 =
+* Minor changes
+
 = 1.3 =
-* Minor bugs.
+* Minor bugs
 * Support for meters instead feets
 
 = 1.2 =
