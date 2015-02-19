@@ -63,6 +63,7 @@ function wp_monsters_create_post_type() {
 		'has_archive'   => true,
 		'hierarchical'	=> true,
 		'show_in_menu'  => false,
+		'show_in_nav_menus'   => true,
 		'menu_icon'	=> plugin_dir_url( __FILE__ ).'img/monster.png'
 	);
 	register_post_type( 'monster', $args );
@@ -89,6 +90,7 @@ function wp_monsters_create_category() {
 		'hierarchical' 	=> true,
 		//'public'		=> true,
 		'query_var'		=> true,
+		'show_in_nav_menus'   => true,
 		//slug prodotto deve coincidere con il primo parametro dello slug del Custom Post Type correlato
 		'rewrite'		=>  array('slug' => 'monsters' ),
 		//'_builtin'		=> false,
