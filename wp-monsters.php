@@ -693,6 +693,12 @@ function wp_monsters_admin_menu_item() {
 }
 add_action('admin_menu', 'wp_monsters_admin_menu_item');
 
+add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'wp_monsters_add_action_links' );
+function wp_monsters_add_action_links ( $links ) {
+	$mylinks = array('<a href="' . admin_url( 'admin.php?page='.__FILE__ ) . '">'.__("Settings", "wp_monsters").'</a>');
+	return array_merge( $links, $mylinks );
+}
+
 require_once ('wp-spells.php');
 require_once ('wp-feats.php');
 require_once ('wp-weapons.php');
