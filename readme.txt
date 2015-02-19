@@ -13,11 +13,6 @@ WP Monsters allows to the bloggers to publish in a easy way their Pathfinder RPG
 
 WP Monsters allows to the bloggers to publish in a easy way their Pathfinder RPG home-brew monsters, weapons, spells, cities, magic items and feats in their Wordpress blogs. You can use shortcodes to insert the monster in any site of your web.
 
-This plugins uses trademarks and/or copyrights owned by Paizo Inc., which are used under Paizo's Community Use Policy. We are expressly prohibited from charging you to use or access this content. This plugins is not published, endorsed, or specifically approved by Paizo Inc. For more information about Paizo's Community Use Policy, please visit paizo.com/communityuse. For more information about Paizo Inc. and Paizo products, please visit paizo.com.
-
-Icons http://7soul1.deviantart.com/art/420-Pixel-Art-Icons-for-RPG-129892453 by http://7soul1.deviantart.com/ 
-Creative Commons http://creativecommons.org/licenses/by/3.0/
-
 == Installation ==
 
 To install WP Monsters:
@@ -30,6 +25,13 @@ To install WP Monsters:
 
 1. Monster example.
 2. Admin monster
+
+== Copyrights ==
+
+This plugins uses trademarks and/or copyrights owned by Paizo Inc., which are used under Paizo's Community Use Policy. We are expressly prohibited from charging you to use or access this content. This plugins is not published, endorsed, or specifically approved by Paizo Inc. For more information about Paizo's Community Use Policy, please visit paizo.com/communityuse. For more information about Paizo Inc. and Paizo products, please visit paizo.com.
+
+Icons http://7soul1.deviantart.com/art/420-Pixel-Art-Icons-for-RPG-129892453 by http://7soul1.deviantart.com/ 
+Creative Commons http://creativecommons.org/licenses/by/3.0/
 
 == Translations included ==
 
