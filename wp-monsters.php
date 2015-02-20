@@ -1,13 +1,13 @@
 <?php
 /**
  * @package WP Monsters
- * @version 1.3.1
+ * @version 1.3.2
  */
 /*
 Plugin Name: WP Monsters
 Plugin URI: http://blog.gwannon.com/wp-monsters/
 Description: This plugin allows to the bloggers to publish in a easy way their Pathfinder RPG home-brew monster in their Wordpress blogs.
-Version: 1.3.1
+Version: 1.3.2
 Author: Gwannon
 Author URI: http://blog.gwannon.com/
 */
@@ -62,7 +62,7 @@ function wp_monsters_create_post_type() {
 		'query_var'	=> true,
 		'has_archive'   => true,
 		'hierarchical'	=> true,
-		'show_in_menu'  => false,
+		'show_in_menu'  => 'admin.php?page=wp-monsters/wp-monsters.php',
 		'show_in_nav_menus'   => true,
 		'menu_icon'	=> plugin_dir_url( __FILE__ ).'img/monster.png'
 	);
@@ -340,6 +340,7 @@ function wp_monsters_show_monster_stats() { //Show box
 	<tr><td><?php _e('Feats', 'wp_monsters'); ?></td><td><input type="text" name="feats" style="width: 100%;" value="<?php echo get_post_meta( $post->ID, 'feats', true ); ?>" /></td></tr>
 	<tr><td><?php _e('Skills', 'wp_monsters'); ?></td><td><input type="text" name="skills" style="width: 100%;" value="<?php echo get_post_meta( $post->ID, 'skills', true ); ?>" /></td></tr>
 	<tr><td><?php _e('Languages', 'wp_monsters'); ?></td><td><input type="text" name="languages" style="width: 100%;" value="<?php echo get_post_meta( $post->ID, 'languages', true ); ?>" /></td></tr>
+	<tr><td><?php _e('Special Features', 'wp_monsters'); ?></td><td><input type="text" name="sq" style="width: 100%;" value="<?php echo get_post_meta( $post->ID, 'sq', true ); ?>" /></td></tr>
 	</table>
 	
 	<?php 
@@ -358,6 +359,7 @@ function wp_monsters_save_monster_stats( $post_id ) { //Save changes
 	if (isset($_POST['feats'])) update_post_meta( $post_id, 'feats', sanitize_text_field( $_POST['feats'] ) );
 	if (isset($_POST['skills'])) update_post_meta( $post_id, 'skills', sanitize_text_field( $_POST['skills'] ) );
 	if (isset($_POST['languages'])) update_post_meta( $post_id, 'languages', sanitize_text_field( $_POST['languages'] ) );
+	if (isset($_POST['sq'])) update_post_meta( $post_id, 'sq', sanitize_text_field( $_POST['sq'] ) );
 }
 add_action( 'save_post', 'wp_monsters_save_monster_stats' );
 
@@ -531,7 +533,8 @@ function monster_shortcode( $atts ) {
 						<b>".__('Base Atk', 'wp_monsters')."</b> [ba], <b>".__('CMB', 'wp_monsters')."</b> [cmb], <b>".__('CMD', 'wp_monsters')."</b> [cmd]<br/>
 						<b>".__('Feats', 'wp_monsters').":</b> [feats]<br/>
 						<b>".__('Skills', 'wp_monsters').":</b> [skills]<br/>
-						<b>".__('Languages', 'wp_monsters').":</b> [languages]
+						<b>".__('Languages', 'wp_monsters').":</b> [languages]<br/>
+						<b>".__('Special Features', 'wp_monsters').":</b> [sq]
 					</td>
 				</tr>
 				<tr>
@@ -548,7 +551,7 @@ function monster_shortcode( $atts ) {
 				</tr>
 			</tbody>
 		</table>";
-	$codes = array("type", "size", "cr", "xp", "init", "senses", "str", "dex", "con", "int", "wis", "cha", "ba", "cmb", "cmd", "feats", "skills", "speed", "fly", "flytype", "space", "reach", "fort", "ref", "will", "environment", "organization", "treasure", "special-abilities", "sr", "melee", "ranged","special-attacks", "spell-like-abilities", "ca", "flat-footed", "touched", "infoca", "hp", "dr", "inmmune", "resist", "weaknesses", "languages", "alignment", "feets");
+	$codes = array("type", "size", "cr", "xp", "init", "senses", "str", "dex", "con", "int", "wis", "cha", "ba", "cmb", "cmd", "feats", "skills", "speed", "fly", "flytype", "space", "reach", "fort", "ref", "will", "environment", "organization", "treasure", "special-abilities", "sr", "melee", "ranged","special-attacks", "spell-like-abilities", "ca", "flat-footed", "touched", "infoca", "hp", "dr", "inmmune", "resist", "weaknesses", "languages", "alignment", "feets", "sq");
 	foreach($codes as $code) {
 		$data = get_post_meta( $post->ID, $code, true );
 		if ($code == 'special-abilities' || $code == 'spell-like-abilities') $data = wpautop($data, true);

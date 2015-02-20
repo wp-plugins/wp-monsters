@@ -40,6 +40,9 @@ Creative Commons http://creativecommons.org/licenses/by/3.0/
 
 == Changelog ==
 
+= 1.3.2 =
+* Minor changes
+
 = 1.3.1 =
 * Minor changes
 

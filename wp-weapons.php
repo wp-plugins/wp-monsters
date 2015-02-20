@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WP Monsters
- * @version 1.3.1
+ * @version 1.3.2
  */
 /* 
 This plugins uses trademarks and/or copyrights owned by Paizo Inc., which are used under Paizo's Community Use Policy. We are expressly prohibited from charging you to use or access this content. This plugins is not published, endorsed, or specifically approved by Paizo Inc. For more information about Paizo's Community Use Policy, please visit paizo.com/communityuse. For more information about Paizo Inc. and Paizo products, please visit paizo.com. 
@@ -42,7 +42,7 @@ function wp_weapons_create_post_type() {
 		'query_var'	=> true,
 		'has_archive'   => true,
 		'hierarchical'	=> true,
-		'show_in_menu'  => false,
+		'show_in_menu'  => 'admin.php?page=wp-monsters/wp-monsters.php',
 		'show_in_nav_menus'   => true,
 		'menu_icon'	=> plugin_dir_url( __FILE__ ).'img/weapon.png'
 	);

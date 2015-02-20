@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WP Monsters
- * @version 1.3.1
+ * @version 1.3.2
  */
 
 /* 
@@ -43,7 +43,7 @@ function wp_traps_create_post_type() {
 		'query_var'	=> true,
 		'has_archive'   => true,
 		'hierarchical'	=> true,
-		'show_in_menu'  => false,
+		'show_in_menu'  => 'admin.php?page=wp-monsters/wp-monsters.php',
 		'show_in_nav_menus'   => true,
 		'menu_icon'	=> plugin_dir_url( __FILE__ ).'img/trap.png'
 	);
