@@ -2,22 +2,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Monsters\n"
 "POT-Creation-Date: 2015-02-20 21:01+0100\n"
-"PO-Revision-Date: 2015-02-20 21:02+0100\n"
+"PO-Revision-Date: 2015-02-23 10:08+0100\n"
 "Last-Translator: Floh <Floh@l4f.de>\n"
 "Language-Team: \n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.7.4\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
 
 #: wp-monsters.php:41 wp-monsters.php:53 wp-monsters.php:675
 msgid "Monsters"
@@ -62,7 +62,7 @@ msgstr "Monster nicht gefunden"
 
 #: wp-monsters.php:51
 msgid "Monster not found in trash"
-msgstr "Monster nicht bei den gelöschten gefunden"
+msgstr "Monster nicht imPapierkorb gefunden"
 
 #: wp-monsters.php:76 wp-monsters.php:77 wp-monsters.php:86
 #: wp-monsters.php:676
@@ -148,44 +148,53 @@ msgstr "gigantisch"
 msgid "colossal"
 msgstr "kollosal"
 
-#: wp-monsters.php:160 wp-monsters.php:479 wp-cities.php:141 wp-cities.php:318
+#: wp-monsters.php:160 wp-monsters.php:479 wp-cities.php:141
+#: wp-cities.php:318
 msgid "lawful good"
 msgstr "rechtschaffend gut"
 
-#: wp-monsters.php:160 wp-monsters.php:479 wp-cities.php:141 wp-cities.php:318
+#: wp-monsters.php:160 wp-monsters.php:479 wp-cities.php:141
+#: wp-cities.php:318
 msgid "neutral good"
 msgstr "neutral gut"
 
-#: wp-monsters.php:160 wp-monsters.php:479 wp-cities.php:141 wp-cities.php:318
+#: wp-monsters.php:160 wp-monsters.php:479 wp-cities.php:141
+#: wp-cities.php:318
 msgid "chaotic good"
 msgstr "chaotisch gut"
 
-#: wp-monsters.php:160 wp-monsters.php:479 wp-cities.php:141 wp-cities.php:318
+#: wp-monsters.php:160 wp-monsters.php:479 wp-cities.php:141
+#: wp-cities.php:318
 msgid "lawful neutral"
 msgstr "rechtschaffend neutral"
 
-#: wp-monsters.php:160 wp-monsters.php:479 wp-cities.php:141 wp-cities.php:318
+#: wp-monsters.php:160 wp-monsters.php:479 wp-cities.php:141
+#: wp-cities.php:318
 msgid "neutral"
 msgstr "neutral"
 
-#: wp-monsters.php:160 wp-monsters.php:479 wp-cities.php:141 wp-cities.php:318
+#: wp-monsters.php:160 wp-monsters.php:479 wp-cities.php:141
+#: wp-cities.php:318
 msgid "chaotic neutral"
 msgstr "chaotisch neutral"
 
-#: wp-monsters.php:160 wp-monsters.php:479 wp-cities.php:141 wp-cities.php:318
+#: wp-monsters.php:160 wp-monsters.php:479 wp-cities.php:141
+#: wp-cities.php:318
 msgid "lawful evil"
 msgstr "rechtschaffend böse"
 
-#: wp-monsters.php:160 wp-monsters.php:479 wp-cities.php:141 wp-cities.php:318
+#: wp-monsters.php:160 wp-monsters.php:479 wp-cities.php:141
+#: wp-cities.php:318
 msgid "neutral evil"
 msgstr "neutral böse"
 
-#: wp-monsters.php:160 wp-monsters.php:479 wp-cities.php:141 wp-cities.php:318
+#: wp-monsters.php:160 wp-monsters.php:479 wp-cities.php:141
+#: wp-cities.php:318
 msgid "chaotic evil"
 msgstr "chaotisch böse"
 
-#: wp-monsters.php:163 wp-monsters.php:424 wp-spells.php:187 wp-traps.php:145
-#: wp-traps.php:300
+#: wp-monsters.php:163 wp-monsters.php:424 wp-spells.php:187
+#: wp-traps.php:145 wp-traps.php:300
 msgid "Type"
 msgstr "Typ"
 
@@ -375,8 +384,8 @@ msgstr "KMB"
 msgid "CMD"
 msgstr "KMV"
 
-#: wp-monsters.php:340 wp-monsters.php:534 wp-monsters.php:684 wp-feats.php:20
-#: wp-feats.php:32
+#: wp-monsters.php:340 wp-monsters.php:534 wp-monsters.php:684
+#: wp-feats.php:20 wp-feats.php:32
 msgid "Feats"
 msgstr "Talente"
 
@@ -389,9 +398,8 @@ msgid "Languages"
 msgstr "Sprachen"
 
 #: wp-monsters.php:343 wp-monsters.php:537
-#, fuzzy
 msgid "Special Features"
-msgstr "Besondere Fähigkeiten"
+msgstr "Besondere Eigenschaften"
 
 #: wp-monsters.php:370 wp-monsters.php:541
 msgid "ECOLOGY"
@@ -523,9 +531,8 @@ msgid "Type of cities"
 msgstr "Art der Stadt"
 
 #: wp-monsters.php:701
-#, fuzzy
 msgid "Settings"
-msgstr "Zauberei"
+msgstr "Einstellungen"
 
 #: wp-weapons.php:21
 msgid "Weapon"
@@ -665,8 +672,8 @@ msgstr "Gewicht"
 msgid "Type of damage"
 msgstr "Schadensart"
 
-#: wp-weapons.php:185 wp-weapons.php:189 wp-weapons.php:193 wp-spells.php:138
-#: wp-spells.php:239 wp-traps.php:142 wp-traps.php:289
+#: wp-weapons.php:185 wp-weapons.php:189 wp-weapons.php:193
+#: wp-spells.php:138 wp-spells.php:239 wp-traps.php:142 wp-traps.php:289
 msgid "No"
 msgstr "Nein"
 
