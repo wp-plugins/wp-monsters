@@ -3,7 +3,7 @@ Contributors: gwannon
 Tags: monsters, spells, rpg, pathfinder, role playing games, role playing game, feats, cities, weapons, magic items, traps
 Requires at least: 4.0.0
 Tested up to: 4.0.0
-Stable tag: 1.3.1
+Stable tag: 1.3.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,9 @@ Creative Commons http://creativecommons.org/licenses/by/3.0/
 * Castellano (Spanish)
 
 == Changelog ==
+
+= 1.3.3 =
+* Support for custom monster templates
 
 = 1.3.2 =
 * Minor changes

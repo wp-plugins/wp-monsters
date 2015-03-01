@@ -1,13 +1,13 @@
 <?php
 /**
  * @package WP Monsters
- * @version 1.3.2
+ * @version 1.3.3
  */
 /*
 Plugin Name: WP Monsters
 Plugin URI: http://blog.gwannon.com/wp-monsters/
 Description: This plugin allows to the bloggers to publish in a easy way their Pathfinder RPG home-brew monster in their Wordpress blogs.
-Version: 1.3.2
+Version: 1.3.4
 Author: Gwannon
 Author URI: http://blog.gwannon.com/
 */
@@ -475,6 +475,8 @@ function wp_monsters_term_in_query($query) {
 
 //SHORTCODE ---------------------------------------------
 function monster_shortcode( $atts ) {
+	global $codes_monster;
+	global $template_monster;
 	$sizes = array (__("fine", 'wp_monsters'), __("diminutive", 'wp_monsters'), __("tiny", 'wp_monsters'), __("small", 'wp_monsters'), __("medium", 'wp_monsters'), __("large", 'wp_monsters'), __("huge", 'wp_monsters'), __("gargantuan", 'wp_monsters'), __("colossal", 'wp_monsters'));
 	$alignment = array (__("lawful good", 'wp_monsters'), __("neutral good", 'wp_monsters'), __("chaotic good", 'wp_monsters'), __("lawful neutral", 'wp_monsters'), __("neutral", 'wp_monsters'), __("chaotic neutral", 'wp_monsters'), __("lawful evil", 'wp_monsters'), __("neutral evil", 'wp_monsters'), __("chaotic evil", 'wp_monsters'));
 	$flytypes = array("--", __("clumsy", 'wp_monsters'), __("poor", 'wp_monsters'), __("average", 'wp_monsters'), __("good", 'wp_monsters'), __("perfect", 'wp_monsters')); 
@@ -485,74 +487,8 @@ function monster_shortcode( $atts ) {
 	if ($atts['image'] != 'no' && has_post_thumbnail($post->ID) ) $html .= get_the_post_thumbnail($post->ID, 'medium', array('class' => "alignleft") );
 	if ($atts['description'] != 'no') $html .= apply_filters('the_content', $post->post_content);
 
-	$template = "<table class='wp-monsters'>
-			<thead>
-				<tr>
-					<td><b>".apply_filters('the_title', $post->post_title)."</b></td>
-					<td><b>[type] [size] [alignment]</b></td>
-				</tr>
-			<thead>
-			<tbody>
-				<tr>
-					<td><b>".__('GENERAL', 'wp_monsters')."</b></td>
-					<td><b>".__('DEFENSE', 'wp_monsters')."</b></td>
-				</tr>
-				<tr>
-					<td>
-						<b>".__('CR', 'wp_monsters').":</b> [cr]<br/>
-						<b>".__('XP', 'wp_monsters').":</b> [xp]<br/>
-						<b>".__('Init', 'wp_monsters').":</b> [init]<br/>
-						<b>".__('Senses', 'wp_monsters').":</b> [senses]<br/>
-					</td>
-					<td>
-						<b>".__('CA', 'wp_monsters').":</b> [ca] ".__('Flat-footed', 'wp_monsters')." [flat-footed] ".__('Touched', 'wp_monsters')." [touched] ([infoca])<br/>
-						<b>".__('HP', 'wp_monsters').":</b> [hp]<br/>
-						".__('Fort', 'wp_monsters')." [fort], ".__('Ref', 'wp_monsters')." [ref], ".__('Will', 'wp_monsters')." [will]<br/>
-						<b>".__('DR', 'wp_monsters').":</b> [dr]<br/>
-						<b>".__('Immune', 'wp_monsters').":</b> [inmmune]<br/>
-						<b>".__('Resist', 'wp_monsters').":</b> [resist]<br/>		
-						<b>".__('Weaknesses', 'wp_monsters').":</b> [weaknesses]<br/>
-						<b>".__('SR', 'wp_monsters').":</b> [sr]<br/>
-					</td>
-				</tr>
-				<tr>
-					<td><b>".__('OFFENSE', 'wp_monsters')."</b></td>
-					<td><b>".__('STATISTICS', 'wp_monsters')."</b></td>
-				</tr>
-				<tr>
-					<td>
-						<b>".__('Speed', 'wp_monsters').":</b> [speed] [feets] ".__('Fly', 'wp_monsters')." [fly] [feets] ([flytype])<br/>
-						<b>".__('Melee', 'wp_monsters').":</b> [melee]<br/>
-						<b>".__('Space', 'wp_monsters')."</b> [space] [feets] <b>".__('Reach', 'wp_monsters')."</b> [reach] [feets]</br>
-						<b>".__('Ranged', 'wp_monsters').":</b> [ranged]<br/>
-						<b>".__('Special attacks', 'wp_monsters').":</b> [special-attacks]<br/>
-						<b>".__('Spell-like abilities', 'wp_monsters').":</b><br/>[spell-like-abilities]
-					</td>
-					<td>
-						".__('Str', 'wp_monsters')." [str], ".__('Dex', 'wp_monsters')." [dex], ".__('Con', 'wp_monsters')." [con], ".__('Int', 'wp_monsters')." [int], ".__('Wis', 'wp_monsters')." [wis], ".__('Cha', 'wp_monsters')." [cha]<br/>
-						<b>".__('Base Atk', 'wp_monsters')."</b> [ba], <b>".__('CMB', 'wp_monsters')."</b> [cmb], <b>".__('CMD', 'wp_monsters')."</b> [cmd]<br/>
-						<b>".__('Feats', 'wp_monsters').":</b> [feats]<br/>
-						<b>".__('Skills', 'wp_monsters').":</b> [skills]<br/>
-						<b>".__('Languages', 'wp_monsters').":</b> [languages]<br/>
-						<b>".__('Special Features', 'wp_monsters').":</b> [sq]
-					</td>
-				</tr>
-				<tr>
-					<td><b>".__('ECOLOGY', 'wp_monsters')."</b></td>
-					<td><b>".__('SPECIAL ABILITIES', 'wp_monsters')."</b></td>
-				</tr>
-				<tr>
-					<td>
-						<b>".__('Environment', 'wp_monsters').":</b> [environment]<br/>
-						<b>".__('Organization', 'wp_monsters').":</b> [organization]<br/>
-						<b>".__('Treasure', 'wp_monsters').":</b> [treasure]
-					</td>
-					<td>[special-abilities]</td>
-				</tr>
-			</tbody>
-		</table>";
-	$codes = array("type", "size", "cr", "xp", "init", "senses", "str", "dex", "con", "int", "wis", "cha", "ba", "cmb", "cmd", "feats", "skills", "speed", "fly", "flytype", "space", "reach", "fort", "ref", "will", "environment", "organization", "treasure", "special-abilities", "sr", "melee", "ranged","special-attacks", "spell-like-abilities", "ca", "flat-footed", "touched", "infoca", "hp", "dr", "inmmune", "resist", "weaknesses", "languages", "alignment", "feets", "sq");
-	foreach($codes as $code) {
+	
+	foreach($codes_monster as $code) {
 		$data = get_post_meta( $post->ID, $code, true );
 		if ($code == 'special-abilities' || $code == 'spell-like-abilities') $data = wpautop($data, true);
 		else if ($code == 'feets') {
@@ -565,10 +501,10 @@ function monster_shortcode( $atts ) {
 		else if ($code == 'alignment') $data = $alignment[$data];
 		else if (($code == "str" || $code == "dex" || $code == "con" || $code == "int" || $code == "wis" || $code == "cha") && $data == 0)  $data = "--";
 		if ($data == '')  $data = "--";
-		$template = str_replace("[".$code."]", $data, $template);
+		$template_monster = str_replace("[".$code."]", $data, $template_monster);
 	} 
 
-	$html .= $template;
+	$html .= $template_monster;
 
 	return $html;
 }
@@ -644,9 +580,19 @@ function wp_monsters_taxonomy_dropdown($taxonomy) { ?>
 
 //Página de settings
 function wp_monsters_page_settings() {
-if (isset($_REQUEST['wp_monsters_measures']) && $_REQUEST['wp_monsters_measures'] != '') {
-	update_option( 'wp_monsters_measures', $_REQUEST['wp_monsters_measures']);
-}
+	global $template_monster;
+	global $default_template_monster;
+	global $codes_monster;
+	if (isset($_REQUEST['wp_monsters_measures']) && $_REQUEST['wp_monsters_measures'] != '') {
+		update_option( 'wp_monsters_measures', $_REQUEST['wp_monsters_measures']);
+	} else if (isset($_REQUEST['template_monster']) && $_REQUEST['template_monster'] != '') {
+		update_option( 'wp_monsters_template_monster', $_REQUEST['template_monster']);
+		$template_monster = get_option( 'wp_monsters_template_monster');
+	} else  if (isset($_REQUEST['default_template_monster']) && $_REQUEST['default_template_monster'] != '') {
+		delete_option( 'wp_monsters_template_monster');
+		global $default_template_monster;
+		$template_monster = $default_template_monster;
+	}
 ?>
 <div class="wrap">
 	<h2><?php _e('WP Monsters Settings', 'wp_monsters'); ?></h2>
@@ -663,6 +609,25 @@ if (isset($_REQUEST['wp_monsters_measures']) && $_REQUEST['wp_monsters_measures'
 			</tr>
 		</table>
 		<?php submit_button(); ?>
+	</form>
+	<hr/>
+	<form method="post" action="">
+		<table class="form-table">
+			<tr valign="top">
+				<th scope="row"><?php _e('Template monsters', 'wp_monsters'); ?></th>
+				<td>
+					<textarea name="template_monster"style="width: 100%; height: 500px;"><?php echo stripslashes($template_monster); ?></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><b><?php _e('Codes', 'wp_monsters'); ?>:</b> [<?php echo implode("], [", $codes_monster); ?>]</td>
+			</tr>
+		</table>
+		<?php submit_button(); ?>
+	</form>
+	<form method="post" action="">
+		<input type="submit" name="default_template_monster" id="submit" class="button button-primary" value="<?php _e('Default monster template reset', 'wp_monsters'); ?>">
 	</form>
 </div>
 <?php }
@@ -701,6 +666,8 @@ function wp_monsters_add_action_links ( $links ) {
 	$mylinks = array('<a href="' . admin_url( 'admin.php?page='.__FILE__ ) . '">'.__("Settings", "wp_monsters").'</a>');
 	return array_merge( $links, $mylinks );
 }
+
+require_once ('templates.php');
 
 require_once ('wp-spells.php');
 require_once ('wp-feats.php');
