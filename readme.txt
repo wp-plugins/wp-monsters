@@ -35,6 +35,7 @@ Creative Commons http://creativecommons.org/licenses/by/3.0/
 
 == Translations included ==
 
+* Français (French) by Thierry Pillot 
 * Deutsch (German) by http://nerdig-by-nature.de/
 * Castellano (Spanish)
 
