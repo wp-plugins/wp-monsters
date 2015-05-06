@@ -1,15 +1,11 @@
 <?php
 /**
  * @package WP Monsters
- * @version 1.3.3
+ * @version 1.3.4
  */
 /* 
 This plugins uses trademarks and/or copyrights owned by Paizo Inc., which are used under Paizo's Community Use Policy. We are expressly prohibited from charging you to use or access this content. This plugins is not published, endorsed, or specifically approved by Paizo Inc. For more information about Paizo's Community Use Policy, please visit paizo.com/communityuse. For more information about Paizo Inc. and Paizo products, please visit paizo.com. 
 */
-/*
-
-*/
-
 register_activation_hook( __FILE__, 'wp_magic_items_activate' );
 function wp_magic_items_activate() {
     if ( ! get_option( 'wp_magic_items_flush_rewrite_rules_flag' ) ) {

@@ -1,12 +1,12 @@
 <?php
 /**
  * @package WP Monsters
- * @version 1.3.3
+ * @version 1.3.4
  */
 /* 
 This plugins uses trademarks and/or copyrights owned by Paizo Inc., which are used under Paizo's Community Use Policy. We are expressly prohibited from charging you to use or access this content. This plugins is not published, endorsed, or specifically approved by Paizo Inc. For more information about Paizo's Community Use Policy, please visit paizo.com/communityuse. For more information about Paizo Inc. and Paizo products, please visit paizo.com. 
 */
-$codes_monster = array("type", "size", "cr", "xp", "init", "senses", "str", "dex", "con", "int", "wis", "cha", "ba", "cmb", "cmd", "feats", "skills", "speed", "fly", "flytype", "space", "reach", "fort", "ref", "will", "environment", "organization", "treasure", "special-abilities", "sr", "melee", "ranged","special-attacks", "spell-like-abilities", "ca", "flat-footed", "touched", "infoca", "hp", "dr", "inmmune", "resist", "weaknesses", "languages", "alignment", "feets", "sq");
+$codes_monster = array("title","type", "size", "cr", "xp", "init", "senses", "str", "dex", "con", "int", "wis", "cha", "ba", "cmb", "cmd", "feats", "skills", "speed", "fly", "flytype", "space", "reach", "fort", "ref", "will", "environment", "organization", "treasure", "special-abilities", "sr", "melee", "ranged","special-attacks", "spell-like-abilities", "ca", "flat-footed", "touched", "infoca", "hp", "dr", "inmmune", "resist", "weaknesses", "languages", "alignment", "feets", "sq");
 $template_monster = "";
 $default_template_monster = "";	
 
@@ -15,7 +15,7 @@ function wp_monsters_init_templates () {
 	$default_template_monster = "<table class='wp-monsters'>
 		<thead>
 			<tr>
-				<td><b>".apply_filters('the_title', $post->post_title)."</b></td>
+				<td><b>[title]</b></td>
 				<td><b>[type] [size] [alignment]</b></td>
 			</tr>
 		<thead>

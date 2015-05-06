@@ -1,13 +1,13 @@
 <?php
 /**
  * @package WP Monsters
- * @version 1.3.3
+ * @version 1.3.4
  */
 /*
 Plugin Name: WP Monsters
 Plugin URI: http://blog.gwannon.com/wp-monsters/
 Description: This plugin allows to the bloggers to publish in a easy way their Pathfinder RPG home-brew monster in their Wordpress blogs.
-Version: 1.3.3
+Version: 1.3.4
 Author: Gwannon
 Author URI: http://blog.gwannon.com/
 */
@@ -500,6 +500,7 @@ function monster_shortcode( $atts ) {
 		else if ($code == 'flytype') $data = $flytypes[$data];
 		else if ($code == 'alignment') $data = $alignment[$data];
 		else if (($code == "str" || $code == "dex" || $code == "con" || $code == "int" || $code == "wis" || $code == "cha") && $data == 0)  $data = "--";
+		else if ($code == 'title') $data = apply_filters('the_title', $post->post_title);
 		if ($data == '')  $data = "--";
 		$template_monster = str_replace("[".$code."]", $data, $template_monster);
 	} 
